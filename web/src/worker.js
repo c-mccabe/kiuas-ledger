@@ -1,5 +1,5 @@
-// API for the sauna map. Static files in ../public are served by Workers
-// assets; only /api/* reaches this code.
+// API for the sauna map. Static files in ../public are served by Pages;
+// only /api/* reaches this code, via functions/api/[[path]].js.
 //
 //   POST /api/ingest                      one scraper run (bearer INGEST_TOKEN)
 //   GET  /api/venues                      venues + next-7-days stats

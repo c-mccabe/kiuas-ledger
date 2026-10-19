@@ -1,10 +1,11 @@
 name: Scrape sessions
 
 on:
-  # :45 past each hour, 05:45–21:45 UTC: covers every session start in both
-  # BST and GMT. Public repo, so Actions minutes are free.
+  # :45 past every second hour, 05:45–21:45 UTC: covers every session start in
+  # both BST and GMT. Every 2h keeps D1 writes well under the free 100k/day.
+  # Public repo, so Actions minutes are free.
   schedule:
-    - cron: '45 5-21 * * *'
+    - cron: '45 5-21/2 * * *'
   workflow_dispatch:
     inputs:
       only:

@@ -64,7 +64,7 @@ One failing venue doesn't stop the others. The run exits non-zero only if more t
 
 ## Deployment
 
-`.github/workflows/scrape.yml` runs the scraper on GitHub Actions and commits new rows to `data/`. It runs at :45 past every hour from 05:45 to 21:45 UTC. You can also start it from **Actions → Scrape sessions → Run workflow**, optionally with `only` and `days_ahead`.
+`.github/workflows/scrape.yml` runs the scraper on GitHub Actions and commits new rows to `data/`. It runs at :45 past every second hour from 05:45 to 21:45 UTC (9 runs a day). You can also start it from **Actions → Scrape sessions → Run workflow**, optionally with `only` and `days_ahead`.
 
 Notes:
 
@@ -75,13 +75,16 @@ Notes:
 
 ## Web app
 
-`web/` is a Cloudflare Worker with a D1 (SQLite) database, live at https://kiuas.pintjudge-worker.workers.dev. It shows a map of the venues coloured by % booked, the sessions for each day with spaces left, filters (day, time of day, spots needed, hide full) and a weekday × hour "usual busyness" heatmap that fills in as history builds up.
+`web/` is a Cloudflare Pages site with a D1 (SQLite) database, live at https://sauna-finder.pages.dev.
 
-- **Data flow.** After each scrape, `src/push.mjs` POSTs `out/run.json` to `/api/ingest` using the `PUSH_URL` and `PUSH_TOKEN` repo secrets. The token must match the Worker secret `INGEST_TOKEN`. The CSVs in git stay the archive of record.
-- **Tables.** `sessions` holds the latest numbers for each session. It stops updating 15 minutes after a session starts, so past sessions keep their final fill. `snapshots` holds every observation, for booking curves (`/api/curve`).
+- **What it shows.** A headline saying how many saunas have space for the chosen day, time and group size. Below that, a day timetable: one row per sauna, with each session placed on a shared hour axis. Each block fills from the bottom with an ember colour as it books up and shows spots left. There's also a map with one pin per sauna, giving the number of sessions with space. Clicking a sauna opens its address, a booking button, and a weekday × hour "usually" heatmap, which fills in once history builds up. Members-only slots are hidden.
+- **Booking links** carry `utm_source=saunafinder&utm_medium=referral&utm_campaign=sauna_finder`. `utm_content` is `session` for a session block or `venue` for the "Book at" button, so each venue can see the traffic we send.
+- **Data flow.** After each scrape, `src/push.mjs` POSTs `out/run.json` to `/api/ingest` using the `PUSH_URL` and `PUSH_TOKEN` repo secrets. The token must match the Pages secret `INGEST_TOKEN`. The CSVs in git stay the archive of record.
+- **Code.** `functions/api/[[path]].js` hands every `/api/*` request to `src/worker.js`. `sessions` holds the latest numbers for each session and stops updating 15 minutes after the session starts. `snapshots` holds every observation (`/api/curve`).
 - **API.** `GET /api/venues`, `/api/day?date=YYYY-MM-DD`, `/api/venues/:id/pattern`, `/api/curve?venue=&session=`.
-- **Free tier.** About 3,200 rows written per run × 17 runs ≈ 55k a day, against D1's free limit of 100k a day. Storage grows by about 2 MB a day, against 5 GB free. If more venues push this past the write limit, store snapshots less often than hourly.
-- **Deploy.** `cd web && npx wrangler deploy`. Migrations: `npx wrangler d1 migrations apply kiuas --remote`. Map tiles come from OpenStreetMap.
+- **Free tier.** About 3,200 rows written per run × 9 runs ≈ 29k a day, against D1's free limit of 100k a day.
+- **Deploy.** `cd web && npx wrangler pages deploy --branch main`. Migrations: `npx wrangler d1 migrations apply kiuas --remote`. Map tiles come from OpenStreetMap.
+- **Design.** The interface uses cold colours (plunge-water blue-grey, slate ink, a teal accent). The data uses a single-hue ember ramp, which glows brighter at night in dark mode. The typeface is Schibsted Grotesk.
 
 ## Adding a venue
 

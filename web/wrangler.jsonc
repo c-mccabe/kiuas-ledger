@@ -1,12 +1,10 @@
 {
+  // Cloudflare Pages project: static files in ./public, the API in
+  // functions/api (which hands every /api/* request to src/worker.js).
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "kiuas",
-  "main": "src/worker.js",
+  "name": "sauna-finder",
+  "pages_build_output_dir": "./public",
   "compatibility_date": "2026-10-01",
-  "assets": {
-    "directory": "./public",
-    "run_worker_first": ["/api/*"]
-  },
   "d1_databases": [
     {
       "binding": "DB",
@@ -14,8 +12,7 @@
       "database_id": "4af9d1cd-42c1-4f01-8beb-3f1fe13c2da2",
       "migrations_dir": "migrations"
     }
-  ],
-  "observability": { "enabled": true }
-  // Secret (set with `wrangler secret put INGEST_TOKEN`): bearer token the
-  // GitHub Action uses to POST /api/ingest.
+  ]
+  // Secret (set with `wrangler pages secret put INGEST_TOKEN`): bearer token
+  // the GitHub Action uses to POST /api/ingest.
 }

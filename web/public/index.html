@@ -4,80 +4,74 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sauna Finder London</title>
-  <meta name="description" content="How booked-up London's public saunas are, session by session.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♨️</text></svg>">
+  <meta name="description" content="Which London saunas have space, session by session.">
+  <meta name="theme-color" content="#e8edee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111719" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><ellipse cx='16' cy='25' rx='13' ry='5' fill='%2322292d'/><ellipse cx='14' cy='17' rx='9' ry='4.5' fill='%234d585e'/><ellipse cx='17' cy='10' rx='6' ry='3.5' fill='%23db6a2c'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      <span class="logo" aria-hidden="true">♨</span>
-      <div>
-        <h1>Sauna Finder</h1>
-        <p class="sub">How full London's saunas are, session by session</p>
-      </div>
-    </div>
+  <header class="masthead">
+    <a class="wordmark" href="/" aria-label="Sauna Finder home">
+      <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path class="steam" d="M12 7c-1.5-1.6 1.5-2.4 0-4M17 6c-1.5-1.6 1.5-2.4 0-4M22 7c-1.5-1.6 1.5-2.4 0-4" />
+        <ellipse class="s3" cx="16" cy="27" rx="13" ry="4" />
+        <ellipse class="s2" cx="14.5" cy="20.5" rx="9.5" ry="3.8" />
+        <ellipse class="s1" cx="17" cy="14.5" rx="6.5" ry="3" />
+      </svg>
+      <span>Sauna Finder</span>
+    </a>
     <p class="fresh" id="fresh"></p>
   </header>
 
-  <section class="filters" aria-label="Filters">
-    <div class="days" id="days" role="tablist" aria-label="Day"></div>
-    <div class="row">
-      <div class="seg" id="tod" role="group" aria-label="Time of day">
-        <button data-v="any" class="on">Any time</button>
-        <button data-v="am">Morning</button>
-        <button data-v="pm">Afternoon</button>
-        <button data-v="eve">Evening</button>
-      </div>
-      <label class="spots">Spots needed
-        <select id="need">
-          <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
-        </select>
-      </label>
-      <label class="check"><input type="checkbox" id="hidefull"> Hide full sessions</label>
-    </div>
+  <section class="lede" aria-live="polite">
+    <h1 id="headline">Checking London's saunas…</h1>
+    <p id="subline" class="subline"></p>
   </section>
 
-  <main class="layout">
-    <div class="mapwrap">
-      <div id="map" aria-label="Map of saunas"></div>
-      <div class="legend" aria-hidden="true">
-        <span>% booked</span>
-        <i style="background:var(--q0)"></i><i style="background:var(--q1)"></i><i style="background:var(--q2)"></i><i style="background:var(--q3)"></i><i style="background:var(--q4)"></i>
-        <span>quiet → busy</span>
+  <nav class="controls" aria-label="Filters">
+    <div class="days" id="days" role="tablist" aria-label="Day"></div>
+    <div class="control-row">
+      <div class="seg" id="tod" role="radiogroup" aria-label="Time of day">
+        <button type="button" data-v="any" aria-pressed="true">All day</button>
+        <button type="button" data-v="am" aria-pressed="false">Morning</button>
+        <button type="button" data-v="pm" aria-pressed="false">Afternoon</button>
+        <button type="button" data-v="eve" aria-pressed="false">Evening</button>
       </div>
+      <div class="stepper" role="group" aria-label="People">
+        <button type="button" id="need-dec" aria-label="Fewer people">−</button>
+        <output id="need-out" aria-live="polite">1 person</output>
+        <button type="button" id="need-inc" aria-label="More people">+</button>
+      </div>
+      <label class="switch"><input type="checkbox" id="hidefull" role="switch"><span class="track-ui" aria-hidden="true"></span>Only show sessions with space</label>
     </div>
-    <div class="list" id="list" aria-live="polite">
-      <p class="loading">Loading…</p>
-    </div>
+  </nav>
+
+  <main class="stage">
+    <section class="timetable" aria-label="Sessions by sauna">
+      <div class="key" aria-hidden="true">
+        <span>Number = spots left. Fill shows how booked it is:</span>
+        <span class="ramp"><i style="--h:var(--h0)"></i><i style="--h:var(--h1)"></i><i style="--h:var(--h2)"></i><i style="--h:var(--h3)"></i><i style="--h:var(--h4)"></i></span>
+        <span>quiet to busy</span>
+        <span class="full-key"><i></i>Full</span>
+      </div>
+      <div class="board-scroll" id="board-scroll">
+        <div class="board" id="board"><p class="empty">Loading sessions…</p></div>
+      </div>
+    </section>
+    <aside class="mapcol">
+      <div id="map" role="region" aria-label="Map of saunas"></div>
+    </aside>
   </main>
 
   <footer class="foot">
-    <p>Numbers come from each venue's public booking system, checked hourly between about 6am and 11pm, so they can be up to an hour old. Always book on the venue's own site. Not affiliated with any venue.</p>
-    <p>Sauna &amp; Plunge sells rolling 30-minute slots rather than fixed sessions, so its counts are people booked into each slot.</p>
+    <p>Counts come from each sauna's public booking page, checked every two hours between about 6am and 11pm, so they can be a little behind. Book on the sauna's own site. Sauna Finder isn't affiliated with any of them.</p>
+    <p>Sauna &amp; Plunge sells rolling 30-minute slots, so each block there is people booked into that half hour. Members-only slots, like Community Sauna's priority slots, are left out.</p>
   </footer>
-
-  <template id="venue-tpl">
-    <article class="venue">
-      <header>
-        <div>
-          <h2><span class="vname"></span> <span class="vsite"></span></h2>
-          <p class="vaddr"></p>
-        </div>
-        <div class="vstat"></div>
-      </header>
-      <div class="slots"></div>
-      <div class="vfoot">
-        <a class="book" target="_blank" rel="noopener">Book on their site ↗</a>
-        <button class="pattern-btn" type="button">Usual busyness</button>
-      </div>
-      <div class="pattern" hidden></div>
-    </article>
-  </template>
 
   <div class="tip" id="tip" role="tooltip" hidden></div>
 
