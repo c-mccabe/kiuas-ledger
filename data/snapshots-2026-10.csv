@@ -15952,3 +15952,82 @@ scraped_at_utc,venue,site,platform,session_id,date,weekday,start_local,duration_
 2026-10-19T19:46:51.187Z,Yogahome,Stoke Newington,mindbody,162775,2026-10-25,Sun,14:30,60,General session,5,0,5,,8323,19
 2026-10-19T19:46:51.187Z,Yogahome,Stoke Newington,mindbody,162827,2026-10-25,Sun,15:45,60,General session,5,0,5,,8398,19
 2026-10-19T19:46:51.187Z,Yogahome,Stoke Newington,mindbody,162879,2026-10-25,Sun,17:00,60,General session,5,0,5,,8473,19
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-21T16:00:Bring a Mate Wednesday,2026-10-21,Wed,16:00,50,Bring a Mate Wednesday,3,2,1,,2561,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-21T17:00:Bring a Mate Wednesday,2026-10-21,Wed,17:00,50,Bring a Mate Wednesday,3,3,0,,2621,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-21T18:00:Bring a Mate Wednesday,2026-10-21,Wed,18:00,50,Bring a Mate Wednesday,3,3,0,,2681,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-21T19:00:Bring a Mate Wednesday,2026-10-21,Wed,19:00,50,Bring a Mate Wednesday,3,3,0,,2741,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T08:00:Off Peak Sauna Session,2026-10-22,Thu,08:00,50,Off Peak Sauna Session,6,1,5,,3521,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T09:00:Off Peak Sauna Session,2026-10-22,Thu,09:00,50,Off Peak Sauna Session,6,0,6,,3581,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T10:00:Off Peak Sauna Session,2026-10-22,Thu,10:00,50,Off Peak Sauna Session,6,0,6,,3641,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T11:00:Off Peak Sauna Session,2026-10-22,Thu,11:00,50,Off Peak Sauna Session,6,2,4,,3701,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T16:00:Off Peak Sauna Session,2026-10-22,Thu,16:00,50,Off Peak Sauna Session,6,0,6,,4001,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T17:00:Off Peak Sauna Session,2026-10-22,Thu,17:00,50,Off Peak Sauna Session,6,0,6,,4061,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T18:00:Off Peak Sauna Session,2026-10-22,Thu,18:00,50,Off Peak Sauna Session,6,4,2,,4121,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-22T19:00:Off Peak Sauna Session,2026-10-22,Thu,19:00,50,Off Peak Sauna Session,6,0,6,,4181,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T08:00:Off Peak Sauna Session,2026-10-23,Fri,08:00,50,Off Peak Sauna Session,6,0,6,,4961,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T09:00:Off Peak Sauna Session,2026-10-23,Fri,09:00,50,Off Peak Sauna Session,6,0,6,,5021,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T10:00:Off Peak Sauna Session,2026-10-23,Fri,10:00,50,Off Peak Sauna Session,6,1,5,,5081,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T11:00:Off Peak Sauna Session,2026-10-23,Fri,11:00,50,Off Peak Sauna Session,6,1,5,,5141,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T16:00:Peak Sauna Session,2026-10-23,Fri,16:00,50,Peak Sauna Session,6,2,4,,5441,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T17:00:Peak Sauna Session,2026-10-23,Fri,17:00,50,Peak Sauna Session,6,2,4,,5501,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T18:00:Peak Sauna Session,2026-10-23,Fri,18:00,50,Peak Sauna Session,6,0,6,,5561,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-23T19:00:Peak Sauna Session,2026-10-23,Fri,19:00,50,Peak Sauna Session,6,2,4,,5621,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T08:00:Peak Sauna Session,2026-10-24,Sat,08:00,50,Peak Sauna Session,6,0,6,,6401,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T09:00:Peak Sauna Session,2026-10-24,Sat,09:00,50,Peak Sauna Session,6,0,6,,6461,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T10:00:Peak Sauna Session,2026-10-24,Sat,10:00,50,Peak Sauna Session,6,0,6,,6521,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T11:00:Peak Sauna Session,2026-10-24,Sat,11:00,50,Peak Sauna Session,6,4,2,,6581,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T16:00:Peak Sauna Session,2026-10-24,Sat,16:00,50,Peak Sauna Session,6,0,6,,6881,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T17:00:Peak Sauna Session,2026-10-24,Sat,17:00,50,Peak Sauna Session,6,0,6,,6941,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T18:00:Peak Sauna Session,2026-10-24,Sat,18:00,50,Peak Sauna Session,6,0,6,,7001,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-24T19:00:Peak Sauna Session,2026-10-24,Sat,19:00,50,Peak Sauna Session,6,0,6,,7061,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T08:00:Peak Sauna Session,2026-10-25,Sun,08:00,50,Peak Sauna Session,6,0,6,,7901,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T09:00:Peak Sauna Session,2026-10-25,Sun,09:00,50,Peak Sauna Session,6,0,6,,7961,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T10:00:Peak Sauna Session,2026-10-25,Sun,10:00,50,Peak Sauna Session,6,6,0,,8021,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T11:00:Peak Sauna Session,2026-10-25,Sun,11:00,50,Peak Sauna Session,6,0,6,,8081,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T14:00:Peak Sauna Session,2026-10-25,Sun,14:00,50,Peak Sauna Session,6,6,0,,8261,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T15:00:Peak Sauna Session,2026-10-25,Sun,15:00,50,Peak Sauna Session,6,3,3,,8321,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T16:00:Peak Sauna Session,2026-10-25,Sun,16:00,50,Peak Sauna Session,6,2,4,,8381,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Hampton Court,wunderbook,2026-10-25T17:00:Peak Sauna Session,2026-10-25,Sun,17:00,50,Peak Sauna Session,6,2,4,,8441,25
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T07:00:Sunrise Sauna Club,2026-10-21,Wed,07:00,50,Sunrise Sauna Club,6,2,4,,2021,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T08:00:Open Session Bookings,2026-10-21,Wed,08:00,50,Open Session Bookings,6,2,4,,2081,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T09:00:Open Session Bookings,2026-10-21,Wed,09:00,50,Open Session Bookings,6,0,6,,2141,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T10:00:Open Session Bookings,2026-10-21,Wed,10:00,50,Open Session Bookings,6,1,5,,2201,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T11:00:Open Session Bookings,2026-10-21,Wed,11:00,50,Open Session Bookings,6,0,6,,2261,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T16:00:Open Session Bookings,2026-10-21,Wed,16:00,50,Open Session Bookings,6,0,6,,2561,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T17:00:Open Session Bookings,2026-10-21,Wed,17:00,50,Open Session Bookings,6,0,6,,2621,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T18:00:Open Session Bookings,2026-10-21,Wed,18:00,50,Open Session Bookings,6,3,3,,2681,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-21T19:00:Open Session Bookings,2026-10-21,Wed,19:00,50,Open Session Bookings,6,2,4,,2741,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T07:00:Sunrise Sauna Club,2026-10-22,Thu,07:00,50,Sunrise Sauna Club,6,0,6,,3461,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T08:00:Open Session Bookings,2026-10-22,Thu,08:00,50,Open Session Bookings,6,0,6,,3521,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T09:00:Open Session Bookings,2026-10-22,Thu,09:00,50,Open Session Bookings,6,0,6,,3581,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T10:00:Open Session Bookings,2026-10-22,Thu,10:00,50,Open Session Bookings,6,4,2,,3641,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T11:00:Open Session Bookings,2026-10-22,Thu,11:00,50,Open Session Bookings,6,2,4,,3701,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T16:00:Open Session Bookings,2026-10-22,Thu,16:00,50,Open Session Bookings,6,4,2,,4001,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T17:00:Open Session Bookings,2026-10-22,Thu,17:00,50,Open Session Bookings,6,6,0,,4061,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T18:00:Open Session Bookings,2026-10-22,Thu,18:00,50,Open Session Bookings,6,0,6,,4121,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-22T19:00:Women Only Session,2026-10-22,Thu,19:00,50,Women Only Session,6,0,6,,4181,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T07:00:Sunrise Sauna Club,2026-10-23,Fri,07:00,50,Sunrise Sauna Club,6,0,6,,4901,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T08:00:Open Session Bookings,2026-10-23,Fri,08:00,50,Open Session Bookings,6,6,0,,4961,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T09:00:Open Session Bookings,2026-10-23,Fri,09:00,50,Open Session Bookings,6,1,5,,5021,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T10:00:Open Session Bookings,2026-10-23,Fri,10:00,50,Open Session Bookings,6,1,5,,5081,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T11:00:Open Session Bookings,2026-10-23,Fri,11:00,50,Open Session Bookings,6,4,2,,5141,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T16:00:Open Session Bookings,2026-10-23,Fri,16:00,50,Open Session Bookings,6,2,4,,5441,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T17:00:Open Session Bookings,2026-10-23,Fri,17:00,50,Open Session Bookings,6,2,4,,5501,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T18:00:Open Session Bookings,2026-10-23,Fri,18:00,50,Open Session Bookings,6,1,5,,5561,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-23T19:00:Open Session Bookings,2026-10-23,Fri,19:00,50,Open Session Bookings,6,0,6,,5621,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T08:00:Open Session Bookings,2026-10-24,Sat,08:00,50,Open Session Bookings,6,4,2,,6401,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T09:00:Open Session Bookings,2026-10-24,Sat,09:00,50,Open Session Bookings,6,4,2,,6461,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T10:00:Open Session Bookings,2026-10-24,Sat,10:00,50,Open Session Bookings,6,6,0,,6521,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T11:00:Open Session Bookings,2026-10-24,Sat,11:00,50,Open Session Bookings,6,2,4,,6581,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T16:00:Open Session Bookings,2026-10-24,Sat,16:00,50,Open Session Bookings,6,6,0,,6881,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T17:00:Open Session Bookings,2026-10-24,Sat,17:00,50,Open Session Bookings,6,4,2,,6941,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T18:00:Open Session Bookings,2026-10-24,Sat,18:00,50,Open Session Bookings,6,0,6,,7001,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-24T19:00:Open Session Bookings,2026-10-24,Sat,19:00,50,Open Session Bookings,6,0,6,,7061,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T08:00:Open Session Bookings,2026-10-25,Sun,08:00,50,Open Session Bookings,6,4,2,,7901,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T09:00:Open Session Bookings,2026-10-25,Sun,09:00,50,Open Session Bookings,6,6,0,,7961,
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T10:00:Open Session Bookings,2026-10-25,Sun,10:00,50,Open Session Bookings,6,0,6,,8021,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T11:00:Open Session Bookings,2026-10-25,Sun,11:00,50,Open Session Bookings,6,2,4,,8081,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T14:00:Open Session Bookings,2026-10-25,Sun,14:00,50,Open Session Bookings,6,0,6,,8261,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T15:00:Open Session Bookings,2026-10-25,Sun,15:00,50,Open Session Bookings,6,0,6,,8321,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T16:00:Open Session Bookings,2026-10-25,Sun,16:00,50,Open Session Bookings,6,0,6,,8381,20
+2026-10-19T20:19:15.391Z,Temz Floating Saunas,Teddington,wunderbook,2026-10-25T17:00:Open Session Bookings,2026-10-25,Sun,17:00,50,Open Session Bookings,6,4,2,,8441,20
