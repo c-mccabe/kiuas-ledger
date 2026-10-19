@@ -293,8 +293,8 @@ async function venuePage(slug, request, env) {
   const nearby = venues.filter((x) => x.id !== v.id && x.lat != null && v.lat != null)
     .map((x) => ({ x, d: km(v, x) })).sort((a, b) => a.d - b.d).slice(0, 4);
 
-  const title = `${name} sauna availability this week | Sauna Finder`;
-  const description = `${sum.open ? `${plural(sum.open, 'session')} with space` : 'Sessions'} at ${name} in the next 7 days, updated every 15 minutes. ${nextLine(sum)}`;
+  const title = `${name}: live sauna availability | Sauna Finder`;
+  const description = `${sum.open ? `${plural(sum.open, 'session')} with space` : 'Sessions'} at ${name} in the next 7 days, rechecked live every 15 minutes. ${nextLine(sum)}`;
   const jsonld = [
     {
       '@context': 'https://schema.org',
@@ -309,11 +309,11 @@ async function venuePage(slug, request, env) {
 
   const body = `
     <p class="crumbs"><a href="/">Sauna Finder</a> › <a href="/saunas">Saunas</a> › <a href="/areas/${v.area}">${esc(area.name)}</a></p>
-    <h1>${esc(name)}: sessions with space</h1>
+    <h1>${esc(name)}: live availability</h1>
     <p>${!sum.total ? `We haven't seen any public sessions at ${esc(name)} for the next week yet.`
       : sum.open === sum.total ? `All ${plural(sum.total, 'public session')} at ${esc(name)} in the next week have space.`
       : `${sum.open} of the next ${plural(sum.total, 'public session')} at ${esc(name)} ${sum.open === 1 ? 'has' : 'have'} space.`} ${esc(nextLine(sum))}
-      ${v.last_scraped_at ? `<span class="muted">Checked ${esc(fmtDayShort(new Date(v.last_scraped_at)))}, ${esc(fmtTime(new Date(v.last_scraped_at)))}.</span>` : ''}</p>
+      ${v.last_scraped_at ? `<span class="muted">Last checked ${esc(londonDate(new Date(v.last_scraped_at)) === londonDate(new Date()) ? 'today' : fmtDayShort(new Date(v.last_scraped_at)))} at ${esc(fmtTime(new Date(v.last_scraped_at)))}; rechecked every 15 minutes.</span>` : ''}</p>
     <ul class="facts">
       <li><b>Address</b> <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${v.venue} ${v.address}`)}" rel="nofollow noopener" target="_blank">${esc(v.address)}</a></li>
       ${commonLen ? `<li><b>Sessions</b> usually ${commonLen} minutes</li>` : ''}
@@ -353,13 +353,13 @@ async function areaPage(slug, request, env) {
   if (!area || !list.length) return notFound(request, env, venues);
   const sessions = await loadUpcoming(env, list.map((v) => v.id));
   const today = list.filter((v) => sessions.some((s) => s.venue_id === v.id && s.left > 0 && s.date === londonDate(new Date())));
-  const title = `Saunas in ${area.name} with space today | Sauna Finder`;
+  const title = `Saunas in ${area.name} with space right now | Sauna Finder`;
   const description = `Live availability for ${plural(list.length, 'sauna')} in ${area.name}: ${list.map(fullName).join(', ')}. Updated every 15 minutes.`;
   const others = Object.entries(AREAS).filter(([s]) => s !== slug && venues.some((v) => v.area === s));
   const body = `
     <p class="crumbs"><a href="/">Sauna Finder</a> › <a href="/saunas">Saunas</a></p>
-    <h1>Saunas in ${esc(area.name)}</h1>
-    <p>${today.length} of the ${plural(list.length, 'sauna')} we track in ${esc(area.name)} ${today.length === 1 ? 'has' : 'have'} space today. Each listing shows the next session with a free spot, checked every 15 minutes from the sauna's own booking page.</p>
+    <h1>Live sauna availability in ${esc(area.name)}</h1>
+    <p>${today.length} of the ${plural(list.length, 'sauna')} we track in ${esc(area.name)} ${today.length === 1 ? 'has' : 'have'} space today. Each listing shows the next session with a free spot, read live from the sauna's own booking page every 15 minutes.</p>
     ${venueCards(list, sessions)}
     <div class="cta"><a class="btn" href="/">See today's timetable</a></div>
     ${others.length ? `<h2>Other parts of London</h2><p>${others.map(([s, a]) => `<a href="/areas/${s}">${esc(a.name)}</a>`).join(' · ')}</p>` : ''}`;
@@ -372,13 +372,13 @@ async function allSaunasPage(request, env) {
   const venues = await loadVenues(env);
   setFooter(venues);
   const sessions = await loadUpcoming(env);
-  const title = `Every London sauna we track, with live availability | Sauna Finder`;
+  const title = `Live availability at every London sauna we track | Sauna Finder`;
   const description = `${plural(venues.length, 'London sauna')} with live session availability, grouped by area. Updated every 15 minutes.`;
   const groups = Object.entries(AREAS).map(([slug, a]) => [slug, a, venues.filter((v) => v.area === slug)]).filter(([, , l]) => l.length);
   const body = `
     <p class="crumbs"><a href="/">Sauna Finder</a></p>
-    <h1>London saunas</h1>
-    <p>Sauna Finder checks ${plural(venues.length, 'sauna')} across London every 15 minutes and shows which sessions still have space. Pick one to see its week, or <a href="/">compare them all on one timetable</a>.</p>
+    <h1>London saunas, checked live</h1>
+    <p>Sauna Finder is a live check of ${plural(venues.length, 'London sauna')}: every 15 minutes it reads each one's booking page and shows which sessions still have space. Pick one to see its week, or <a href="/">compare them all on one timetable</a>.</p>
     ${groups.map(([slug, a, list]) => `<h2><a href="/areas/${slug}">${esc(a.name)}</a></h2>${venueCards(list, sessions)}`).join('')}`;
   const jsonld = [
     breadcrumbs(site, [['Sauna Finder', '/'], ['Saunas', '/saunas']]),
@@ -406,14 +406,14 @@ async function homePage(request, env) {
   const head = headTags({
     site,
     path: '/',
-    title: 'Sauna Finder: which London saunas have space today',
-    description: `Live availability for ${plural(venues.length, 'London sauna')}, session by session.`,
+    title: 'Live London sauna availability | Sauna Finder',
+    description: `A live check of ${plural(venues.length, 'London sauna')}, every 15 minutes: which sessions have space right now.`,
     jsonld: [{
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Sauna Finder',
       url: `${site}/`,
-      description: 'Which London saunas have space, session by session.',
+      description: 'A live check of which London saunas have space, every 15 minutes.',
     }],
   });
   const areas = Object.entries(AREAS).filter(([slug]) => venues.some((v) => v.area === slug));

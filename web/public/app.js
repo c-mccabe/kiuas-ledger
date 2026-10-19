@@ -124,9 +124,11 @@ function renderHeadline() {
     return;
   }
   const n = state.venues.filter((v) => summary(venueSessions(v.id)).open > 0).length;
+  // Today reads as a live count ("still"); other days as a forecast.
+  const verb = isToday() ? 'still have' : 'have';
   h1.textContent = n === 0
-    ? `No sauna has space${who} ${whenPhrase()}.`
-    : `${n} of ${state.venues.length} saunas have space${who} ${whenPhrase()}.`;
+    ? `No sauna ${isToday() ? 'still has' : 'has'} space${who} ${whenPhrase()}.`
+    : `${n} of ${state.venues.length} saunas ${verb} space${who} ${whenPhrase()}.`;
 
   const candidates = state.sessions.filter((s) => inTod(s) && bookable(s));
   if (!candidates.length) {
@@ -140,7 +142,7 @@ function renderHeadline() {
   const v = byId[pick.venue_id];
   const place = `${shortName(v)}, ${v.site}`;
   sub.innerHTML = isToday()
-    ? `Next with space: <b>${esc(place)}</b> at ${fmtTime(pick.start)}, ${plural(pick.left, 'spot')} left.`
+    ? `Next free spot: <b>${esc(place)}</b> at ${fmtTime(pick.start)}, ${plural(pick.left, 'place')} left.`
     : `Quietest: <b>${esc(place)}</b> at ${fmtTime(pick.start)}, ${pick.booked} of ${pick.capacity} booked so far.`;
 }
 
@@ -493,9 +495,31 @@ function renderFreshness() {
   const latest = state.venues.map((v) => v.last_scraped_at).filter(Boolean).sort().at(-1);
   if (!latest) return;
   const mins = Math.round((Date.now() - new Date(latest)) / 60000);
-  const ago = mins < 2 ? 'just now' : mins < 60 ? `${mins} minutes ago` : mins < 120 ? 'an hour ago' : `${Math.round(mins / 60)} hours ago`;
-  document.getElementById('fresh').textContent = `Updated ${ago}`;
+  const ago = mins < 2 ? 'just now' : mins < 60 ? `${mins} min ago` : mins < 120 ? 'an hour ago' : `${Math.round(mins / 60)} hours ago`;
+  // "Live" only while the last check is recent; overnight there are no checks.
+  const live = mins <= 40;
+  const el = document.getElementById('fresh');
+  el.classList.toggle('live', live);
+  el.innerHTML = live ? `<i aria-hidden="true"></i>Live · checked ${ago}` : `Last checked ${ago}`;
 }
+
+// Keep an open tab current: pick up each new check without a reload.
+async function poll() {
+  if (document.hidden || !state.loaded) return;
+  const latest = (vs) => vs.map((v) => v.last_scraped_at).filter(Boolean).sort().at(-1);
+  try {
+    const { venues } = await getJson('/api/venues');
+    if (latest(venues) !== latest(state.venues)) {
+      state.venues = venues;
+      state.dayCache.clear();
+      state.sessions = await loadDay(state.date);
+      render();
+    }
+  } catch {}
+  renderFreshness();
+}
+setInterval(poll, 2 * 60e3);
+document.addEventListener('visibilitychange', poll);
 
 let resizeTimer;
 addEventListener('resize', () => {

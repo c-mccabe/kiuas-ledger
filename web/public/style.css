@@ -69,7 +69,11 @@ a { color: inherit; }
 .wordmark .s2 { fill: var(--stone-2); }
 .wordmark .s1 { fill: var(--h3); }
 .wordmark .steam { fill: none; stroke: var(--stone-3); stroke-width: 1.4; stroke-linecap: round; }
-.fresh { margin: 0; color: var(--stone-3); font-size: 13px; }
+.fresh { margin: 0; color: var(--stone-3); font-size: 13px; display: inline-flex; align-items: center; gap: 7px; }
+.fresh.live { color: var(--stone-2); }
+.fresh i { width: 8px; height: 8px; border-radius: 50%; background: var(--h3); box-shadow: 0 0 0 0 color-mix(in oklab, var(--h3) 60%, transparent); animation: pulse 2s ease-out infinite; }
+@keyframes pulse { to { box-shadow: 0 0 0 7px transparent; } }
+@media (prefers-reduced-motion: reduce) { .fresh i { animation: none; } }
 
 /* The headline is generated from the data and changes with the filters. */
 .lede { padding-top: 34px; padding-bottom: 6px; }
@@ -214,9 +218,11 @@ a { color: inherit; }
 /* Expanded venue detail; pinned to the visible width while the board scrolls. */
 .detail {
   position: sticky; left: 0; z-index: 3; width: var(--view-w, 100%); padding: 6px 18px 22px; background: var(--paper);
-  display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr); gap: 18px 28px;
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 18px 28px;
 }
-.detail .addr { margin: 0 0 12px; color: var(--stone-2); font-size: 14px; }
+.detail .addr { margin: 0 0 12px; color: var(--stone-2); font-size: 14px; max-width: 30ch; }
+/* The column grows to fit the button; on narrow screens the label may wrap. */
+.detail .btn { max-width: 100%; white-space: normal; }
 .btn {
   white-space: nowrap;
   display: inline-flex; align-items: center; gap: 8px; padding: 9px 16px; border-radius: 999px;
