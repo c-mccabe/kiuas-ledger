@@ -139,7 +139,7 @@ const PAGE_CSS = `
 .chip { display: inline-flex; gap: 6px; align-items: baseline; padding: 5px 10px; border-radius: 8px; background: var(--h0); color: var(--stone); text-decoration: none; font-size: 14px; }
 .page a.chip { color: var(--stone); }
 .chip b { font-weight: 700; }
-.chip.full { background: var(--sunk); color: var(--stone-3); }
+.chip.full { background: var(--h5); color: var(--full-ink); }
 .chip.busy { background: var(--h2); }
 .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; padding: 0; list-style: none; }
 .cards li { background: var(--paper); border-radius: 12px; padding: 14px 16px; }

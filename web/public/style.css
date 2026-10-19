@@ -14,8 +14,8 @@
   --plunge-wash: #d3e6ea;
   /* Heat ramp, quiet → busy, one hue. Ink flips to white from h3. */
   --h0: #fbe6d3; --h1: #f7c59b; --h2: #ef9a5c; --h3: #d4662a; --h4: #a3401a;
+  --h5: #9b1510; --full-ink: #fff3ea; /* full: the end of the ember ramp */
   --on-h-light: #22292d; --on-h-dark: #ffffff;
-  --hatch: #9aa6ab;
   --radius-s: 5px;
   --radius-m: 10px;
   --label-w: 168px;
@@ -29,8 +29,8 @@
     --plunge: #2f8f99; --plunge-ink: #ffffff; --plunge-wash: #19343b;
     /* At night busier sessions glow brighter, like embers. */
     --h0: #5a2c14; --h1: #85401a; --h2: #b9531d; --h3: #e8691f; --h4: #ff8a3d;
+    --h5: #ff4a2b; --full-ink: #1c0a05;
     --on-h-light: #f4ece6; --on-h-dark: #1a0f09;
-    --hatch: #4f5d63;
   }
   :root:not([data-theme="light"]) .slot.hot4 .fill { box-shadow: 0 0 10px color-mix(in oklab, var(--h4) 60%, transparent); }
 }
@@ -41,8 +41,8 @@
   --stone: #e4eaeb; --stone-2: #b1bcc0; --stone-3: #85939a;
   --plunge: #2f8f99; --plunge-ink: #ffffff; --plunge-wash: #19343b;
   --h0: #5a2c14; --h1: #85401a; --h2: #b9531d; --h3: #e8691f; --h4: #ff8a3d;
+    --h5: #ff4a2b; --full-ink: #1c0a05;
   --on-h-light: #f4ece6; --on-h-dark: #1a0f09;
-  --hatch: #4f5d63;
 }
 
 * { box-sizing: border-box; }
@@ -141,11 +141,8 @@ a { color: inherit; }
 }
 .ramp { display: inline-flex; gap: 2px; }
 .ramp i { width: 18px; height: 10px; background: var(--h); border-radius: 2px; }
-.full-key { display: inline-flex; align-items: center; gap: 6px; margin-left: 6px; }
-.full-key i { width: 18px; height: 10px; border-radius: 2px; background: var(--full-bg); }
 
 /* Timetable board -------------------------------------------------------- */
-:root { --full-bg: repeating-linear-gradient(135deg, var(--hatch) 0 1.5px, transparent 1.5px 5px), var(--sunk); }
 
 .board-scroll { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; }
 .board { position: relative; min-width: 100%; width: max-content; }
@@ -209,7 +206,9 @@ a { color: inherit; }
   color: var(--stone-2); font-variant-numeric: tabular-nums;
   text-shadow: 0 0 2px var(--paper), 0 0 4px var(--paper);
 }
-.slot.full { background: var(--full-bg); color: var(--stone-2); }
+.slot.full { background: var(--h5); color: var(--full-ink); box-shadow: none; }
+.slot.full .lbl, .slot.full .p { text-shadow: none; }
+.slot.full .t, .slot.full .p { color: inherit; opacity: .85; }
 .slot.full .k { font-size: 12px; font-weight: 600; }
 .slot.full .fill { display: none; }
 .slot.short { opacity: .55; }
@@ -267,7 +266,7 @@ a { color: inherit; }
   box-shadow: 0 0 0 2.5px var(--paper), 0 2px 6px rgb(0 0 0 / 30%);
   transition: transform .15s;
 }
-.pin.zero { background: var(--full-bg); color: var(--stone-3); }
+.pin.zero { background: var(--h5); color: var(--full-ink); }
 .pin.hot { transform: scale(1.25); box-shadow: 0 0 0 2.5px var(--paper), 0 0 0 5px var(--plunge), 0 2px 8px rgb(0 0 0 / 30%); }
 .leaflet-marker-icon.on-top { z-index: 9999 !important; }
 .leaflet-tooltip { background: var(--stone); color: var(--mist); border: 0; border-radius: 8px; font: inherit; font-size: 13px; box-shadow: 0 6px 20px rgb(0 0 0 / 22%); }
