@@ -1,6 +1,6 @@
 # London sauna tracker
 
-Snapshots how full upcoming sessions are at 13 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
+Snapshots how full upcoming sessions are at 18 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
 
 None of these venues shows a "X of Y booked" number for its regular sessions. A few show "Waitlist" or "sold out", or a count only for events. Every one of them loads the real numbers from a public booking API, though, the same way Druid Street's Bookee widget does.
 
@@ -16,6 +16,11 @@ None of these venues shows a "X of Y booked" number for its regular sessions. A 
 | Sauna & Plunge | Shoreditch | Momence (appointments) | nothing | reservations overlapping each start time, with attendee counts |
 | The Cabin Sauna | Clapham Common | LegitFit | nothing | `size`, `filledSlotCount` |
 | Pulse Club | Fulham, Putney | LegitFit | nothing | `size`, `filledSlotCount` |
+| Saunos | Regent's Canal, Islington | LegitFit | nothing | `size`, `filledSlotCount` |
+| Reset Sauna | Islington | Momence (class schedule) | spots left | `capacity`, `remainingSpots`, `fixedTicketPrice` |
+| Waking Dreams | Bethnal Green | Momence (class schedule) | spots left | `capacity`, `remainingSpots`, `fixedTicketPrice` |
+| Urban Heat | Camberwell | Momence (class schedule) | spots left | `capacity`, `remainingSpots`, `fixedTicketPrice` |
+| Innervisions Alchemy | South Bermondsey | Momence (class schedule) | spots left | `capacity`, `remainingSpots`, `fixedTicketPrice` |
 
 We looked at these and left them out for now:
 
@@ -30,6 +35,7 @@ We looked at these and left them out for now:
 - **bookee**: the API sits behind an AWS WAF bot challenge. We load the widget in headless Chromium, wait for the WAF token in `localStorage`, then POST to `/api/embed/events` from inside the page for each date. This is the same approach as druid-sauna-tracker.
 - **periode**: the booking pages are a Firebase app. We load `minside.periode.no/bookinggroups/<merchant>/<group>/<date>` for each day, record the Firestore listen stream the page receives, and parse the `bookingManifests` and `dateSlots/.../slots/<date>` documents from it. Weekday and weekend products share saunas through a `parentProduct`, and the parent's slots are the source of truth; the products' own slot docs are often missing or stale. Where the parent's slots are whole sessions (1 to 1.5 hours), each one is a session start. Where they are a half-hour grid (`length` 0.5, e.g. Hackney Wick and weekends), a product holds `slotDelta + 1` consecutive half-hours, so a start is only valid if all of them exist, and spots left is the minimum free across them. Products with no parent use their own slots. If a page didn't deliver the parent docs, the day is retried once. Each page load uses its own browser context, because the Firebase SDK shares one connection between tabs and a second tab would get its data via IndexedDB instead of the stream we record. This is the slowest adapter, at one page load per site per day, with at most 4 at a time. `PERIODE_MAX_WAIT_MS` changes how long each page is given, and `PERIODE_DUMP=file.json` writes every Firestore document the pages delivered, for debugging.
 - **marianatek / arketa / legitfit / momence**: these are plain unauthenticated JSON or GraphQL endpoints that the venues' own widgets call.
+- **momence-schedule**: studios that embed Momence's class schedule read `readonly-api.momence.com/host-plugins/host/<hostId>/host-schedule/sessions`, which is public and returns capacity, remaining spots and price for every session. Find `hostId` by loading the booking page and watching for that request. Studios that also run yoga and so on get an `include` regex so only sauna sessions are kept.
 - **momence** caveat: Sauna & Plunge has no fixed sessions. You book any 30-minute start time, and up to 6 people can share a slot. We record each start time with the attendees of the reservations overlapping it. So the "sessions" there are rolling slots rather than classes, and a 60-minute booking counts in two of them.
 
 ## Data

@@ -68,7 +68,7 @@ function loadDay(date) {
   if (!state.dayCache.has(date)) {
     // Members-only priority slots can't be booked by the public, so leave them out.
     state.dayCache.set(date, getJson(`/api/day?date=${date}`)
-      .then((d) => d.sessions.filter((s) => !/\bmembers\b/i.test(s.name ?? '')).map(enrich)));
+      .then((d) => d.sessions.filter((s) => !/\bmembers\b|\bprivate (booking|hire)\b/i.test(s.name ?? '')).map(enrich)));
   }
   return state.dayCache.get(date);
 }

@@ -19,7 +19,7 @@ const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 const slugify = (s) => s.toLowerCase().replace(/&/g, 'and').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 // Same rule as app.js: members-only slots aren't bookable by the public.
-const MEMBERS = /\bmembers\b/i;
+const MEMBERS = /\bmembers\b|\bprivate (booking|hire)\b/i;
 
 const SHORT = {
   'Community Sauna Baths': 'Community Sauna',
@@ -114,7 +114,7 @@ async function loadPattern(env, id) {
     SELECT weekday, CAST(substr(start_local, 1, 2) AS INTEGER) AS hour,
            avg(min(booked, capacity) * 1.0 / capacity) AS fill, count(*) AS sessions
     FROM sessions
-    WHERE venue_id = ?1 AND start_utc < ?2 AND capacity > 0 AND coalesce(name, '') NOT LIKE '%members%'
+    WHERE venue_id = ?1 AND start_utc < ?2 AND capacity > 0 AND coalesce(name, '') NOT LIKE '%members%' AND coalesce(name, '') NOT LIKE '%private booking%'
     GROUP BY weekday, hour
   `).bind(id, new Date().toISOString()).all();
   return results;

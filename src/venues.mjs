@@ -66,6 +66,37 @@ export const VENUES = [
   },
 
   {
+    id: 'reset-islington', venue: 'Reset Sauna', site: 'Islington', platform: 'momence-schedule',
+    address: '240 Upper Street, London N1 1RU', lat: 51.54527, lng: -0.10351,
+    url: 'https://resetsauna.com/book-session',
+    config: { hostId: 74215, locationIds: [277464] },
+  },
+  {
+    id: 'waking-dreams-bethnal-green', venue: 'Waking Dreams', site: 'Bethnal Green', platform: 'momence-schedule',
+    address: '1 Birkbeck Street, London E2 6JY', lat: 51.52575, lng: -0.0558,
+    url: 'https://www.wakingdreams.co/schedule',
+    config: { hostId: 31455, include: 'sauna' },
+  },
+  {
+    id: 'urban-heat-camberwell', venue: 'Urban Heat', site: 'Camberwell', platform: 'momence-schedule',
+    address: 'Camberwell Station Road, London SE5 9JN', lat: 51.47406, lng: -0.09724,
+    url: 'https://www.urbanheatwellness.com/book',
+    config: { hostId: 130322, include: 'sauna' },
+  },
+  {
+    id: 'innervisions-south-bermondsey', venue: 'Innervisions Alchemy', site: 'South Bermondsey', platform: 'momence-schedule',
+    address: 'Unit 1, Ilderton Wharf, Rollins Street, London SE15 1EP', lat: 51.48367, lng: -0.05035,
+    url: 'https://www.innervisionsalchemy.co.uk/book-sauna',
+    config: { hostId: 117308, include: 'sauna' },
+  },
+
+  {
+    id: 'saunos-islington', venue: 'Saunos', site: 'Regent\'s Canal, Islington', platform: 'legitfit',
+    address: 'Packington Bridge, Shepherdess Walk, London N1 7JL', lat: 51.53362, lng: -0.09366,
+    url: 'https://www.legitfit.com/p/timetable/saunoslimited',
+    config: { profileId: 'saunoslimited' },
+  },
+  {
     id: 'cabin-clapham', venue: 'The Cabin Sauna', site: 'Clapham Common', platform: 'legitfit',
     address: 'Clapham Common, London SW4 0JA', lat: 51.46242, lng: -0.14009,
     url: 'https://thecabinsauna.co.uk/#booking',
