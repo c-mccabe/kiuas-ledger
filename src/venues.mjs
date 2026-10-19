@@ -114,4 +114,16 @@ export const VENUES = [
     url: 'https://legitfit.com/p/timetable/pulseclubputney',
     config: { profileId: 'pulseclubputney' },
   },
+  {
+    id: 'arvo-walthamstow', venue: 'Arvo', site: 'Walthamstow', platform: 'bookasession',
+    address: '93 Shernhall Street, London E17 9HS', lat: 51.58385, lng: -0.00725,
+    url: 'https://bookasession.org/arvo/l/sauna',
+    config: { slug: 'arvo', locationIds: ['19842428-4db0-464f-8b22-43387fff0a33'] }, // the sauna, not the studio
+  },
+  {
+    id: 'old-kent-road-sauna', venue: 'Old Kent Road Sauna', site: 'Peckham', platform: 'bookasession',
+    address: '897a Old Kent Rd, London SE15 1NL', lat: 51.47874, lng: -0.05383,
+    url: 'https://bookasession.org/okr',
+    config: { slug: 'okr' },
+  },
 ];

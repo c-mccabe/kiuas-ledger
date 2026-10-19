@@ -7,8 +7,6 @@ Added 2026-10-19: Reset Sauna, Waking Dreams, Urban Heat, Innervisions Alchemy (
 | Venue | Website | Platform | Notes |
 |---|---|---|---|
 | The Sanctuary &Soul (Shoreditch, E2 6EJ) | andsoulsanctuary.com | Momence | Schedule didn't load in headless Chromium; hostId still to find |
-| Arvo Sauna | arvosauna.co.uk | bookasession.org | New adapter needed; also used by Old Kent Road Sauna |
-| Old Kent Road Sauna (SE15 1NL) | oldkentroadsauna.com | bookasession.org | As above |
 | Yogahome (N16 8SD) | yogahome.com/sauna | Mindbody | New adapter (Mindbody widget / healcode) |
 | Wellnest Spa & Sauna | wellnest.london | Mindbody | As above |
 | HOME Wellness (NW3 3AJ) | homewellness.uk | Mindbody | As above |
@@ -21,5 +19,5 @@ Added 2026-10-19: Reset Sauna, Waking Dreams, Urban Heat, Innervisions Alchemy (
 | Skuna (E14 4AL) | skunaboats.com | bookings.skunaboats.com | Private boats; skipped before |
 | Revive Recovery (SW17 0BQ) | revive-recovery.co.uk | Fresha | Treatments-style booking |
 
-The Mindbody group (4 venues) and bookasession.org (2) are the best next adapters by venues unlocked.
+Arvo and Old Kent Road (bookasession.org) are now tracked. The Mindbody group (4 venues) is the best next adapter by venues unlocked.
 Postcodes scraped from ClassPass pages can pick up an unrelated "Dulwich Village SE21 7DN" from page chrome; check each address on the venue's own site.
