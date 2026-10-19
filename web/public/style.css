@@ -144,6 +144,12 @@ h1 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
 .foot p { margin: 4px 0; }
 
 .leaflet-container { font: inherit; }
+/* Calm the busy OSM palette so the data pins stand out. */
+.tiles { filter: saturate(.35) contrast(.95); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .tiles { filter: invert(1) hue-rotate(180deg) saturate(.3) brightness(.85) contrast(.9); }
+}
+:root[data-theme="dark"] .tiles { filter: invert(1) hue-rotate(180deg) saturate(.3) brightness(.85) contrast(.9); }
 .pin {
   display: grid; place-items: center; border-radius: 999px; font-weight: 700; font-size: 12px;
   border: 2px solid var(--surface); box-shadow: 0 1px 4px rgb(0 0 0 / 35%);

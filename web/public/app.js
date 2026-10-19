@@ -16,7 +16,6 @@ const state = {
 };
 
 // --- color: sequential blue, 5 buckets of share booked -------------------
-const css = getComputedStyle(document.documentElement);
 const bucket = (fill) => Math.min(4, Math.floor(fill * 5));
 const qVar = (fill) => `var(--q${bucket(fill)})`;
 const qInk = (fill) => (bucket(fill) >= 2 ? 'var(--q-ink-dark)' : 'var(--q-ink-light)');
@@ -57,10 +56,9 @@ function summarize(sessions) {
 let map, markers = new Map();
 function initMap() {
   map = L.map('map', { zoomControl: true, scrollWheelZoom: true }).setView([51.505, -0.09], 11);
-  const dark = matchMedia('(prefers-color-scheme: dark)').matches;
-  L.tileLayer(`https://{s}.basemaps.cartocdn.com/${dark ? 'dark_all' : 'light_all'}/{z}/{x}/{y}{r}.png`, {
-    maxZoom: 19, subdomains: 'abcd',
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19, className: 'tiles',
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
 }
 

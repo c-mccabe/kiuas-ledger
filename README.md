@@ -73,6 +73,16 @@ Notes:
 - **Repo size.** About 1,000 rows (~130 KB) per run. Hourly, that's ~65 MB a month of CSV in git, so the monthly files will need compressing, or moving to a release asset or object storage, within a few months.
 - **Fragility.** Bookee and Periode depend on page behaviour (the WAF token, the Firestore stream format), so they're the most likely to break. `latest-run.json` and the job log show which venue failed.
 
+## Web app
+
+`web/` is a Cloudflare Worker with a D1 (SQLite) database, live at https://kiuas.pintjudge-worker.workers.dev. It shows a map of the venues coloured by % booked, the sessions for each day with spaces left, filters (day, time of day, spots needed, hide full) and a weekday × hour "usual busyness" heatmap that fills in as history builds up.
+
+- **Data flow.** After each scrape, `src/push.mjs` POSTs `out/run.json` to `/api/ingest` using the `PUSH_URL` and `PUSH_TOKEN` repo secrets. The token must match the Worker secret `INGEST_TOKEN`. The CSVs in git stay the archive of record.
+- **Tables.** `sessions` holds the latest numbers for each session. It stops updating 15 minutes after a session starts, so past sessions keep their final fill. `snapshots` holds every observation, for booking curves (`/api/curve`).
+- **API.** `GET /api/venues`, `/api/day?date=YYYY-MM-DD`, `/api/venues/:id/pattern`, `/api/curve?venue=&session=`.
+- **Free tier.** About 3,200 rows written per run × 17 runs ≈ 55k a day, against D1's free limit of 100k a day. Storage grows by about 2 MB a day, against 5 GB free. If more venues push this past the write limit, store snapshots less often than hourly.
+- **Deploy.** `cd web && npx wrangler deploy`. Migrations: `npx wrangler d1 migrations apply kiuas --remote`. Map tiles come from OpenStreetMap.
+
 ## Adding a venue
 
 1. Load its booking page with devtools open (or a Playwright script that logs XHR responses) and find the request that returns the schedule.
