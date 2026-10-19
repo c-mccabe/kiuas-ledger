@@ -6,6 +6,8 @@
 //   GET  /api/day?date=YYYY-MM-DD         every session on a London date
 //   GET  /api/venues/:id/pattern          avg fill by weekday x hour, past sessions
 //   GET  /api/curve?venue=..&session=..   booking curve of one session
+//   POST /api/e                           one analytics event from the page (no cookies)
+//   GET  /api/stats?days=30               usage summary (bearer STATS_TOKEN)
 
 const TZ = 'Europe/London';
 const londonDate = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(d);
@@ -65,6 +67,16 @@ async function ingest(request, env) {
         last_seen = excluded.last_seen
     `).bind(at, chunk));
   }
+  // Drop upcoming sessions that this run no longer lists (cancelled, or wrongly
+  // recorded before), but only on venue-days the run actually returned rows for,
+  // so one failed page load doesn't wipe a day.
+  const venueDays = [...new Set(run.rows.map((r) => `${r.venue_id}|${r.date}`))];
+  const cutoff = new Date(new Date(at).getTime() + 15 * 60000).toISOString();
+  stmts.push(env.DB.prepare(`
+    DELETE FROM sessions
+    WHERE last_seen < ?1 AND start_utc > ?2
+      AND (venue_id || '|' || date) IN (SELECT value FROM json_each(?3))
+  `).bind(at, cutoff, JSON.stringify(venueDays)));
   const results = await env.DB.batch(stmts);
   const written = results.reduce((n, r) => n + (r.meta?.rows_written ?? 0), 0);
   return json({ ok: true, venues: run.venues.length, rows: run.rows.length, rows_written: written });
@@ -127,16 +139,89 @@ async function curve(url, env) {
   return json({ venue_id: venue, session_id: session, points: results }, 200, 300);
 }
 
+// --- analytics ---------------------------------------------------------------
+
+const EVENT_TYPES = new Set(['pageview', 'book_click', 'venue_open', 'filter']);
+const BOT = /bot|crawl|spider|slurp|preview|headless|lighthouse|monitor|curl|wget|python|node-fetch/i;
+const clip = (v, n = 120) => (v == null ? null : String(v).slice(0, n));
+
+async function sha256hex(text) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(text));
+  return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function track(request, env) {
+  const ua = request.headers.get('User-Agent') ?? '';
+  if (!ua || BOT.test(ua)) return new Response(null, { status: 204 });
+  let e;
+  try { e = JSON.parse(await request.text()); } catch { return json({ error: 'bad json' }, 400); }
+  if (!EVENT_TYPES.has(e?.t)) return json({ error: 'unknown event' }, 400);
+
+  const now = new Date();
+  const day = londonDate(now);
+  const ip = request.headers.get('CF-Connecting-IP') ?? '';
+  // Rotates daily: the same person gets a new id tomorrow, and the id can't be reversed.
+  const visitor = (await sha256hex(`${day}|${ip}|${ua}|${env.STATS_SALT ?? env.INGEST_TOKEN ?? ''}`)).slice(0, 16);
+  let referrer = null;
+  try { if (e.r) referrer = new URL(e.r).hostname.replace(/^www\./, ''); } catch {}
+  if (referrer && referrer === new URL(request.url).hostname) referrer = null;
+
+  await env.DB.prepare(`
+    INSERT INTO events (ts, day, visitor, type, venue_id, detail, path, referrer, utm_source, country, device)
+    VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11)
+  `).bind(
+    now.toISOString(), day, visitor, e.t, clip(e.v, 60), clip(e.d), clip(e.p, 200), referrer, clip(e.u, 60),
+    request.cf?.country ?? null, /Mobi|Android|iPhone/i.test(ua) ? 'mobile' : 'desktop',
+  ).run();
+  return new Response(null, { status: 204 });
+}
+
+async function stats(url, request, env) {
+  const auth = request.headers.get('Authorization') ?? '';
+  if (!env.STATS_TOKEN || auth !== `Bearer ${env.STATS_TOKEN}`) return json({ error: 'unauthorized' }, 401);
+  const days = Math.min(365, Math.max(1, Number(url.searchParams.get('days')) || 30));
+  const since = londonDate(new Date(Date.now() - (days - 1) * 86400e3));
+  const q = (sql) => env.DB.prepare(sql).bind(since).all().then((r) => r.results);
+  const [totals, daily, venues, referrers, sources, countries, devices, filters] = await Promise.all([
+    q(`SELECT count(DISTINCT visitor || day) AS visitors,
+              sum(type = 'pageview') AS pageviews,
+              sum(type = 'book_click') AS book_clicks,
+              count(DISTINCT CASE WHEN type = 'book_click' THEN visitor || day END) AS clicking_visitors,
+              sum(type = 'venue_open') AS venue_opens
+       FROM events WHERE day >= ?1`),
+    q(`SELECT day, count(DISTINCT visitor) AS visitors, sum(type = 'pageview') AS pageviews,
+              sum(type = 'book_click') AS book_clicks
+       FROM events WHERE day >= ?1 GROUP BY day ORDER BY day`),
+    q(`SELECT venue_id, sum(type = 'book_click') AS book_clicks,
+              sum(type = 'book_click' AND detail = 'session') AS session_clicks,
+              sum(type = 'venue_open') AS opens
+       FROM events WHERE day >= ?1 AND venue_id IS NOT NULL GROUP BY venue_id ORDER BY book_clicks DESC, opens DESC`),
+    q(`SELECT coalesce(referrer, '(direct)') AS name, count(DISTINCT visitor || day) AS visitors
+       FROM events WHERE day >= ?1 AND type = 'pageview' GROUP BY name ORDER BY visitors DESC LIMIT 20`),
+    q(`SELECT utm_source AS name, count(DISTINCT visitor || day) AS visitors
+       FROM events WHERE day >= ?1 AND type = 'pageview' AND utm_source IS NOT NULL GROUP BY name ORDER BY visitors DESC LIMIT 20`),
+    q(`SELECT coalesce(country, '??') AS name, count(DISTINCT visitor || day) AS visitors
+       FROM events WHERE day >= ?1 GROUP BY name ORDER BY visitors DESC LIMIT 15`),
+    q(`SELECT device AS name, count(DISTINCT visitor || day) AS visitors
+       FROM events WHERE day >= ?1 GROUP BY name ORDER BY visitors DESC`),
+    q(`SELECT detail AS name, count(*) AS uses
+       FROM events WHERE day >= ?1 AND type = 'filter' GROUP BY name ORDER BY uses DESC LIMIT 20`),
+  ]);
+  return json({ since, days, totals: totals[0], daily, venues, referrers, sources, countries, devices, filters });
+}
+
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const { pathname } = url;
     try {
       if (pathname === '/api/ingest' && request.method === 'POST') return await ingest(request, env);
+      if (pathname === '/api/e' && request.method === 'POST') return await track(request, env);
       if (request.method !== 'GET') return json({ error: 'method not allowed' }, 405);
       if (pathname === '/api/venues') return await venues(env);
       if (pathname === '/api/day') return await day(url, env);
       if (pathname === '/api/curve') return await curve(url, env);
+      if (pathname === '/api/stats') return await stats(url, request, env);
       const m = pathname.match(/^\/api\/venues\/([\w-]+)\/pattern$/);
       if (m) return await pattern(m[1], env);
       return json({ error: 'not found' }, 404);

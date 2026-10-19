@@ -20,6 +20,16 @@ function bookingUrl(url, content) {
   }
 }
 
+// Cookieless usage counting: one small beacon per event, see /api/e.
+const landing = new URLSearchParams(location.search);
+const campaign = landing.get('utm_source') ?? landing.get('ref');
+function track(t, v, d) {
+  const body = JSON.stringify({ t, v, d, p: location.pathname, r: document.referrer, u: campaign });
+  try {
+    if (!navigator.sendBeacon?.('/api/e', body)) fetch('/api/e', { method: 'POST', body, keepalive: true });
+  } catch {}
+}
+
 // Shorter names for the row labels; the site name sits underneath.
 const SHORT = {
   'Community Sauna Baths': 'Community Sauna',
@@ -101,6 +111,18 @@ function renderHeadline() {
   const h1 = document.getElementById('headline');
   const sub = document.getElementById('subline');
   const who = state.need > 1 ? ` for ${state.need} people` : '';
+  const [nh] = fmtTime(new Date()).split(':').map(Number);
+  if (isToday() && state.tod !== 'any' && nh >= TOD[state.tod].to) {
+    h1.textContent = `This ${TOD[state.tod].label}'s sessions have finished.`;
+    sub.innerHTML = `<button type="button" class="linkish" id="go-tomorrow">See tomorrow ${TOD[state.tod].label}</button>`;
+    document.getElementById('go-tomorrow').onclick = () => {
+      state.date = fmtDate(new Date(Date.now() + 86400e3));
+      track('filter', null, 'day=+1');
+      renderDays();
+      refresh();
+    };
+    return;
+  }
   const n = state.venues.filter((v) => summary(venueSessions(v.id)).open > 0).length;
   h1.textContent = n === 0
     ? `No sauna has space${who} ${whenPhrase()}.`
@@ -126,12 +148,7 @@ function renderHeadline() {
 const boardScroll = document.getElementById('board-scroll');
 const board = document.getElementById('board');
 
-function hourLabel(h) {
-  const hh = h % 24;
-  if (hh === 0) return 'midnight';
-  if (hh === 12) return 'noon';
-  return hh < 12 ? `${hh}am` : `${hh - 12}pm`;
-}
+const hourLabel = (h) => `${String(h % 24).padStart(2, '0')}:00`;
 
 // Greedy interval packing so overlapping sessions get their own lane.
 function packLanes(sessions) {
@@ -177,10 +194,15 @@ function renderBoard() {
   }
   let html = '<div class="axis"><div class="pad"></div><div class="ticks">';
   const step = pph < 48 ? 2 : 1;
-  for (let h = t0 + 1; h < t1; h++) {
+  for (let h = t0; h < t1; h++) {
     // Skip hour labels the "Now" tag would cover.
-    if (nowH != null && Math.abs(x(h) - x(nowH)) < 34) continue;
-    if ((h - t0) % step === 0) html += `<span style="left:${x(h)}px">${hourLabel(h)}</span>`;
+    if (nowH != null && Math.abs(x(h) - x(nowH)) < 40) continue;
+    if ((h - t0) % step !== 0) continue;
+    // The first label is left-aligned, so the next one needs extra room.
+    if (h > t0 && x(h) - x(t0) < 64) continue;
+    html += h === t0
+      ? `<span style="left:4px;transform:none">${hourLabel(h)}</span>`
+      : `<span style="left:${x(h)}px">${hourLabel(h)}</span>`;
   }
   html += '</div></div>';
 
@@ -205,7 +227,7 @@ function renderBoard() {
       if (s.left <= 0) cls.push('full');
       else if (s.left < state.need) cls.push('short');
       if (s.start.getTime() < now) cls.push('past');
-      if (s.left > 0 && b >= 3 && s.fill >= 0.55) cls.push('ink-dark');
+      if (s.left > 0 && b === 4) cls.push('hot4');
       const k = s.left <= 0 ? (width < 50 ? '' : 'Full') : s.left;
       const tip = [
         s.name || 'Session',
@@ -241,10 +263,10 @@ function scrollToNow() {
 
 // --- venue detail ---------------------------------------------------------------
 function detailHtml(v) {
-  return `<div class="detail" id="d-${v.id}">
+  return `<div class="detail" id="d-${v.id}" data-id="${v.id}">
     <div>
       <p class="addr">${esc(v.address ?? '')}</p>
-      <a class="btn" href="${esc(bookingUrl(v.url, 'venue'))}" target="_blank" rel="noopener">Book at ${esc(v.venue)}</a>
+      <a class="btn" href="${esc(bookingUrl(v.url, 'venue'))}" target="_blank" rel="noopener">Book at ${esc(state.venues.filter((x) => x.venue === v.venue).length > 1 ? `${shortName(v)} ${v.site}` : shortName(v))}</a>
     </div>
     <div class="pattern" data-pattern="${v.id}"><h3>Usually</h3><p class="note">Loading…</p></div>
   </div>`;
@@ -265,7 +287,7 @@ async function loadPattern(v) {
   }
   const total = cells.reduce((n, c) => n + c.sessions, 0);
   if (total < 20) {
-    pane.innerHTML = `<h3>Usually</h3><p class="note">A weekly picture of when ${esc(shortName(v))} is busiest appears here once a couple of weeks of sessions have run. ${plural(total, 'session')} recorded so far.</p>`;
+    pane.innerHTML = `<h3>Usually</h3><p class="note">A weekly picture of when ${esc(shortName(v))} is busiest. Filling in now; check back in about two weeks.</p>`;
     return;
   }
   const hours = [...new Set(cells.map((c) => c.hour))].sort((a, b) => a - b);
@@ -286,11 +308,18 @@ async function loadPattern(v) {
 }
 
 board.addEventListener('click', (e) => {
+  const link = e.target.closest('a.slot, a.btn');
+  if (link) {
+    const id = link.closest('.vrow, .detail')?.dataset.id;
+    track('book_click', id, link.classList.contains('slot') ? 'session' : 'venue');
+    return;
+  }
   const btn = e.target.closest('.vlabel');
-  if (btn) toggleVenue(btn.closest('.vrow').dataset.id);
+  if (btn) toggleVenue(btn.closest('.vrow').dataset.id, { via: 'row' });
 });
-function toggleVenue(id, { scroll = false } = {}) {
+function toggleVenue(id, { scroll = false, via } = {}) {
   state.open = state.open === id ? null : id;
+  if (state.open) track('venue_open', id, via);
   const keep = boardScroll.scrollLeft;
   renderBoard();
   boardScroll.scrollLeft = keep;
@@ -322,12 +351,14 @@ function initMap() {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
   map.attributionControl.setPrefix(false);
+  new ResizeObserver(() => map.invalidateSize()).observe(document.getElementById('map'));
   // Scroll-zoom only once the map has been clicked, so the page scrolls past it.
   map.on('focus', () => map.scrollWheelZoom.enable());
   map.on('blur', () => map.scrollWheelZoom.disable());
 }
 
 function drawMarkers() {
+  setHot(null);
   for (const m of markers.values()) m.remove();
   markers.clear();
   const pts = [];
@@ -350,7 +381,7 @@ function drawMarkers() {
     m.bindTooltip(`<b>${esc(shortName(v))}</b> ${esc(v.site)}<br>${line}`, { direction: 'top', offset: [0, -18] });
     m.on('mouseover', () => setHot(v.id));
     m.on('mouseout', () => setHot(null));
-    m.on('click', () => { if (state.open !== v.id) toggleVenue(v.id, { scroll: true }); });
+    m.on('click', () => { if (state.open !== v.id) toggleVenue(v.id, { scroll: true, via: 'pin' }); });
     markers.set(v.id, m);
     pts.push([v.lat, v.lng]);
   }
@@ -406,7 +437,7 @@ function renderDays() {
     b.setAttribute('role', 'tab');
     b.setAttribute('aria-selected', iso === state.date);
     b.innerHTML = `<small>${i === 0 ? 'Today' : i === 1 ? 'Tomorrow' : fmtWeekday(d)}</small><span>${fmtDayMonth(d)}</span>`;
-    b.onclick = () => { state.date = iso; renderDays(); refresh(); };
+    b.onclick = () => { state.date = iso; track('filter', null, `day=+${i}`); renderDays(); refresh(); };
     el.append(b);
   }
 }
@@ -415,6 +446,7 @@ document.getElementById('tod').addEventListener('click', (e) => {
   const b = e.target.closest('button');
   if (!b) return;
   state.tod = b.dataset.v;
+  track('filter', null, `time=${state.tod}`);
   for (const x of e.currentTarget.children) x.setAttribute('aria-pressed', x === b);
   render({ resetScroll: true });
 });
@@ -428,9 +460,13 @@ function setNeed(n) {
   needInc.disabled = state.need === 6;
   render();
 }
-needDec.onclick = () => setNeed(state.need - 1);
-needInc.onclick = () => setNeed(state.need + 1);
-document.getElementById('hidefull').addEventListener('change', (e) => { state.hideFull = e.target.checked; render(); });
+needDec.onclick = () => { setNeed(state.need - 1); track('filter', null, `people=${state.need}`); };
+needInc.onclick = () => { setNeed(state.need + 1); track('filter', null, `people=${state.need}`); };
+document.getElementById('hidefull').addEventListener('change', (e) => {
+  state.hideFull = e.target.checked;
+  track('filter', null, `only_space=${state.hideFull ? 'on' : 'off'}`);
+  render();
+});
 
 function render({ resetScroll = false } = {}) {
   if (!state.loaded) return;
@@ -468,6 +504,7 @@ addEventListener('resize', () => {
 });
 
 async function main() {
+  track('pageview');
   initMap();
   renderDays();
   setNeed(1);

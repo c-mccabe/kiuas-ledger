@@ -5,15 +5,20 @@
 // the counts. We load the public booking-group page for each day in Chromium,
 // record that stream as the page receives it, and parse the documents out.
 //
-// Products can share capacity through a parent product (e.g. "Weekday" and
-// "Weekend/Holiday" sessions use the same saunas). The child's own slot counts
-// are then zero and the real counts live on the parent's slots, so we resolve
-// each child slot to its parent's slot at the same time.
+// Products can share capacity through a parent product. The parent's slots doc
+// is a half-hourly timeline of the site: `available` places and `booked`
+// people present in each half hour, with closed half hours simply absent. A
+// child product (e.g. "Off-peak" / "Peak") sells sessions that hold
+// `parentProduct.slotDelta + 1` consecutive parent half hours (when the parent
+// is a half-hour grid; some parents hold whole sessions instead), so a start time
+// is bookable only if every half hour it covers exists, and its spots left are
+// the minimum over them. The child's own slots doc often isn't sent at all, so
+// start times are derived from the parent timeline.
 
 import { fromLondon, newContext, session } from '../lib.mjs';
 
 const BASE = 'https://minside.periode.no/bookinggroups';
-const MAX_WAIT_MS = 30_000;
+const MAX_WAIT_MS = Number(process.env.PERIODE_MAX_WAIT_MS ?? 30_000);
 const SETTLE_MS = 5_000;
 
 // Records the Firestore WebChannel responses (XHR) the page receives.
@@ -74,7 +79,9 @@ function missingSlotDocs(docs, merchantId, groupId, date) {
   let parentsMissing = false;
   for (const { manifestId } of (group.columns ?? []).flatMap((c) => c.manifests ?? [])) {
     const m = docs.get(`bookingManifests/${manifestId}`);
-    if (!m) { missing.push(manifestId); continue; }
+    // Until the product doc arrives we can't tell whether it has a parent, so
+    // treat it as a missing parent rather than giving up after SETTLE_MS.
+    if (!m) { missing.push(manifestId); parentsMissing = true; continue; }
     if (m.archived) continue;
     if (!docs.has(`dateSlots/${merchantId}/manifests/${manifestId}/slots/${date}`)) missing.push(manifestId);
     const parentId = m.parentProduct?.id;
@@ -121,6 +128,7 @@ async function loadDay(merchantId, groupId, date, docs) {
     if (state.missing.includes('group')) throw new Error(`group ${groupId} not loaded for ${date}`);
     if (state.parentsMissing) console.warn(`periode ${groupId} ${date}: parent slot docs missing after ${MAX_WAIT_MS / 1000}s`);
     for (const [k, v] of local) docs.set(k, v);
+    return !state.parentsMissing;
   } finally {
     await ctx.close();
   }
@@ -143,7 +151,10 @@ const NOT_SAUNA = /massage|treatment|reiki|osteopath|facial|therapy|bodywork|acu
 
 export async function scrape({ merchantId, groupIds }, { dates }) {
   const docs = new Map(); // "collection/id/..." → fields
-  await Promise.all(groupIds.flatMap((g) => dates.map((d) => withSlot(() => loadDay(merchantId, g, d, docs)))));
+  await Promise.all(groupIds.flatMap((g) => dates.map((d) => withSlot(async () => {
+    // The page sometimes stalls before sending the slot docs; one fresh retry fixes most.
+    if (!(await loadDay(merchantId, g, d, docs))) await loadDay(merchantId, g, d, docs);
+  }))));
 
   if (process.env.PERIODE_DUMP) {
     const { writeFileSync } = await import('node:fs');
@@ -153,7 +164,35 @@ export async function scrape({ merchantId, groupIds }, { dates }) {
   const manifest = (id) => docs.get(`bookingManifests/${id}`);
   const slotsDoc = (id, date) => docs.get(`dateSlots/${merchantId}/manifests/${id}/slots/${date}`)?.slots ?? [];
 
+  // Places left for a session of `span` consecutive parent slots from `time`,
+  // or null if any of those half hours is closed.
+  const spanCounts = (parentId, date, time, span) => {
+    const timeline = slotsDoc(parentId, date);
+    let t = time, capacity = Infinity, left = Infinity, hours = 0;
+    for (let i = 0; i < span; i++) {
+      const x = timeline.find((y) => Math.abs(y.time - t) < 1e-6);
+      if (!x) return null;
+      capacity = Math.min(capacity, x.available);
+      left = Math.min(left, x.available - x.booked);
+      hours += x.length ?? 0.5;
+      t += x.length ?? 0.5;
+    }
+    return { capacity, booked: capacity - left, hours };
+  };
+
   const rows = new Map();
+  const add = (key, m, date, time, counts, hours) => {
+    if (rows.has(key)) return;
+    const hh = Math.floor(time), mm = Math.round((time - hh) * 60);
+    rows.set(key, session({
+      id: key,
+      start: fromLondon(date, hh, mm),
+      durationMin: Math.round(hours * 60) || '',
+      name: m.name,
+      capacity: counts.capacity,
+      booked: counts.booked,
+    }));
+  };
   for (const groupId of groupIds) {
     const group = docs.get(`bookingManifestGroups/${groupId}`);
     if (!group) throw new Error(`booking group ${groupId} not loaded`);
@@ -161,36 +200,32 @@ export async function scrape({ merchantId, groupIds }, { dates }) {
     // the public one first so shared slots get its name.
     const manifestIds = (group.columns ?? []).flatMap((c) => c.manifests ?? []).map((m) => m.manifestId)
       .sort((a, b) => /^members/i.test(manifest(a)?.name ?? '') - /^members/i.test(manifest(b)?.name ?? ''));
-    const groupParents = [...new Set(manifestIds.map((id) => manifest(id)?.parentProduct?.id).filter(Boolean))];
     for (const mid of manifestIds) {
       const m = manifest(mid);
       if (!m || m.archived || NOT_SAUNA.test(m.name)) continue;
       const parentId = m.parentProduct?.id;
       for (const date of dates) {
-        for (const s of slotsDoc(mid, date)) {
-          // A child's own counts are always zero; the counts live on a parent's
-          // slot at the same time. That's normally its own parent, but e.g.
-          // Stratford's "Weekday" product has Saturday slots whose counts sit
-          // on the weekend product's parent, so fall back to any parent in the
-          // group that has this time. With none, skip rather than record a
-          // false "empty".
-          let ownerId = mid, src = s;
-          if (parentId) {
-            ownerId = [parentId, ...groupParents].find((id) => slotsDoc(id, date).some((x) => x.time === s.time));
-            if (!ownerId) continue;
-            src = slotsDoc(ownerId, date).find((x) => x.time === s.time);
+        if (!parentId) {
+          // Standalone product: its own slots carry the counts.
+          for (const s of slotsDoc(mid, date)) {
+            add(`${mid}:${date}:${s.time}`, m, date, s.time, { capacity: s.available, booked: s.booked }, s.length ?? m.length);
           }
-          const key = `${ownerId}:${date}:${s.time}`;
-          if (rows.has(key)) continue;
-          const hh = Math.floor(s.time), mm = Math.round((s.time - hh) * 60);
-          rows.set(key, session({
-            id: key,
-            start: fromLondon(date, hh, mm),
-            durationMin: Math.round((src.length ?? m.length ?? 0) * 60) || '',
-            name: m.name,
-            capacity: src.available,
-            booked: src.booked,
-          }));
+          continue;
+        }
+        // slotDelta only means "extra half hours held" when the parent really is
+        // a half-hour grid (Hackney Wick, weekends). Where the parent's slots are
+        // whole 1–1.5h sessions (Stratford weekdays), each slot is one session.
+        const parentSlots = slotsDoc(parentId, date);
+        const grid = parentSlots.length > 0 && parentSlots.every((x) => (x.length ?? 0.5) === 0.5);
+        const span = grid ? (m.parentProduct.slotDelta ?? 0) + 1 : 1;
+        // Start times come from the parent's timeline only. The child's own
+        // slots doc is often missing, and when present it can be stale: missing
+        // times the booking page offers, or listing times it doesn't (Stratford's
+        // weekday product on a Saturday). A start counts only if all the half
+        // hours it needs are open.
+        for (const { time } of parentSlots) {
+          const counts = spanCounts(parentId, date, time, span);
+          if (counts) add(`${parentId}:${date}:${time}`, m, date, time, counts, counts.hours);
         }
       }
     }

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Sauna Finder stats</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 18px 28px 48px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+    .top h1 { margin: 0; font-size: 26px; font-weight: 800; letter-spacing: -0.02em; }
+    .range button { border: 0; background: none; border-radius: 999px; padding: 5px 12px; cursor: pointer; color: var(--stone-2); }
+    .range button[aria-pressed="true"] { background: var(--paper); color: var(--stone); font-weight: 600; box-shadow: 0 1px 2px rgb(0 0 0 / 12%); }
+    .range { background: var(--sunk); border-radius: 999px; padding: 3px; display: inline-flex; }
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 22px 0; }
+    .kpi { background: var(--paper); border-radius: 14px; padding: 14px 16px; }
+    .kpi b { display: block; font-size: 34px; font-weight: 800; letter-spacing: -0.03em; }
+    .kpi span { color: var(--stone-3); font-size: 13px; }
+    .panel { background: var(--paper); border-radius: 14px; padding: 16px 18px; margin-bottom: 12px; }
+    .panel h2 { margin: 0 0 10px; font-size: 15px; font-weight: 700; }
+    .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+    .bars { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; align-items: end; gap: 3px; height: 120px; }
+    .bars i { display: block; background: var(--plunge); border-radius: 3px 3px 0 0; min-height: 2px; }
+    .bars.clicks i { background: var(--h3); }
+    .axisrow { display: flex; justify-content: space-between; color: var(--stone-3); font-size: 11.5px; margin-top: 4px; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    td, th { padding: 6px 0; border-top: 1px solid var(--rule); text-align: left; }
+    th { color: var(--stone-3); font-weight: 500; font-size: 12.5px; border-top: 0; }
+    td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+    .muted { color: var(--stone-3); font-size: 13px; }
+    form[hidden], .range[hidden] { display: none; }
+    form { display: flex; gap: 8px; margin-top: 30px; }
+    form input { flex: 1; max-width: 360px; padding: 9px 12px; border-radius: 999px; border: 1px solid var(--rule); background: var(--paper); }
+    @media (max-width: 640px) { .wrap { padding-inline: 16px; } }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="top">
+      <h1>Sauna Finder usage</h1>
+      <div class="range" id="range" hidden>
+        <button type="button" data-d="7">7 days</button>
+        <button type="button" data-d="30" aria-pressed="true">30 days</button>
+        <button type="button" data-d="90">90 days</button>
+      </div>
+    </div>
+    <form id="login" hidden>
+      <input id="key" type="password" placeholder="Stats key" autocomplete="current-password" required>
+      <button class="btn" type="submit">Show stats</button>
+    </form>
+    <div id="out"></div>
+  </div>
+  <div class="tip" id="tip" hidden></div>
+<script type="module">
+const out = document.getElementById('out');
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const fmt = (n) => (n ?? 0).toLocaleString('en-GB');
+let key = null, days = 30;
+try { key = localStorage.getItem('statsKey'); } catch {}
+
+async function load() {
+  out.innerHTML = '<p class="muted">Loading…</p>';
+  const res = await fetch(`/api/stats?days=${days}`, { headers: { Authorization: `Bearer ${key}` } });
+  if (res.status === 401) {
+    try { localStorage.removeItem('statsKey'); } catch {}
+    key = null;
+    out.innerHTML = '<p class="muted">That key didn\'t work. Check it and try again.</p>';
+    showLogin();
+    return;
+  }
+  render(await res.json());
+}
+
+function bars(daily, field, cls, since) {
+  // One bar per day in the range, including days with no events.
+  const byDay = new Map(daily.map((d) => [d.day, d[field]]));
+  const all = [];
+  for (let t = new Date(`${since}T12:00:00Z`); all.length < days; t = new Date(t.getTime() + 86400e3)) all.push(t.toISOString().slice(0, 10));
+  const max = Math.max(1, ...all.map((d) => byDay.get(d) ?? 0));
+  return `<div class="bars ${cls}">${all.map((d) => {
+    const v = byDay.get(d) ?? 0;
+    return `<i style="height:${(v / max) * 100}%" data-tip="${d}\n${fmt(v)}"></i>`;
+  }).join('')}</div><div class="axisrow"><span>${all[0]}</span><span>max ${fmt(max)}</span><span>${all.at(-1)}</span></div>`;
+}
+
+function table(rows, cols) {
+  if (!rows.length) return '<p class="muted">Nothing yet.</p>';
+  return `<table><tr>${cols.map(([k, label, n]) => `<th class="${n ? 'n' : ''}">${label}</th>`).join('')}</tr>${rows.map((r) =>
+    `<tr>${cols.map(([k, , n]) => `<td class="${n ? 'n' : ''}">${n ? fmt(r[k]) : esc(r[k])}</td>`).join('')}</tr>`).join('')}</table>`;
+}
+
+function render(s) {
+  const t = s.totals ?? {};
+  const ctr = t.visitors ? Math.round((t.clicking_visitors / t.visitors) * 100) : 0;
+  out.innerHTML = `
+    <div class="kpis">
+      <div class="kpi"><b>${fmt(t.visitors)}</b><span>visitors (unique per day)</span></div>
+      <div class="kpi"><b>${fmt(t.pageviews)}</b><span>page views</span></div>
+      <div class="kpi"><b>${fmt(t.book_clicks)}</b><span>clicks to a booking site</span></div>
+      <div class="kpi"><b>${ctr}%</b><span>of visitors clicked through to book</span></div>
+    </div>
+    <div class="panel"><h2>Visitors per day</h2>${bars(s.daily, 'visitors', '', s.since)}</div>
+    <div class="panel"><h2>Booking clicks per day</h2>${bars(s.daily, 'book_clicks', 'clicks', s.since)}</div>
+    <div class="panel"><h2>By sauna</h2>${table(s.venues, [['venue_id', 'Sauna'], ['opens', 'Opened', 1], ['session_clicks', 'Session clicks', 1], ['book_clicks', 'All booking clicks', 1]])}</div>
+    <div class="grid2">
+      <div class="panel"><h2>Where visitors came from</h2>${table(s.referrers, [['name', 'Referrer'], ['visitors', 'Visitors', 1]])}</div>
+      <div class="panel"><h2>Campaigns (utm_source or ?ref=)</h2>${table(s.sources, [['name', 'Source'], ['visitors', 'Visitors', 1]])}</div>
+      <div class="panel"><h2>Devices</h2>${table(s.devices, [['name', 'Device'], ['visitors', 'Visitors', 1]])}</div>
+      <div class="panel"><h2>Countries</h2>${table(s.countries, [['name', 'Country'], ['visitors', 'Visitors', 1]])}</div>
+      <div class="panel"><h2>Filters used</h2>${table(s.filters, [['name', 'Filter'], ['uses', 'Uses', 1]])}</div>
+    </div>
+    <p class="muted">No cookies are set. A visitor is a daily-rotating hash of IP and browser, so the same person counts once per day. Bots are excluded by user agent.</p>`;
+}
+
+function showLogin() {
+  const f = document.getElementById('login');
+  f.hidden = false;
+  f.onsubmit = (e) => {
+    e.preventDefault();
+    key = document.getElementById('key').value.trim();
+    try { localStorage.setItem('statsKey', key); } catch {}
+    f.hidden = true;
+    start();
+  };
+}
+function start() {
+  document.getElementById('range').hidden = false;
+  load();
+}
+document.getElementById('range').addEventListener('click', (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  days = Number(b.dataset.d);
+  for (const x of e.currentTarget.children) x.setAttribute('aria-pressed', x === b);
+  load();
+});
+
+const tip = document.getElementById('tip');
+document.addEventListener('pointerover', (e) => {
+  const t = e.target.closest?.('[data-tip]');
+  if (!t) { tip.hidden = true; return; }
+  tip.innerHTML = t.dataset.tip.split('\n').map((l, i) => (i ? esc(l) : `<b>${esc(l)}</b>`)).join('');
+  tip.hidden = false;
+});
+document.addEventListener('pointermove', (e) => {
+  tip.style.left = `${Math.min(e.clientX + 12, innerWidth - 140)}px`;
+  tip.style.top = `${e.clientY + 16}px`;
+});
+
+if (key) start(); else showLogin();
+</script>
+</body>
+</html>
