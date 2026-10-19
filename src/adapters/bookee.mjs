@@ -46,6 +46,7 @@ export async function scrape({ urlPrefix, regionId }, { dates }) {
           capacity: e.max_allowed,
           booked: e.booked,
           waitlist: e.waitlist,
+          price: e.service_data?.price,
         }));
       }
     }

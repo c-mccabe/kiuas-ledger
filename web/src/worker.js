@@ -66,18 +66,19 @@ async function ingest(request, env) {
     // Stop updating a session once it has started, so it keeps its final numbers.
     stmts.push(env.DB.prepare(`
       INSERT INTO sessions (venue_id, session_id, start_utc, date, weekday, start_local, duration_min, name,
-                            capacity, booked, waitlist, first_seen, last_seen)
+                            capacity, booked, waitlist, price, first_seen, last_seen)
       SELECT r->>'venue_id', r->>'session_id', r->>'start_utc', r->>'date', r->>'weekday', r->>'start_local',
-             r->>'duration_min', r->>'name', r->>'capacity', r->>'booked', r->>'waitlist', ?1, ?1
+             r->>'duration_min', r->>'name', r->>'capacity', r->>'booked', r->>'waitlist', r->>'price', ?1, ?1
       FROM (SELECT value AS r FROM json_each(?2)) WHERE (r->>'minutes_to_start') >= -15
       ON CONFLICT (venue_id, session_id) DO UPDATE SET
         start_utc = excluded.start_utc, date = excluded.date, weekday = excluded.weekday,
         start_local = excluded.start_local, duration_min = excluded.duration_min, name = excluded.name,
         capacity = excluded.capacity, booked = excluded.booked, waitlist = excluded.waitlist,
-        last_seen = excluded.last_seen
+        price = excluded.price, last_seen = excluded.last_seen
       WHERE sessions.capacity IS NOT excluded.capacity OR sessions.booked IS NOT excluded.booked
          OR sessions.waitlist IS NOT excluded.waitlist OR sessions.start_utc IS NOT excluded.start_utc
          OR sessions.name IS NOT excluded.name OR sessions.duration_min IS NOT excluded.duration_min
+         OR sessions.price IS NOT excluded.price
     `).bind(at, chunk));
   }
   // Drop upcoming sessions that this run no longer lists (cancelled, or wrongly
@@ -124,7 +125,7 @@ async function day(url, env) {
   const date = url.searchParams.get('date') ?? londonDate(new Date());
   if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return json({ error: 'date must be YYYY-MM-DD' }, 400);
   const { results } = await env.DB.prepare(`
-    SELECT venue_id, session_id, start_utc, start_local, duration_min, name, capacity, booked, waitlist, last_seen
+    SELECT venue_id, session_id, start_utc, start_local, duration_min, name, capacity, booked, waitlist, price, last_seen
     FROM sessions WHERE date = ?1 AND capacity > 0
     ORDER BY start_utc, venue_id
   `).bind(date).all();

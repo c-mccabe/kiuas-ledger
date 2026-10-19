@@ -37,6 +37,7 @@ export async function scrape({ boardId, serviceId, durationMin }, { dates }) {
       name: svc.name.replace(/^[^\p{L}\p{N}]+/u, '').trim(),
       capacity,
       booked,
+      price: svc.priceInCurrency,
     }));
   }
   return rows;

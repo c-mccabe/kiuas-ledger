@@ -49,6 +49,11 @@
         <output id="need-out" aria-live="polite">1 person</output>
         <button type="button" id="need-inc" aria-label="More people">+</button>
       </div>
+      <div class="seg" id="sort" role="radiogroup" aria-label="Sort saunas">
+        <button type="button" data-v="space" aria-pressed="true">Most space</button>
+        <button type="button" data-v="price" aria-pressed="false">Cheapest</button>
+        <button type="button" data-v="near" aria-pressed="false">Nearest</button>
+      </div>
       <label class="switch"><input type="checkbox" id="hidefull" role="switch"><span class="track-ui" aria-hidden="true"></span>Only show sessions with space</label>
     </div>
   </nav>

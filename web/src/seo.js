@@ -83,12 +83,14 @@ async function loadVenues(env) {
 }
 
 // Upcoming public sessions for the next week, optionally for some venues only.
+const fmtPrice = (p) => `£${Number.isInteger(p) ? p : p.toFixed(2)}`;
+
 async function loadUpcoming(env, ids) {
   const now = new Date();
   const until = londonDate(new Date(now.getTime() + (DAYS_AHEAD - 1) * 86400e3));
   const where = ids ? `AND venue_id IN (SELECT value FROM json_each(?3))` : '';
   const stmt = env.DB.prepare(`
-    SELECT venue_id, start_utc, date, start_local, duration_min, name, capacity, booked
+    SELECT venue_id, start_utc, date, start_local, duration_min, name, capacity, booked, price
     FROM sessions WHERE start_utc >= ?1 AND date <= ?2 AND capacity > 0 ${where}
     ORDER BY start_utc
   `);
@@ -266,6 +268,7 @@ async function venuePage(slug, request, env) {
   const commonLen = lengths.length ? Object.entries(lengths.reduce((m, l) => ((m[l] = (m[l] ?? 0) + 1), m), {})).sort((a, b) => b[1] - a[1])[0][0] : null;
   const mode = (xs) => (xs.length ? Number(Object.entries(xs.reduce((m, x) => ((m[x] = (m[x] ?? 0) + 1), m), {})).sort((a, b) => b[1] - a[1])[0][0]) : null);
   const usualCap = mode(sessions.map((s) => s.capacity));
+  const prices = [...new Set(sessions.map((s) => s.price).filter((x) => x > 0))].sort((a, b) => a - b);
   const starts = sessions.map((s) => s.start_local.slice(-5)).sort();
   const pct = sessions.length ? Math.round((sessions.reduce((a, s) => a + Math.min(s.booked, s.capacity), 0) / sessions.reduce((a, s) => a + s.capacity, 0)) * 100) : null;
 
@@ -306,6 +309,7 @@ async function venuePage(slug, request, env) {
     <ul class="facts">
       <li><b>Address</b> <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${v.venue} ${v.address}`)}" rel="nofollow noopener" target="_blank">${esc(v.address)}</a></li>
       ${commonLen ? `<li><b>Sessions</b> usually ${commonLen} minutes</li>` : ''}
+      ${prices.length ? `<li><b>Price</b> ${prices[0] === prices.at(-1) ? fmtPrice(prices[0]) : `${fmtPrice(prices[0])} to ${fmtPrice(prices.at(-1))}`} per person</li>` : ''}
       ${usualCap ? `<li><b>Usually</b> ${usualCap} places per session</li>` : ''}
       ${starts.length ? `<li><b>Start times</b> ${starts[0]} to ${starts.at(-1)}</li>` : ''}
       ${pct != null ? `<li><b>This week</b> ${pct}% booked so far</li>` : ''}
@@ -574,7 +578,7 @@ async function homePage(request, env) {
         const d = ([a, b]) => (a - la) ** 2 + ((b - lo) * Math.cos(la * Math.PI / 180)) ** 2;
         const best = pins.reduce((x, y) => (d(y) < d(x) ? y : x));
         send({ t: 'filter', d: 'near=' + best[2] });
-        location.href = '/areas/' + best[2];
+        location.href = '/areas/' + best[2] + '?sort=near';
       }, () => { msg.textContent = 'Couldn\\'t get your location. Pick a region instead.'; }, { timeout: 10000, maximumAge: 600000 });
     };
   </script>

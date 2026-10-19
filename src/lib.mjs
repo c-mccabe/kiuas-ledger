@@ -68,6 +68,7 @@ export async function newContext() {
 }
 
 // Builds a row from a session's start Date plus capacity numbers. Adapters return these.
-export function session({ id, start, durationMin, name, capacity, booked, waitlist = '' }) {
-  return { id, start, durationMin, name, capacity, booked, waitlist };
+// price: the standard one-person price in pounds, where the platform exposes it.
+export function session({ id, start, durationMin, name, capacity, booked, waitlist = '', price = null }) {
+  return { id, start, durationMin, name, capacity, booked, waitlist, price: Number.isFinite(price) ? Math.round(price * 100) / 100 : null };
 }

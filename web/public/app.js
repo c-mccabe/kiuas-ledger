@@ -61,6 +61,8 @@ const state = {
   tod: 'any',
   need: 1,
   hideFull: false,
+  sort: 'space',   // space | price | near
+  here: null,      // [lat, lng] once the visitor shares a location for "Nearest"
   venues: [],
   sessions: [],
   open: null,      // venue id with its detail expanded
@@ -102,6 +104,20 @@ const heat = (fill) => Math.min(4, Math.floor(fill * 5));
 function venueSessions(id) {
   return state.sessions.filter((s) => s.venue_id === id && inTod(s));
 }
+// Cheapest standard price among the day's sessions (members' slots are already gone).
+function fromPrice(sessions) {
+  const p = sessions.map((s) => s.price).filter((x) => x > 0);
+  return p.length ? Math.min(...p) : null;
+}
+const fmtPrice = (p) => `£${Number.isInteger(p) ? p : p.toFixed(2)}`;
+function km(v) {
+  if (!state.here || v.lat == null) return null;
+  const [lat, lng] = state.here, r = Math.PI / 180;
+  const a = Math.sin(((v.lat - lat) * r) / 2) ** 2 + Math.cos(lat * r) * Math.cos(v.lat * r) * Math.sin(((v.lng - lng) * r) / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(a));
+}
+const fmtKm = (d) => (d < 10 ? `${d.toFixed(1)} km` : `${Math.round(d)} km`);
+
 function summary(sessions) {
   const now = Date.now();
   const cap = sessions.reduce((n, s) => n + s.capacity, 0);
@@ -196,9 +212,15 @@ function renderBoard() {
   const rows = state.venues.map((v) => {
     const all = venueSessions(v.id);
     const shown = all.filter((s) => !state.hideFull || s.left >= state.need);
-    return { v, all, shown, sum: summary(all) };
+    return { v, all, shown, sum: summary(all), price: fromPrice(all), dist: km(v) };
   });
-  rows.sort((a, b) => b.sum.open - a.sum.open || (a.sum.fill ?? 2) - (b.sum.fill ?? 2) || shortName(a.v).localeCompare(shortName(b.v)));
+  const bySpace = (a, b) => b.sum.open - a.sum.open || (a.sum.fill ?? 2) - (b.sum.fill ?? 2) || shortName(a.v).localeCompare(shortName(b.v));
+  // Saunas with nothing bookable sink to the bottom whatever the sort.
+  const hasSpace = (a, b) => (b.sum.open > 0) - (a.sum.open > 0);
+  const last = (x) => x ?? Infinity;
+  rows.sort(state.sort === 'price' ? (a, b) => hasSpace(a, b) || last(a.price) - last(b.price) || bySpace(a, b)
+    : state.sort === 'near' && state.here ? (a, b) => hasSpace(a, b) || last(a.dist) - last(b.dist) || bySpace(a, b)
+    : bySpace);
 
   let nowH = null;
   if (isToday()) {
@@ -219,13 +241,14 @@ function renderBoard() {
   }
   html += '</div></div>';
 
-  rows.forEach(({ v, all, shown }, i) => {
+  rows.forEach(({ v, all, shown, price, dist }, i) => {
+    const meta = [v.site, dist != null && state.sort === 'near' ? fmtKm(dist) : '', price != null ? `from ${fmtPrice(price)}` : ''].filter(Boolean).join(' · ');
     const lanes = packLanes(shown.slice().sort((a, b) => a.h0 - b.h0));
     const nLanes = Math.max(1, ...lanes.map((l) => l.lane + 1));
     const open = state.open === v.id;
     html += `<div class="vrow${open ? ' open' : ''}" data-id="${v.id}" style="--row:${i}">`;
     html += `<button class="vlabel" type="button" aria-expanded="${open}" aria-controls="d-${v.id}">
-      <span class="n">${esc(shortName(v))}</span><span class="s">${esc(v.site)}</span>
+      <span class="n">${esc(shortName(v))}</span><span class="s">${esc(meta)}</span>
       ${v.last_ok ? '' : '<span class="warn">Not updated at the last check</span>'}</button>`;
     html += `<div class="track" style="height:${nLanes * laneH + 16}px">`;
     if (!shown.length) {
@@ -247,6 +270,7 @@ function renderBoard() {
         `${fmtTime(s.start)} to ${fmtTime(s.end)}`,
         s.left <= 0 ? `Full, ${s.capacity} places` : `${Math.min(s.booked, s.capacity)} of ${s.capacity} booked, ${plural(s.left, 'spot')} left`,
         s.waitlist ? `${s.waitlist} on the waitlist` : '',
+        s.price > 0 ? `${fmtPrice(s.price)} per person` : '',
         s.start.getTime() < now ? 'Already started' : '',
       ].filter(Boolean).join('\n');
       html += `<a class="${cls.join(' ')}" href="${esc(bookingUrl(v.url, 'session'))}" target="_blank" rel="noopener"
@@ -470,6 +494,33 @@ document.getElementById('tod').addEventListener('click', (e) => {
   for (const x of e.currentTarget.children) x.setAttribute('aria-pressed', x === b);
   render({ resetScroll: true });
 });
+function setSort(v) {
+  state.sort = v;
+  for (const x of document.getElementById('sort').children) x.setAttribute('aria-pressed', x.dataset.v === v);
+  render();
+}
+document.getElementById('sort').addEventListener('click', (e) => {
+  const b = e.target.closest('button');
+  if (!b) return;
+  track('filter', null, `sort=${b.dataset.v}`);
+  if (b.dataset.v !== 'near' || state.here) return setSort(b.dataset.v);
+  locate(() => setSort('near'));
+});
+// The location stays in the browser: it's only used to sort the rows.
+function locate(done) {
+  const btn = document.querySelector('#sort [data-v="near"]');
+  if (!navigator.geolocation) { btn.title = "Your browser can't share a location."; return; }
+  btn.textContent = 'Locating…';
+  navigator.geolocation.getCurrentPosition((p) => {
+    btn.textContent = 'Nearest';
+    state.here = [p.coords.latitude, p.coords.longitude];
+    done();
+  }, () => {
+    btn.textContent = 'Nearest';
+    btn.title = 'Allow location access to sort by distance.';
+  }, { maximumAge: 600000, timeout: 10000 });
+}
+
 const needOut = document.getElementById('need-out');
 const needDec = document.getElementById('need-dec');
 const needInc = document.getElementById('need-inc');
@@ -558,6 +609,10 @@ async function main() {
   renderFreshness();
   await refresh();
   // /?sauna=<id> (linked from the per-sauna pages) opens that row.
+  // ?sort=near (from "Near me" on the home page) or ?sort=price.
+  const sort = landing.get('sort');
+  if (sort === 'price') setSort('price');
+  else if (sort === 'near') locate(() => setSort('near'));
   const deep = landing.get('sauna');
   if (deep && state.venues.some((v) => v.id === deep)) toggleVenue(deep, { scroll: true, via: 'link' });
 }

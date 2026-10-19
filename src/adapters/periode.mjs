@@ -191,6 +191,9 @@ export async function scrape({ merchantId, groupIds }, { dates }) {
       name: m.name,
       capacity: counts.capacity,
       booked: counts.booked,
+      // The product's price is in pence, VAT included: the "Session" price the
+      // booking page shows (members' and concession prices are in `discounts`).
+      price: Number.isFinite(m.price) ? m.price / 100 : null,
     }));
   };
   for (const groupId of groupIds) {

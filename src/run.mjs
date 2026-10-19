@@ -4,7 +4,7 @@
 // Env: DAYS_AHEAD (default 7), ONLY (comma-separated substrings of "venue site"
 // to run a subset, e.g. ONLY=pulse,arc).
 
-import { appendFileSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
+import { appendFileSync, existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { closeBrowser, datesAhead, londonDate, londonTime, londonWeekday } from './lib.mjs';
@@ -19,13 +19,25 @@ const OUT_FILE = join(ROOT, 'out', 'run.json');
 
 const COLUMNS = [
   'scraped_at_utc', 'venue', 'site', 'platform', 'session_id', 'date', 'weekday', 'start_local',
-  'duration_min', 'name', 'capacity', 'booked', 'spots_left', 'waitlist', 'minutes_to_start',
+  'duration_min', 'name', 'capacity', 'booked', 'spots_left', 'waitlist', 'minutes_to_start', 'price',
 ];
 
 const csvCell = (v) => {
   const s = String(v ?? '');
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 };
+
+// Columns are only ever added at the end. When a month's file predates one,
+// rewrite its header and pad the existing rows with empty cells.
+function addMissingColumns(file) {
+  const text = readFileSync(file, 'utf8');
+  const nl = text.indexOf('\n');
+  const have = text.slice(0, nl).split(',');
+  if (have.length >= COLUMNS.length) return;
+  const pad = ','.repeat(COLUMNS.length - have.length);
+  const body = text.slice(nl + 1).split('\n').map((l) => (l ? l + pad : l)).join('\n');
+  writeFileSync(file, COLUMNS.join(',') + '\n' + body);
+}
 
 async function main() {
   const now = new Date();
@@ -72,6 +84,7 @@ async function main() {
         spots_left: s.capacity - s.booked,
         waitlist: s.waitlist,
         minutes_to_start: minutes,
+        price: s.price ?? '',
       });
     }
   }
@@ -81,6 +94,7 @@ async function main() {
   mkdirSync(DATA_DIR, { recursive: true });
   const file = join(DATA_DIR, `snapshots-${londonDate(now).slice(0, 7)}.csv`);
   if (!existsSync(file)) appendFileSync(file, COLUMNS.join(',') + '\n');
+  else addMissingColumns(file);
   if (rows.length) appendFileSync(file, rows.map((r) => COLUMNS.map((c) => csvCell(r[c])).join(',')).join('\n') + '\n');
 
   // Per-run summary, overwritten each run, for a quick look at the latest state.
@@ -108,7 +122,7 @@ async function main() {
       venue_id: r.venue_id, session_id: String(r.session_id), start_utc: r.start_utc, date: r.date,
       weekday: r.weekday, start_local: r.start_local, duration_min: r.duration_min === '' ? null : r.duration_min,
       name: r.name, capacity: r.capacity, booked: r.booked, waitlist: r.waitlist === '' ? null : r.waitlist,
-      minutes_to_start: r.minutes_to_start,
+      minutes_to_start: r.minutes_to_start, price: r.price === '' ? null : r.price,
     })),
   }));
 

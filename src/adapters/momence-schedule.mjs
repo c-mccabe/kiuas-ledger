@@ -29,5 +29,6 @@ export async function scrape({ hostId, include, locationIds = [] }, { dates }) {
       capacity: s.capacity,
       // remainingSpots is what the widget shows; ticketsSold can miss comps.
       booked: s.capacity - (s.remainingSpots?.remaining ?? s.capacity - (s.ticketsSold ?? 0)),
+      price: s.fixedTicketPrice,
     }));
 }
