@@ -1,5 +1,5 @@
 {
-  "scraped_at_utc": "2026-10-19T12:48:36.703Z",
+  "scraped_at_utc": "2026-10-19T13:35:58.368Z",
   "days_ahead": 7,
   "venues": [
     {
@@ -7,10 +7,10 @@
       "site": "Bermondsey",
       "platform": "bookee",
       "ok": true,
-      "seconds": 8.1,
-      "sessions": 70,
-      "capacity": 1420,
-      "booked": 101,
+      "seconds": 5.8,
+      "sessions": 69,
+      "capacity": 1400,
+      "booked": 99,
       "fill": 7.1,
       "raw_sessions": 75
     },
@@ -19,11 +19,11 @@
       "site": "Peckham",
       "platform": "bookee",
       "ok": true,
-      "seconds": 8.4,
-      "sessions": 109,
-      "capacity": 2302,
-      "booked": 435,
-      "fill": 18.9,
+      "seconds": 5.8,
+      "sessions": 107,
+      "capacity": 2262,
+      "booked": 442,
+      "fill": 19.5,
       "raw_sessions": 114
     },
     {
@@ -31,11 +31,11 @@
       "site": "Hackney Wick",
       "platform": "periode",
       "ok": true,
-      "seconds": 53.3,
+      "seconds": 23.8,
       "sessions": 237,
       "capacity": 6643,
-      "booked": 1916,
-      "fill": 28.8,
+      "booked": 1944,
+      "fill": 29.3,
       "raw_sessions": 237
     },
     {
@@ -43,11 +43,11 @@
       "site": "Stratford",
       "platform": "periode",
       "ok": true,
-      "seconds": 51.2,
-      "sessions": 80,
-      "capacity": 1826,
-      "booked": 313,
-      "fill": 17.1,
+      "seconds": 45.7,
+      "sessions": 79,
+      "capacity": 1804,
+      "booked": 296,
+      "fill": 16.4,
       "raw_sessions": 85
     },
     {
@@ -55,11 +55,11 @@
       "site": "Walthamstow",
       "platform": "periode",
       "ok": true,
-      "seconds": 70.2,
-      "sessions": 148,
-      "capacity": 4102,
-      "booked": 1013,
-      "fill": 24.7,
+      "seconds": 68,
+      "sessions": 147,
+      "capacity": 4069,
+      "booked": 1021,
+      "fill": 25.1,
       "raw_sessions": 154
     },
     {
@@ -67,11 +67,11 @@
       "site": "Camberwell",
       "platform": "periode",
       "ok": true,
-      "seconds": 118.4,
-      "sessions": 156,
-      "capacity": 3084,
-      "booked": 1363,
-      "fill": 44.2,
+      "seconds": 101.1,
+      "sessions": 154,
+      "capacity": 3043,
+      "booked": 1347,
+      "fill": 44.3,
       "raw_sessions": 165
     },
     {
@@ -79,7 +79,7 @@
       "site": "Peckham",
       "platform": "periode",
       "ok": true,
-      "seconds": 114,
+      "seconds": 109.6,
       "sessions": 17,
       "capacity": 180,
       "booked": 21,
@@ -91,11 +91,11 @@
       "site": "Canary Wharf",
       "platform": "marianatek",
       "ok": true,
-      "seconds": 2.2,
+      "seconds": 4.1,
       "sessions": 69,
       "capacity": 2482,
-      "booked": 260,
-      "fill": 10.5,
+      "booked": 266,
+      "fill": 10.7,
       "raw_sessions": 69
     },
     {
@@ -103,7 +103,7 @@
       "site": "Battersea",
       "platform": "arketa",
       "ok": true,
-      "seconds": 1.5,
+      "seconds": 0.4,
       "sessions": 31,
       "capacity": 736,
       "booked": 19,
@@ -115,23 +115,23 @@
       "site": "Shoreditch",
       "platform": "momence",
       "ok": true,
-      "seconds": 3.6,
-      "sessions": 162,
-      "capacity": 972,
+      "seconds": 2.3,
+      "sessions": 160,
+      "capacity": 960,
       "booked": 53,
       "fill": 5.5,
-      "raw_sessions": 162
+      "raw_sessions": 160
     },
     {
       "venue": "The Cabin Sauna",
       "site": "Clapham Common",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 0.7,
-      "sessions": 84,
-      "capacity": 1008,
-      "booked": 102,
-      "fill": 10.1,
+      "seconds": 0.8,
+      "sessions": 83,
+      "capacity": 996,
+      "booked": 103,
+      "fill": 10.3,
       "raw_sessions": 89
     },
     {
@@ -139,24 +139,24 @@
       "site": "Fulham",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 0.7,
-      "sessions": 61,
-      "capacity": 1098,
-      "booked": 36,
-      "fill": 3.3,
-      "raw_sessions": 66
+      "seconds": 1,
+      "sessions": 60,
+      "capacity": 1080,
+      "booked": 37,
+      "fill": 3.4,
+      "raw_sessions": 65
     },
     {
       "venue": "Pulse Club",
       "site": "Putney",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 0.7,
-      "sessions": 60,
-      "capacity": 930,
-      "booked": 42,
-      "fill": 4.5,
-      "raw_sessions": 65
+      "seconds": 0.9,
+      "sessions": 59,
+      "capacity": 914,
+      "booked": 40,
+      "fill": 4.4,
+      "raw_sessions": 64
     }
   ]
 }
