@@ -1,6 +1,6 @@
 # London sauna tracker
 
-Snapshots how full upcoming sessions are at 27 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
+Snapshots how full upcoming sessions are at 29 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
 
 None of these venues shows a "X of Y booked" number for its regular sessions. A few show "Waitlist" or "sold out", or a count only for events. Every one of them loads the real numbers from a public booking API, though, the same way Druid Street's Bookee widget does.
 
@@ -28,6 +28,7 @@ None of these venues shows a "X of Y booked" number for its regular sessions. A 
 | Sweheat | Royal Docks | Acuity Scheduling | nothing | `slotsAvailable` per start time, `classSize` and price per type |
 | Revitalise Urban Spa | Hackney | bsport | spots left | `effectif`, `validated_booking_count` |
 | Lowlu | Wandsworth, Kentish Town, Ilford | Lowlu's own app | nothing | `booking_spaces`, `booking_count`, `price` |
+| Temz Floating Saunas | Teddington, Hampton Court | Wunderbook | "booked/capacity" on each session | nothing usable (encrypted); we read the page |
 
 We looked at these and left them out for now:
 
@@ -48,6 +49,7 @@ We looked at these and left them out for now:
 - **acuity**: the scheduling page `<name>.as.me` embeds the business's appointment types (`BUSINESS` JSON: name, duration, price, `classSize` for group classes), and `/api/scheduling/v1/availability/times?owner=…&appointmentTypeId=…&startDate=…` returns each start time's `slotsAvailable`. Sold-out times are left out of that response, so a full session just isn't listed. Sweheat's open sessions are a "service" with no size, so the config gives `serviceCapacity` (12, the most places ever seen free), and the 60- and 90-minute types share one room, so only the 90-minute starts are kept. Event types in the listed categories are picked up automatically.
 - **bsport**: the widget reads `api.production.bsport.io/book/v1/offer/?company=<id>&min_date=…&max_date=…`, which is public and returns `effectif` (capacity) and `validated_booking_count` per class. Times come back in Paris time with an offset, which parses to the right instant. Find the company id in the page's `BsportWidget.mount({ companyId })`.
 - **lowlu**: lowlu.com/book reads `prod-api.lowlu.co/schedules/club-id/<id>?start_date=…&date_range=…`, which lists each day's hourly sessions with `booking_spaces`, `booking_count` and `price`. Locked or privately hired hours are skipped. Club ids come from `/clubs/paginated`.
+- **wunderbook**: the schedule API encrypts both request and response, so we don't use it. The public page shows "2/6" (booked/capacity) and the price on every session card; it's a Flutter app drawn on a canvas, but turning on Flutter's accessibility layer (clicking `flt-semantics-placeholder`) puts that text in the DOM. We click each day in the strip ("Next Month" when needed), scroll the lazy list, and split the text on the "HH:MM - HH:MM" times, using the site's `location` text to end the session name. Full sessions show no price.
 - **momence** caveat: Sauna & Plunge has no fixed sessions. You book any 30-minute start time, and up to 6 people can share a slot. We record each start time with the attendees of the reservations overlapping it. So the "sessions" there are rolling slots rather than classes, and a 60-minute booking counts in two of them.
 
 ## Data

@@ -171,4 +171,17 @@ export const VENUES = [
     url: 'https://lowlu.com/book',
     config: { clubId: 8 },
   },
+  {
+    // Coordinates for the Temz sites are from Wunderbook's own tenant records.
+    id: 'temz-teddington', venue: 'Temz Floating Saunas', site: 'Teddington', platform: 'wunderbook',
+    address: 'The Lensbury, Broom Road, Teddington TW11 9NU', lat: 51.42687, lng: -0.33387,
+    url: 'https://www.temzfloatingsaunas.com/book-now-/teddington/',
+    config: { tenant: 'TEMZ_Floating_Saunas', location: 'Teddington, UK' },
+  },
+  {
+    id: 'temz-hampton-court', venue: 'Temz Floating Saunas', site: 'Hampton Court', platform: 'wunderbook',
+    address: 'The Mitre Hotel, Hampton Court Road, East Molesey KT8 9BN', lat: 51.40648, lng: -0.33609,
+    url: 'https://www.temzfloatingsaunas.com/book-now-/hampton-court/',
+    config: { tenant: 'TEMZ_Floating_Saunas_HC', location: 'Hampton Ct Rd, East Molesey, UK' },
+  },
 ];
