@@ -212,7 +212,7 @@ function renderBoard() {
   const rows = state.venues.map((v) => {
     const all = venueSessions(v.id);
     const shown = all.filter((s) => !state.hideFull || s.left >= state.need);
-    return { v, all, shown, sum: summary(all), price: fromPrice(all), dist: km(v) };
+    return { v, all, shown, sum: summary(all), price: fromPrice(all.filter((s) => bookable(s, now))) ?? fromPrice(all), dist: km(v) };
   });
   const bySpace = (a, b) => b.sum.open - a.sum.open || (a.sum.fill ?? 2) - (b.sum.fill ?? 2) || shortName(a.v).localeCompare(shortName(b.v));
   // Saunas with nothing bookable sink to the bottom whatever the sort.

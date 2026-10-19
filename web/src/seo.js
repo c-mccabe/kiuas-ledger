@@ -269,6 +269,7 @@ async function venuePage(slug, request, env) {
   const mode = (xs) => (xs.length ? Number(Object.entries(xs.reduce((m, x) => ((m[x] = (m[x] ?? 0) + 1), m), {})).sort((a, b) => b[1] - a[1])[0][0]) : null);
   const usualCap = mode(sessions.map((s) => s.capacity));
   const prices = [...new Set(sessions.map((s) => s.price).filter((x) => x > 0))].sort((a, b) => a - b);
+  const usualPrice = mode(sessions.map((s) => s.price).filter((x) => x > 0));
   const starts = sessions.map((s) => s.start_local.slice(-5)).sort();
   const pct = sessions.length ? Math.round((sessions.reduce((a, s) => a + Math.min(s.booked, s.capacity), 0) / sessions.reduce((a, s) => a + s.capacity, 0)) * 100) : null;
 
@@ -309,7 +310,7 @@ async function venuePage(slug, request, env) {
     <ul class="facts">
       <li><b>Address</b> <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${v.venue} ${v.address}`)}" rel="nofollow noopener" target="_blank">${esc(v.address)}</a></li>
       ${commonLen ? `<li><b>Sessions</b> usually ${commonLen} minutes</li>` : ''}
-      ${prices.length ? `<li><b>Price</b> ${prices[0] === prices.at(-1) ? fmtPrice(prices[0]) : `${fmtPrice(prices[0])} to ${fmtPrice(prices.at(-1))}`} per person</li>` : ''}
+      ${usualPrice ? `<li><b>Price</b> usually ${fmtPrice(usualPrice)} per person${prices.length > 1 ? ` (${fmtPrice(prices[0])} to ${fmtPrice(prices.at(-1))} across all sessions)` : ''}</li>` : ''}
       ${usualCap ? `<li><b>Usually</b> ${usualCap} places per session</li>` : ''}
       ${starts.length ? `<li><b>Start times</b> ${starts[0]} to ${starts.at(-1)}</li>` : ''}
       ${pct != null ? `<li><b>This week</b> ${pct}% booked so far</li>` : ''}

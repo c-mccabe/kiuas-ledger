@@ -30,7 +30,7 @@ We looked at these and left them out for now:
 
 ## How each adapter works
 
-`src/adapters/<platform>.mjs` exports `scrape(config, { now, days, dates })` and returns sessions as `{ id, start, durationMin, name, capacity, booked, waitlist }`.
+`src/adapters/<platform>.mjs` exports `scrape(config, { now, days, dates })` and returns sessions as `{ id, start, durationMin, name, capacity, booked, waitlist, price }`. `price` is the standard one-person price in pounds where the platform exposes it: Bookee `service_data.price`, Periode the product's `price` (pence, VAT included, i.e. the "Session" price the booking page shows), Momence `priceInCurrency` and `fixedTicketPrice`. Mariana Tek, Arketa and LegitFit don't expose one, so those are blank.
 
 - **bookee**: the API sits behind an AWS WAF bot challenge. We load the widget in headless Chromium, wait for the WAF token in `localStorage`, then POST to `/api/embed/events` from inside the page for each date. This is the same approach as druid-sauna-tracker.
 - **periode**: the booking pages are a Firebase app. We load `minside.periode.no/bookinggroups/<merchant>/<group>/<date>` for each day, record the Firestore listen stream the page receives, and parse the `bookingManifests` and `dateSlots/.../slots/<date>` documents from it. Weekday and weekend products share saunas through a `parentProduct`, and the parent's slots are the source of truth; the products' own slot docs are often missing or stale. Where the parent's slots are whole sessions (1 to 1.5 hours), each one is a session start. Where they are a half-hour grid (`length` 0.5, e.g. Hackney Wick and weekends), a product holds `slotDelta + 1` consecutive half-hours, so a start is only valid if all of them exist, and spots left is the minimum free across them. Products with no parent use their own slots. If a page didn't deliver the parent docs, the day is retried once. Each page load uses its own browser context, because the Firebase SDK shares one connection between tabs and a second tab would get its data via IndexedDB instead of the stream we record. This is the slowest adapter, at one page load per site per day, with at most 4 at a time. `PERIODE_MAX_WAIT_MS` changes how long each page is given, and `PERIODE_DUMP=file.json` writes every Firestore document the pages delivered, for debugging.
@@ -52,6 +52,9 @@ We looked at these and left them out for now:
 | `capacity`, `booked`, `spots_left` | `spots_left = capacity - booked`. It can be negative when a venue overbooks or later cuts capacity (seen at Community Sauna). |
 | `waitlist` | waitlist size where the platform reports one |
 | `minutes_to_start` | negative means the session had already started |
+| `price` | standard one-person price in £, blank where unknown (added 2026-10-19; older rows are blank) |
+
+New columns are only ever added at the end. When a month's file predates one, the next run rewrites its header and pads the older rows.
 
 `data/latest-run.json` is overwritten on each run with a per-venue summary: OK or failed, session count, % booked and timing.
 
@@ -83,7 +86,7 @@ Notes:
 
 `web/` is a Cloudflare Pages site with a D1 (SQLite) database, live at https://sauna-finder.pages.dev.
 
-- **What it shows.** Per region (or for all of London): a headline saying how many saunas have space for the chosen day, time and group size. Below that, a day timetable: one row per sauna, with each session placed on a shared hour axis. Each block fills from the bottom with an ember colour as it books up and shows spots left. There's also a map with one pin per sauna, giving the number of sessions with space. Clicking a sauna opens its address, a booking button, and a weekday × hour "usually" heatmap, which fills in once history builds up. Members-only slots are hidden.
+- **What it shows.** Per region (or for all of London): a headline saying how many saunas have space for the chosen day, time and group size. Below that, a day timetable: one row per sauna, with each session placed on a shared hour axis. Each block fills from the bottom with an ember colour as it books up and shows spots left. There's also a map with one pin per sauna, giving the number of sessions with space. Clicking a sauna opens its address, a booking button, and a weekday × hour "usually" heatmap, which fills in once history builds up. Members-only slots are hidden. Rows can be sorted by most space, cheapest ("from £X" among sessions still bookable) or nearest (browser geolocation, kept in the browser; "Near me" on the home page lands on `/areas/<region>?sort=near`).
 - **Booking links** carry `utm_source=saunafinder&utm_medium=referral&utm_campaign=sauna_finder`. `utm_content` is `session` for a session block or `venue` for the "Book at" button, so each venue can see the traffic we send.
 - **Data flow.** After each scrape, `src/push.mjs` POSTs `out/run.json` to `/api/ingest` using the `PUSH_URL` and `PUSH_TOKEN` repo secrets. The token must match the Pages secret `INGEST_TOKEN`. The CSVs in git stay the archive of record.
 - **Code.** `functions/api/[[path]].js` hands every `/api/*` request to `src/worker.js`. `sessions` holds the latest numbers for each session and stops updating 15 minutes after the session starts. `snapshots` holds every observation (`/api/curve`).
