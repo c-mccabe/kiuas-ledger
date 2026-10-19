@@ -20,6 +20,10 @@ on:
         description: 'Days ahead to scrape'
         required: false
         default: '7'
+      archive:
+        description: 'Commit data to git (the cron Worker sends false except in the archive slot)'
+        required: false
+        default: 'true'
 
 permissions:
   contents: write
@@ -64,7 +68,7 @@ jobs:
         run: node src/push.mjs
 
       - name: Commit data
-        if: always() && (github.event_name != 'schedule' || github.event.schedule == '45 5-21/2 * * *')
+        if: always() && (github.event_name == 'schedule' && github.event.schedule == '45 5-21/2 * * *' || github.event_name != 'schedule' && inputs.archive != 'false')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

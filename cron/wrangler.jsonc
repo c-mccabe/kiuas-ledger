@@ -1,0 +1,11 @@
+{
+  // Cron fallback: GitHub's own schedule never fired for this repo, so this
+  // Worker asks GitHub to run the scrape workflow every 15 minutes. It has no
+  // public URL (workers_dev false). Needs the GH_TOKEN secret: a fine-grained
+  // token with Actions read and write on c-mccabe/kiuas-ledger only.
+  "name": "sauna-finder-cron",
+  "main": "index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "triggers": { "crons": ["*/15 5-22 * * *"] }
+}
