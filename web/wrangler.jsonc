@@ -5,6 +5,9 @@
   "name": "sauna-finder",
   "pages_build_output_dir": "./public",
   "compatibility_date": "2026-10-01",
+  // Canonical origin for SEO pages, sitemap and social tags. Change this when
+  // a custom domain is attached; every other host then gets noindex.
+  "vars": { "SITE_URL": "https://sauna-finder.pages.dev" },
   "d1_databases": [
     {
       "binding": "DB",

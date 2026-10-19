@@ -1,11 +1,15 @@
 name: Scrape sessions
 
 on:
-  # :45 past every second hour, 05:45–21:45 UTC: covers every session start in
-  # both BST and GMT. Every 2h keeps D1 writes well under the free 100k/day.
-  # Public repo, so Actions minutes are free.
+  # Every 15 minutes, 05:00–22:45 UTC: covers every session start in both BST
+  # and GMT. Ingest only writes rows that changed, which keeps D1 under its
+  # free 100k writes a day. Public repo, so Actions minutes are free.
+  # Data is committed to git only on the :45 run of every second hour (the
+  # ARCHIVE schedule), to keep the repo from growing ~70 commits a day.
   schedule:
-    - cron: '45 5-21/2 * * *'
+    - cron: '0,15,30 5-22 * * *'
+    - cron: '45 6-22/2 * * *'
+    - cron: '45 5-21/2 * * *'   # ARCHIVE
   workflow_dispatch:
     inputs:
       only:
@@ -27,7 +31,7 @@ concurrency:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
 
@@ -60,7 +64,7 @@ jobs:
         run: node src/push.mjs
 
       - name: Commit data
-        if: always()
+        if: always() && (github.event_name != 'schedule' || github.event.schedule == '45 5-21/2 * * *')
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"

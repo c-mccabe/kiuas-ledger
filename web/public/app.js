@@ -517,5 +517,8 @@ async function main() {
   }
   renderFreshness();
   await refresh();
+  // /?sauna=<id> (linked from the per-sauna pages) opens that row.
+  const deep = landing.get('sauna');
+  if (deep && state.venues.some((v) => v.id === deep)) toggleVenue(deep, { scroll: true, via: 'link' });
 }
 main();

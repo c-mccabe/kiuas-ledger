@@ -289,3 +289,8 @@ a { color: inherit; }
   .detail { grid-template-columns: 1fr; padding-inline: 12px; }
   .key { padding-inline: 12px; }
 }
+
+/* Crawlable links to the per-sauna and area pages (added server-side on /). */
+.sitelinks { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid var(--rule); }
+.sitelinks a, .foot nav a { color: var(--stone-2); text-underline-offset: 3px; }
+.sitelinks b, .foot nav b { color: var(--stone-2); font-weight: 600; }

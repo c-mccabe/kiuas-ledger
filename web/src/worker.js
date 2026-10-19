@@ -47,10 +47,18 @@ async function ingest(request, env) {
   ];
   for (let i = 0; i < run.rows.length; i += CHUNK) {
     const chunk = JSON.stringify(run.rows.slice(i, i + CHUNK));
+    // Runs every 15 minutes and most sessions don't change between runs, so
+    // only write what changed (D1's free tier allows 100k row writes a day).
+    // A snapshot is kept when the numbers differ from the session's current
+    // row; this must run before the sessions upsert below.
     stmts.push(env.DB.prepare(`
       INSERT INTO snapshots (venue_id, session_id, scraped_at, capacity, booked, waitlist, minutes_to_start)
       SELECT r->>'venue_id', r->>'session_id', ?1, r->>'capacity', r->>'booked', r->>'waitlist', r->>'minutes_to_start'
-      FROM (SELECT value AS r FROM json_each(?2)) WHERE true
+      FROM (SELECT value AS r FROM json_each(?2))
+      WHERE (r->>'minutes_to_start') >= -15 AND NOT EXISTS (
+        SELECT 1 FROM sessions s
+        WHERE s.venue_id = r->>'venue_id' AND s.session_id = r->>'session_id'
+          AND s.capacity = r->>'capacity' AND s.booked = r->>'booked' AND s.waitlist IS (r->>'waitlist'))
       ON CONFLICT DO NOTHING
     `).bind(at, chunk));
     // Stop updating a session once it has started, so it keeps its final numbers.
@@ -65,18 +73,24 @@ async function ingest(request, env) {
         start_local = excluded.start_local, duration_min = excluded.duration_min, name = excluded.name,
         capacity = excluded.capacity, booked = excluded.booked, waitlist = excluded.waitlist,
         last_seen = excluded.last_seen
+      WHERE sessions.capacity IS NOT excluded.capacity OR sessions.booked IS NOT excluded.booked
+         OR sessions.waitlist IS NOT excluded.waitlist OR sessions.start_utc IS NOT excluded.start_utc
+         OR sessions.name IS NOT excluded.name OR sessions.duration_min IS NOT excluded.duration_min
     `).bind(at, chunk));
   }
   // Drop upcoming sessions that this run no longer lists (cancelled, or wrongly
   // recorded before), but only on venue-days the run actually returned rows for,
   // so one failed page load doesn't wipe a day.
+  // (last_seen only moves when a row changes, so match on session ids.)
   const venueDays = [...new Set(run.rows.map((r) => `${r.venue_id}|${r.date}`))];
+  const seen = run.rows.map((r) => `${r.venue_id}|${r.session_id}`);
   const cutoff = new Date(new Date(at).getTime() + 15 * 60000).toISOString();
   stmts.push(env.DB.prepare(`
     DELETE FROM sessions
-    WHERE last_seen < ?1 AND start_utc > ?2
-      AND (venue_id || '|' || date) IN (SELECT value FROM json_each(?3))
-  `).bind(at, cutoff, JSON.stringify(venueDays)));
+    WHERE start_utc > ?1
+      AND (venue_id || '|' || date) IN (SELECT value FROM json_each(?2))
+      AND (venue_id || '|' || session_id) NOT IN (SELECT value FROM json_each(?3))
+  `).bind(cutoff, JSON.stringify(venueDays), JSON.stringify(seen)));
   const results = await env.DB.batch(stmts);
   const written = results.reduce((n, r) => n + (r.meta?.rows_written ?? 0), 0);
   return json({ ok: true, venues: run.venues.length, rows: run.rows.length, rows_written: written });
