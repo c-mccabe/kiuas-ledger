@@ -1,0 +1,67 @@
+name: Scrape sessions
+
+on:
+  # Manual only for now. To run on a schedule, uncomment this. 05:45–21:45 UTC
+  # covers every session start in both BST and GMT. See README "Deployment"
+  # for the Actions-minutes maths before turning it on for a private repo.
+  # schedule:
+  #   - cron: '45 5-21 * * *'
+  workflow_dispatch:
+    inputs:
+      only:
+        description: 'Only these venues (comma-separated substrings, e.g. "pulse,arc"). Blank = all.'
+        required: false
+        default: ''
+      days_ahead:
+        description: 'Days ahead to scrape'
+        required: false
+        default: '7'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scrape
+  cancel-in-progress: false
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+
+      - run: npx playwright install --with-deps chromium
+
+      - name: Scrape
+        env:
+          ONLY: ${{ inputs.only }}
+          DAYS_AHEAD: ${{ inputs.days_ahead || '7' }}
+        run: npm run scrape
+
+      - name: Commit data
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "data: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
