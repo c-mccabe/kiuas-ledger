@@ -64,11 +64,11 @@ One failing venue doesn't stop the others. The run exits non-zero only if more t
 
 ## Deployment
 
-`.github/workflows/scrape.yml` runs the scraper on GitHub Actions and commits new rows to `data/`. For now it's **manual only**: use **Actions → Scrape sessions → Run workflow**, optionally with `only` and `days_ahead`. The cron line is in the file, commented out.
+`.github/workflows/scrape.yml` runs the scraper on GitHub Actions and commits new rows to `data/`. It runs at :45 past every hour from 05:45 to 21:45 UTC. You can also start it from **Actions → Scrape sessions → Run workflow**, optionally with `only` and `days_ahead`.
 
-Before enabling the schedule:
+Notes:
 
-- **Minutes.** A full run takes about 90 seconds locally, mostly the Periode page loads. On Actions, add the Chromium install, for roughly 3 billed minutes per run. Hourly from 05:45 to 21:45 UTC is 17 runs a day, so ~1,500 minutes a month, which is most of the 2,000 free minutes for a private repo. Options: make the repo public (Actions are free and the data is public anyway), run every 2 hours, or split the job. The HTTP-only platforms need no browser and take a few seconds, so they could run hourly while the Chromium ones run less often.
+- **Minutes.** The repo is public, so Actions minutes are free. A run takes about 2.5 minutes on Actions, including the Chromium install.
 - **Late runs.** GitHub's cron is best-effort, often 5–30 minutes late and sometimes skipped. `minutes_to_start` records the actual lead time.
 - **Repo size.** About 1,000 rows (~130 KB) per run. Hourly, that's ~65 MB a month of CSV in git, so the monthly files will need compressing, or moving to a release asset or object storage, within a few months.
 - **Fragility.** Bookee and Periode depend on page behaviour (the WAF token, the Firestore stream format), so they're the most likely to break. `latest-run.json` and the job log show which venue failed.

@@ -1,11 +1,10 @@
 name: Scrape sessions
 
 on:
-  # Manual only for now. To run on a schedule, uncomment this. 05:45–21:45 UTC
-  # covers every session start in both BST and GMT. See README "Deployment"
-  # for the Actions-minutes maths before turning it on for a private repo.
-  # schedule:
-  #   - cron: '45 5-21 * * *'
+  # :45 past each hour, 05:45–21:45 UTC: covers every session start in both
+  # BST and GMT. Public repo, so Actions minutes are free.
+  schedule:
+    - cron: '45 5-21 * * *'
   workflow_dispatch:
     inputs:
       only:
