@@ -1,6 +1,6 @@
 # London sauna tracker
 
-Snapshots how full upcoming sessions are at 21 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
+Snapshots how full upcoming sessions are at 27 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
 
 None of these venues shows a "X of Y booked" number for its regular sessions. A few show "Waitlist" or "sold out", or a count only for events. Every one of them loads the real numbers from a public booking API, though, the same way Druid Street's Bookee widget does.
 
@@ -24,6 +24,10 @@ None of these venues shows a "X of Y booked" number for its regular sessions. A 
 | Arvo | Walthamstow | bookasession.org | spaces left | `effectiveCapacity`, `spotsRemaining` |
 | Old Kent Road Sauna | Peckham | bookasession.org | spaces left | `effectiveCapacity`, `spotsRemaining` |
 | Yogahome | Stoke Newington | Mindbody | spots left | `capacity`, `openings`, drop-in prices |
+| The Sanctuary &Soul | Shoreditch | Momence (class schedule) | spots left | `capacity`, `remainingSpots`, `fixedTicketPrice` |
+| Sweheat | Royal Docks | Acuity Scheduling | nothing | `slotsAvailable` per start time, `classSize` and price per type |
+| Revitalise Urban Spa | Hackney | bsport | spots left | `effectif`, `validated_booking_count` |
+| Lowlu | Wandsworth, Kentish Town, Ilford | Lowlu's own app | nothing | `booking_spaces`, `booking_count`, `price` |
 
 We looked at these and left them out for now:
 
@@ -33,7 +37,7 @@ We looked at these and left them out for now:
 
 ## How each adapter works
 
-`src/adapters/<platform>.mjs` exports `scrape(config, { now, days, dates })` and returns sessions as `{ id, start, durationMin, name, capacity, booked, waitlist, price }`. `price` is the standard one-person price in pounds where the platform exposes it: Bookee `service_data.price`, Periode the product's `price` (pence, VAT included, i.e. the "Session" price the booking page shows), Momence `priceInCurrency` and `fixedTicketPrice`. Mariana Tek, Arketa and LegitFit don't expose one, so those are blank.
+`src/adapters/<platform>.mjs` exports `scrape(config, { now, days, dates })` and returns sessions as `{ id, start, durationMin, name, capacity, booked, waitlist, price }`. `price` is the standard one-person price in pounds where the platform exposes it: Bookee `service_data.price`, Periode the product's `price` (pence, VAT included, i.e. the "Session" price the booking page shows), Momence `priceInCurrency` and `fixedTicketPrice`, Mindbody and Acuity the type's price, Lowlu the session's `price`. Mariana Tek, Arketa, LegitFit and bsport don't expose one, so those are blank.
 
 - **bookee**: the API sits behind an AWS WAF bot challenge. We load the widget in headless Chromium, wait for the WAF token in `localStorage`, then POST to `/api/embed/events` from inside the page for each date. This is the same approach as druid-sauna-tracker.
 - **periode**: the booking pages are a Firebase app. We load `minside.periode.no/bookinggroups/<merchant>/<group>/<date>` for each day, record the Firestore listen stream the page receives, and parse the `bookingManifests` and `dateSlots/.../slots/<date>` documents from it. Weekday and weekend products share saunas through a `parentProduct`, and the parent's slots are the source of truth; the products' own slot docs are often missing or stale. Where the parent's slots are whole sessions (1 to 1.5 hours), each one is a session start. Where they are a half-hour grid (`length` 0.5, e.g. Hackney Wick and weekends), a product holds `slotDelta + 1` consecutive half-hours, so a start is only valid if all of them exist, and spots left is the minimum free across them. Products with no parent use their own slots. If a page didn't deliver the parent docs, the day is retried once. Each page load uses its own browser context, because the Firebase SDK shares one connection between tabs and a second tab would get its data via IndexedDB instead of the stream we record. This is the slowest adapter, at one page load per site per day, with at most 4 at a time. `PERIODE_MAX_WAIT_MS` changes how long each page is given, and `PERIODE_DUMP=file.json` writes every Firestore document the pages delivered, for debugging.
@@ -41,6 +45,9 @@ We looked at these and left them out for now:
 - **momence-schedule**: studios that embed Momence's class schedule read `readonly-api.momence.com/host-plugins/host/<hostId>/host-schedule/sessions`, which is public and returns capacity, remaining spots and price for every session. Find `hostId` by loading the booking page and watching for that request. Studios that also run yoga and so on get an `include` regex so only sauna sessions are kept.
 - **bookasession**: a Next.js app with no separate JSON API. The public page `bookasession.org/<slug>` server-renders the whole booking window (about 20 days) into its React Server Components payload, and each session instance there has `effectiveCapacity` and `spotsRemaining`. We fetch the page and pull the instance objects out with regexes; names come from the instance or its template, and locations from the instance, its schedule or its one-off date. Arvo also runs a studio, so its config keeps only the sauna's `locationIds`.
 - **mindbody**: the marketplace search API behind mindbody.io (`POST prod-mkt-gateway.mindbody.io/v1/search/class_times`, filtered by location `slug`) is public and returns `capacity` and `openings` for each class, plus purchase options; the price is the cheapest non-intro drop-in. Find a slug with `POST /v1/search/locations`. Only venues that sell sauna sessions as classes show up: FS8 and HOME don't, and Wellnest only lists a few guided rituals.
+- **acuity**: the scheduling page `<name>.as.me` embeds the business's appointment types (`BUSINESS` JSON: name, duration, price, `classSize` for group classes), and `/api/scheduling/v1/availability/times?owner=…&appointmentTypeId=…&startDate=…` returns each start time's `slotsAvailable`. Sold-out times are left out of that response, so a full session just isn't listed. Sweheat's open sessions are a "service" with no size, so the config gives `serviceCapacity` (12, the most places ever seen free), and the 60- and 90-minute types share one room, so only the 90-minute starts are kept. Event types in the listed categories are picked up automatically.
+- **bsport**: the widget reads `api.production.bsport.io/book/v1/offer/?company=<id>&min_date=…&max_date=…`, which is public and returns `effectif` (capacity) and `validated_booking_count` per class. Times come back in Paris time with an offset, which parses to the right instant. Find the company id in the page's `BsportWidget.mount({ companyId })`.
+- **lowlu**: lowlu.com/book reads `prod-api.lowlu.co/schedules/club-id/<id>?start_date=…&date_range=…`, which lists each day's hourly sessions with `booking_spaces`, `booking_count` and `price`. Locked or privately hired hours are skipped. Club ids come from `/clubs/paginated`.
 - **momence** caveat: Sauna & Plunge has no fixed sessions. You book any 30-minute start time, and up to 6 people can share a slot. We record each start time with the attendees of the reservations overlapping it. So the "sessions" there are rolling slots rather than classes, and a 60-minute booking counts in two of them.
 
 ## Data

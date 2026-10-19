@@ -132,4 +132,43 @@ export const VENUES = [
     url: 'https://www.yogahome.com/sauna',
     config: { slug: 'yogahome', include: '^SAUNA' },
   },
+  {
+    id: 'and-soul-shoreditch', venue: 'The Sanctuary &Soul', site: 'Shoreditch', platform: 'momence-schedule',
+    address: '114-116 Cheshire Street, London E2 6EJ', lat: 51.52372, lng: -0.06648,
+    url: 'https://andsoulsanctuary.com/book-now',
+    config: { hostId: 47026, include: '^(open|guided)\\b', strip: '^open\\s*[:|]\\s*' }, // also runs pilates and yoga
+  },
+  {
+    id: 'sweheat-royal-docks', venue: 'Sweheat', site: 'Royal Docks', platform: 'acuity',
+    address: '1 Dock Road, London E16 1AH', lat: 51.50598, lng: 0.0158,
+    url: 'https://www.sweheatsauna.co.uk/book',
+    // The 60- and 90-minute open sessions share one 12-person room; tracking the
+    // 90-minute starts avoids listing every half hour twice.
+    config: { host: 'sweheat.as.me', categories: ['Regular Sauna Sessions', 'Sauna Events'], exclude: '60 Minutes', serviceCapacity: 12 },
+  },
+  {
+    id: 'revitalise-hackney', venue: 'Revitalise Urban Spa', site: 'Hackney', platform: 'bsport',
+    address: 'Parkhaus, 2 Maple Path, London E5 8FD', lat: 51.5558, lng: -0.06631,
+    url: 'https://www.revitaliseurbanspa.co.uk/bookings',
+    config: { company: 5670 },
+  },
+  {
+    // Coordinates for the Lowlu sites are from Lowlu's own club records.
+    id: 'lowlu-wandsworth', venue: 'Lowlu', site: 'Wandsworth', platform: 'lowlu',
+    address: 'The Padel Yard, 2 Armoury Way, London SW18 1HQ', lat: 51.45935, lng: -0.19122,
+    url: 'https://lowlu.com/book',
+    config: { clubId: 1 },
+  },
+  {
+    id: 'lowlu-kentish-town', venue: 'Lowlu', site: 'Kentish Town', platform: 'lowlu',
+    address: '44 Caversham Road, London NW5 2DS', lat: 51.54879, lng: -0.13742,
+    url: 'https://lowlu.com/book',
+    config: { clubId: 6 },
+  },
+  {
+    id: 'lowlu-ilford', venue: 'Lowlu', site: 'Ilford', platform: 'lowlu',
+    address: 'Rocket Padel, 2 The Drive, Ilford IG1 3PS', lat: 51.57167, lng: 0.05652,
+    url: 'https://lowlu.com/book',
+    config: { clubId: 8 },
+  },
 ];

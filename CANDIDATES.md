@@ -2,19 +2,15 @@
 
 Saunas listed on ClassPass London (https://classpass.com/search/london/sauna, checked 2026-10-19), with the booking platform each one's own site uses. A ClassPass listing suggests a venue sells enough sessions to matter, so these come first.
 
-Added 2026-10-19: Reset Sauna, Waking Dreams, Urban Heat, Innervisions Alchemy (momence-schedule) and Saunos (legitfit).
+Added 2026-10-19: Reset Sauna, Waking Dreams, Urban Heat, Innervisions Alchemy (momence-schedule), Saunos (legitfit), then The Sanctuary &Soul (momence-schedule), Sweheat (acuity), Revitalise Urban Spa (bsport) and Lowlu's three sites (lowlu).
 
 | Venue | Website | Platform | Notes |
 |---|---|---|---|
-| The Sanctuary &Soul (Shoreditch, E2 6EJ) | andsoulsanctuary.com | Momence | Schedule didn't load in headless Chromium; hostId still to find |
 | Wellnest Spa & Sauna (SE1 3JW) | wellnest.london | Mindbody (slug `wellnest`) | Only ~4 guided SPA rituals a week are Mindbody classes; regular sauna booking is elsewhere |
 | HOME Wellness (NW3 3AJ) | homewellness.uk | Mindbody (slug `home-london`) | No sauna classes in the marketplace API; sauna is probably an appointment |
 | FS8 Blackhorse Lane (E17 6ZJ) | fs8.com/blackhorselane | Mindbody (slug `fs8-blackhorse-lane`) | Only pilates classes in the marketplace API |
-| Sweheat (E16 1AH) | sweheatsauna.co.uk | Acuity Scheduling | New adapter |
 | Hot & Cold, Leytonstone (E11 3BD) | hotandcoldonline.co.uk | WellnessLiving | Private pods |
-| Revitalise Urban Spa (E5 8FD) | revitaliseurbanspa.co.uk | bsport | New adapter |
-| Temz floating saunas (Teddington, Hampton Court) | temzfloatingsaunas.com | wunderbook | |
-| Lowlu Sauna (Ilford) | lowlu.com | own /book page | Unknown platform |
+| Temz floating saunas (Teddington, Hampton Court) | temzfloatingsaunas.com | Wunderbook | The schedule API's request and response are encrypted; the app is Flutter (canvas), so the page text isn't readable either. Left out |
 | Skuna (E14 4AL) | skunaboats.com | bookings.skunaboats.com | Private boats; skipped before |
 | Revive Recovery (SW17 0BQ) | revive-recovery.co.uk | Fresha | Treatments-style booking |
 
