@@ -1,5 +1,5 @@
 {
-  "scraped_at_utc": "2026-10-19T12:19:11.886Z",
+  "scraped_at_utc": "2026-10-19T12:48:36.703Z",
   "days_ahead": 7,
   "venues": [
     {
@@ -7,11 +7,11 @@
       "site": "Bermondsey",
       "platform": "bookee",
       "ok": true,
-      "seconds": 7.7,
+      "seconds": 8.1,
       "sessions": 70,
       "capacity": 1420,
-      "booked": 99,
-      "fill": 7,
+      "booked": 101,
+      "fill": 7.1,
       "raw_sessions": 75
     },
     {
@@ -19,11 +19,11 @@
       "site": "Peckham",
       "platform": "bookee",
       "ok": true,
-      "seconds": 10.9,
+      "seconds": 8.4,
       "sessions": 109,
       "capacity": 2302,
-      "booked": 419,
-      "fill": 18.2,
+      "booked": 435,
+      "fill": 18.9,
       "raw_sessions": 114
     },
     {
@@ -31,55 +31,55 @@
       "site": "Hackney Wick",
       "platform": "periode",
       "ok": true,
-      "seconds": 19.9,
-      "sessions": 100,
-      "capacity": 527,
-      "booked": 80,
-      "fill": 15.2,
-      "raw_sessions": 100
+      "seconds": 53.3,
+      "sessions": 237,
+      "capacity": 6643,
+      "booked": 1916,
+      "fill": 28.8,
+      "raw_sessions": 237
     },
     {
       "venue": "Community Sauna Baths",
       "site": "Stratford",
       "platform": "periode",
       "ok": true,
-      "seconds": 39.3,
-      "sessions": 56,
-      "capacity": 1250,
-      "booked": 235,
-      "fill": 18.8,
-      "raw_sessions": 61
+      "seconds": 51.2,
+      "sessions": 80,
+      "capacity": 1826,
+      "booked": 313,
+      "fill": 17.1,
+      "raw_sessions": 85
     },
     {
       "venue": "Community Sauna Baths",
       "site": "Walthamstow",
       "platform": "periode",
       "ok": true,
-      "seconds": 71.3,
-      "sessions": 100,
-      "capacity": 2113,
-      "booked": 493,
-      "fill": 23.3,
-      "raw_sessions": 105
+      "seconds": 70.2,
+      "sessions": 148,
+      "capacity": 4102,
+      "booked": 1013,
+      "fill": 24.7,
+      "raw_sessions": 154
     },
     {
       "venue": "Community Sauna Baths",
       "site": "Camberwell",
       "platform": "periode",
       "ok": true,
-      "seconds": 89.7,
-      "sessions": 99,
-      "capacity": 1365,
-      "booked": 417,
-      "fill": 30.5,
-      "raw_sessions": 99
+      "seconds": 118.4,
+      "sessions": 156,
+      "capacity": 3084,
+      "booked": 1363,
+      "fill": 44.2,
+      "raw_sessions": 165
     },
     {
       "venue": "Community Sauna Baths",
       "site": "Peckham",
       "platform": "periode",
       "ok": true,
-      "seconds": 94.6,
+      "seconds": 114,
       "sessions": 17,
       "capacity": 180,
       "booked": 21,
@@ -91,19 +91,19 @@
       "site": "Canary Wharf",
       "platform": "marianatek",
       "ok": true,
-      "seconds": 2.5,
-      "sessions": 70,
-      "capacity": 2524,
-      "booked": 261,
-      "fill": 10.3,
-      "raw_sessions": 70
+      "seconds": 2.2,
+      "sessions": 69,
+      "capacity": 2482,
+      "booked": 260,
+      "fill": 10.5,
+      "raw_sessions": 69
     },
     {
       "venue": "Hotdrop",
       "site": "Battersea",
       "platform": "arketa",
       "ok": true,
-      "seconds": 0.3,
+      "seconds": 1.5,
       "sessions": 31,
       "capacity": 736,
       "booked": 19,
@@ -115,23 +115,23 @@
       "site": "Shoreditch",
       "platform": "momence",
       "ok": true,
-      "seconds": 2.8,
-      "sessions": 163,
-      "capacity": 978,
+      "seconds": 3.6,
+      "sessions": 162,
+      "capacity": 972,
       "booked": 53,
-      "fill": 5.4,
-      "raw_sessions": 163
+      "fill": 5.5,
+      "raw_sessions": 162
     },
     {
       "venue": "The Cabin Sauna",
       "site": "Clapham Common",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 0.6,
+      "seconds": 0.7,
       "sessions": 84,
       "capacity": 1008,
-      "booked": 98,
-      "fill": 9.7,
+      "booked": 102,
+      "fill": 10.1,
       "raw_sessions": 89
     },
     {
@@ -139,12 +139,12 @@
       "site": "Fulham",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 0.6,
+      "seconds": 0.7,
       "sessions": 61,
       "capacity": 1098,
-      "booked": 33,
-      "fill": 3,
-      "raw_sessions": 65
+      "booked": 36,
+      "fill": 3.3,
+      "raw_sessions": 66
     },
     {
       "venue": "Pulse Club",
@@ -156,7 +156,7 @@
       "capacity": 930,
       "booked": 42,
       "fill": 4.5,
-      "raw_sessions": 64
+      "raw_sessions": 65
     }
   ]
 }
