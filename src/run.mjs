@@ -12,7 +12,10 @@ import { VENUES } from './venues.mjs';
 
 const DAYS_AHEAD = Number(process.env.DAYS_AHEAD ?? 7);
 const ONLY = (process.env.ONLY ?? '').toLowerCase().split(',').filter(Boolean);
-const DATA_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'data');
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const DATA_DIR = join(ROOT, 'data');
+// Full results of this run, for src/push.mjs to send to the web backend. Not committed.
+const OUT_FILE = join(ROOT, 'out', 'run.json');
 
 const COLUMNS = [
   'scraped_at_utc', 'venue', 'site', 'platform', 'session_id', 'date', 'weekday', 'start_local',
@@ -52,6 +55,8 @@ async function main() {
       const minutes = Math.round((s.start - now) / 60000);
       if (minutes < -120 || date > lastDay) continue;
       rows.push({
+        venue_id: v.id,
+        start_utc: s.start.toISOString(),
         scraped_at_utc: now.toISOString(),
         venue: v.venue,
         site: v.site,
@@ -91,6 +96,21 @@ async function main() {
     };
   });
   writeFileSync(join(DATA_DIR, 'latest-run.json'), JSON.stringify({ scraped_at_utc: now.toISOString(), days_ahead: DAYS_AHEAD, venues: summary }, null, 2) + '\n');
+
+  mkdirSync(dirname(OUT_FILE), { recursive: true });
+  writeFileSync(OUT_FILE, JSON.stringify({
+    scraped_at: now.toISOString(),
+    venues: results.map(({ v, error }) => {
+      const { config, ...meta } = v;
+      return { ...meta, ok: !error, error: error ? String(error.message ?? error).slice(0, 300) : null };
+    }),
+    rows: rows.map((r) => ({
+      venue_id: r.venue_id, session_id: String(r.session_id), start_utc: r.start_utc, date: r.date,
+      weekday: r.weekday, start_local: r.start_local, duration_min: r.duration_min === '' ? null : r.duration_min,
+      name: r.name, capacity: r.capacity, booked: r.booked, waitlist: r.waitlist === '' ? null : r.waitlist,
+      minutes_to_start: r.minutes_to_start,
+    })),
+  }));
 
   console.log(`Wrote ${rows.length} rows to ${file}\n`);
   for (const s of summary) {

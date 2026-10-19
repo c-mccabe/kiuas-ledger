@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sauna Finder London</title>
+  <meta name="description" content="How booked-up London's public saunas are, session by session.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>♨️</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">♨</span>
+      <div>
+        <h1>Sauna Finder</h1>
+        <p class="sub">How full London's saunas are, session by session</p>
+      </div>
+    </div>
+    <p class="fresh" id="fresh"></p>
+  </header>
+
+  <section class="filters" aria-label="Filters">
+    <div class="days" id="days" role="tablist" aria-label="Day"></div>
+    <div class="row">
+      <div class="seg" id="tod" role="group" aria-label="Time of day">
+        <button data-v="any" class="on">Any time</button>
+        <button data-v="am">Morning</button>
+        <button data-v="pm">Afternoon</button>
+        <button data-v="eve">Evening</button>
+      </div>
+      <label class="spots">Spots needed
+        <select id="need">
+          <option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="hidefull"> Hide full sessions</label>
+    </div>
+  </section>
+
+  <main class="layout">
+    <div class="mapwrap">
+      <div id="map" aria-label="Map of saunas"></div>
+      <div class="legend" aria-hidden="true">
+        <span>% booked</span>
+        <i style="background:var(--q0)"></i><i style="background:var(--q1)"></i><i style="background:var(--q2)"></i><i style="background:var(--q3)"></i><i style="background:var(--q4)"></i>
+        <span>quiet → busy</span>
+      </div>
+    </div>
+    <div class="list" id="list" aria-live="polite">
+      <p class="loading">Loading…</p>
+    </div>
+  </main>
+
+  <footer class="foot">
+    <p>Numbers come from each venue's public booking system, checked hourly between about 6am and 11pm, so they can be up to an hour old. Always book on the venue's own site. Not affiliated with any venue.</p>
+    <p>Sauna &amp; Plunge sells rolling 30-minute slots rather than fixed sessions, so its counts are people booked into each slot.</p>
+  </footer>
+
+  <template id="venue-tpl">
+    <article class="venue">
+      <header>
+        <div>
+          <h2><span class="vname"></span> <span class="vsite"></span></h2>
+          <p class="vaddr"></p>
+        </div>
+        <div class="vstat"></div>
+      </header>
+      <div class="slots"></div>
+      <div class="vfoot">
+        <a class="book" target="_blank" rel="noopener">Book on their site ↗</a>
+        <button class="pattern-btn" type="button">Usual busyness</button>
+      </div>
+      <div class="pattern" hidden></div>
+    </article>
+  </template>
+
+  <div class="tip" id="tip" role="tooltip" hidden></div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

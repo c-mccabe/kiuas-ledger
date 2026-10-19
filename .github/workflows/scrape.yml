@@ -51,6 +51,13 @@ jobs:
           DAYS_AHEAD: ${{ inputs.days_ahead || '7' }}
         run: npm run scrape
 
+      - name: Push to web backend
+        if: always() && hashFiles('out/run.json') != ''
+        env:
+          PUSH_URL: ${{ secrets.PUSH_URL }}
+          PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+        run: node src/push.mjs
+
       - name: Commit data
         if: always()
         run: |
