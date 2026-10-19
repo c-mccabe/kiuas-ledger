@@ -7,10 +7,9 @@ Added 2026-10-19: Reset Sauna, Waking Dreams, Urban Heat, Innervisions Alchemy (
 | Venue | Website | Platform | Notes |
 |---|---|---|---|
 | The Sanctuary &Soul (Shoreditch, E2 6EJ) | andsoulsanctuary.com | Momence | Schedule didn't load in headless Chromium; hostId still to find |
-| Yogahome (N16 8SD) | yogahome.com/sauna | Mindbody | New adapter (Mindbody widget / healcode) |
-| Wellnest Spa & Sauna | wellnest.london | Mindbody | As above |
-| HOME Wellness (NW3 3AJ) | homewellness.uk | Mindbody | As above |
-| FS8 Blackhorse Lane (E17 6ZJ) | fs8.com/blackhorselane | Mindbody | As above |
+| Wellnest Spa & Sauna (SE1 3JW) | wellnest.london | Mindbody (slug `wellnest`) | Only ~4 guided SPA rituals a week are Mindbody classes; regular sauna booking is elsewhere |
+| HOME Wellness (NW3 3AJ) | homewellness.uk | Mindbody (slug `home-london`) | No sauna classes in the marketplace API; sauna is probably an appointment |
+| FS8 Blackhorse Lane (E17 6ZJ) | fs8.com/blackhorselane | Mindbody (slug `fs8-blackhorse-lane`) | Only pilates classes in the marketplace API |
 | Sweheat (E16 1AH) | sweheatsauna.co.uk | Acuity Scheduling | New adapter |
 | Hot & Cold, Leytonstone (E11 3BD) | hotandcoldonline.co.uk | WellnessLiving | Private pods |
 | Revitalise Urban Spa (E5 8FD) | revitaliseurbanspa.co.uk | bsport | New adapter |
@@ -19,5 +18,5 @@ Added 2026-10-19: Reset Sauna, Waking Dreams, Urban Heat, Innervisions Alchemy (
 | Skuna (E14 4AL) | skunaboats.com | bookings.skunaboats.com | Private boats; skipped before |
 | Revive Recovery (SW17 0BQ) | revive-recovery.co.uk | Fresha | Treatments-style booking |
 
-Arvo and Old Kent Road (bookasession.org) are now tracked. The Mindbody group (4 venues) is the best next adapter by venues unlocked.
+Arvo and Old Kent Road (bookasession.org) are now tracked. Yogahome is tracked via the Mindbody adapter; the other Mindbody venues don't list sauna sessions as classes.
 Postcodes scraped from ClassPass pages can pick up an unrelated "Dulwich Village SE21 7DN" from page chrome; check each address on the venue's own site.

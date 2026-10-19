@@ -126,4 +126,10 @@ export const VENUES = [
     url: 'https://bookasession.org/okr',
     config: { slug: 'okr' },
   },
+  {
+    id: 'yogahome-stoke-newington', venue: 'Yogahome', site: 'Stoke Newington', platform: 'mindbody',
+    address: '14 Allen Road, London N16 8SD', lat: 51.55510, lng: -0.08013,
+    url: 'https://www.yogahome.com/sauna',
+    config: { slug: 'yogahome', include: '^SAUNA' },
+  },
 ];

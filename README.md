@@ -1,6 +1,6 @@
 # London sauna tracker
 
-Snapshots how full upcoming sessions are at 20 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
+Snapshots how full upcoming sessions are at 21 London saunas, so we can learn when each one is busy or quiet. It grew out of [druid-sauna-tracker](https://github.com/c-mccabe/druid-sauna-tracker), which covers Druid Street only.
 
 None of these venues shows a "X of Y booked" number for its regular sessions. A few show "Waitlist" or "sold out", or a count only for events. Every one of them loads the real numbers from a public booking API, though, the same way Druid Street's Bookee widget does.
 
@@ -23,6 +23,7 @@ None of these venues shows a "X of Y booked" number for its regular sessions. A 
 | Innervisions Alchemy | South Bermondsey | Momence (class schedule) | spots left | `capacity`, `remainingSpots`, `fixedTicketPrice` |
 | Arvo | Walthamstow | bookasession.org | spaces left | `effectiveCapacity`, `spotsRemaining` |
 | Old Kent Road Sauna | Peckham | bookasession.org | spaces left | `effectiveCapacity`, `spotsRemaining` |
+| Yogahome | Stoke Newington | Mindbody | spots left | `capacity`, `openings`, drop-in prices |
 
 We looked at these and left them out for now:
 
@@ -39,6 +40,7 @@ We looked at these and left them out for now:
 - **marianatek / arketa / legitfit / momence**: these are plain unauthenticated JSON or GraphQL endpoints that the venues' own widgets call.
 - **momence-schedule**: studios that embed Momence's class schedule read `readonly-api.momence.com/host-plugins/host/<hostId>/host-schedule/sessions`, which is public and returns capacity, remaining spots and price for every session. Find `hostId` by loading the booking page and watching for that request. Studios that also run yoga and so on get an `include` regex so only sauna sessions are kept.
 - **bookasession**: a Next.js app with no separate JSON API. The public page `bookasession.org/<slug>` server-renders the whole booking window (about 20 days) into its React Server Components payload, and each session instance there has `effectiveCapacity` and `spotsRemaining`. We fetch the page and pull the instance objects out with regexes; names come from the instance or its template, and locations from the instance, its schedule or its one-off date. Arvo also runs a studio, so its config keeps only the sauna's `locationIds`.
+- **mindbody**: the marketplace search API behind mindbody.io (`POST prod-mkt-gateway.mindbody.io/v1/search/class_times`, filtered by location `slug`) is public and returns `capacity` and `openings` for each class, plus purchase options; the price is the cheapest non-intro drop-in. Find a slug with `POST /v1/search/locations`. Only venues that sell sauna sessions as classes show up: FS8 and HOME don't, and Wellnest only lists a few guided rituals.
 - **momence** caveat: Sauna & Plunge has no fixed sessions. You book any 30-minute start time, and up to 6 people can share a slot. We record each start time with the attendees of the reservations overlapping it. So the "sessions" there are rolling slots rather than classes, and a 60-minute booking counts in two of them.
 
 ## Data
