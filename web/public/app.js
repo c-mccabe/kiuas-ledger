@@ -79,7 +79,7 @@ function enrich(s) {
   return {
     ...s, start, end: new Date(start.getTime() + dur * 60000),
     h0: h + m / 60, h1: h + m / 60 + dur / 60,
-    left: s.capacity - s.booked, fill: Math.min(1, s.booked / s.capacity),
+    left: Math.max(0, s.capacity - s.booked), fill: Math.min(1, s.booked / s.capacity),
   };
 }
 
