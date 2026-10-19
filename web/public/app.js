@@ -46,7 +46,7 @@ const TOD = {
   eve: { label: 'evening', from: 17, to: 24 },
 };
 
-// /areas/<slug> pages set data-region on <body>; /all leaves it unset.
+// /areas/<slug> pages set data-region on <body>; / leaves it unset (all of London).
 const REGION = document.body.dataset.region || null;
 const WHERE = document.body.dataset.where || 'in London';
 const inRegion = (venues) => (REGION ? venues.filter((v) => v.region === REGION) : venues);
@@ -265,6 +265,9 @@ function renderBoard() {
       if (s.start.getTime() < now) cls.push('past');
       if (s.left > 0 && b === 4) cls.push('hot4');
       const k = s.left <= 0 ? (width < 50 ? '' : 'Full') : s.left;
+      // Price sits beside the spots-left number when the block has room for it.
+      const pt = s.price > 0 ? fmtPrice(s.price) : '';
+      const price = pt && width >= Math.max(50, 26 + pt.length * 6) ? `<span class="p">${pt}</span>` : '';
       const tip = [
         s.name || 'Session',
         `${fmtTime(s.start)} to ${fmtTime(s.end)}`,
@@ -276,7 +279,7 @@ function renderBoard() {
       html += `<a class="${cls.join(' ')}" href="${esc(bookingUrl(v.url, 'session'))}" target="_blank" rel="noopener"
         style="left:${left}px;top:${8 + lane * laneH}px;width:${width}px;--f:${(s.fill * 100).toFixed(1)}%;--h:var(--h${b})"
         data-tip="${esc(tip)}" aria-label="${esc(`${shortName(v)} ${fmtTime(s.start)}: ${s.left <= 0 ? 'full' : `${s.left} spots left`}`)}">
-        <span class="fill"></span><span class="lbl"><span class="t">${fmtTime(s.start)}</span><span class="k">${k}</span></span></a>`;
+        <span class="fill"></span><span class="lbl"><span class="t">${fmtTime(s.start)}</span><span class="k">${k}</span></span>${price}</a>`;
     }
     html += '</div></div>';
     if (open) html += detailHtml(v);

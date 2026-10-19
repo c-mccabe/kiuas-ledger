@@ -1,11 +1,10 @@
 // Server-rendered pages for search engines and link previews. The timetable
-// at / is drawn by app.js, so crawlers see little there; these pages carry
-// the same data as plain HTML, one per sauna and one per area.
+// is drawn by app.js, so crawlers see little of it; these pages carry the same
+// data as plain HTML, one per sauna and one per region.
 //
-//   /                 hero with the six regions of London and their live counts
-//   /areas/:slug      the timetable app (app.html) for one region, plus a
-//                     server-rendered list of its saunas
-//   /all              the timetable app for all of London
+//   /                 the timetable app (app.html) for all of London, with
+//                     region tabs and a server-rendered list of its saunas
+//   /areas/:slug      the same app filtered to one region
 //   /saunas           every sauna, grouped by area
 //   /saunas/:slug     one sauna: sessions with space this week, typical times
 //   /sitemap.xml, /robots.txt
@@ -317,7 +316,7 @@ async function venuePage(slug, request, env) {
     </ul>
     <div class="cta">
       <a class="btn" href="${esc(bookingUrl(v.url, 'seo_venue'))}" rel="nofollow noopener" target="_blank">Book at ${esc(shortName(v))}</a>
-      <a class="ghost" href="${area ? `/areas/${v.area}` : '/all'}?sauna=${encodeURIComponent(v.id)}">Compare with ${area ? `saunas in ${esc(area.name)}` : 'every London sauna'}</a>
+      <a class="ghost" href="${area ? `/areas/${v.area}` : '/'}?sauna=${encodeURIComponent(v.id)}">Compare with ${area ? `saunas in ${esc(area.name)}` : 'every London sauna'}</a>
     </div>
     <h2>Next 7 days</h2>
     ${days || '<p class="muted">No public sessions found for the next week.</p>'}
@@ -353,15 +352,15 @@ async function appPage(slug, request, env) {
   const sessions = await loadUpcoming(env, list.map((v) => v.id));
   const today = list.filter((v) => sessions.some((s) => s.venue_id === v.id && s.left > 0 && s.date === londonDate(new Date())));
   const where = region ? region.name : 'London';
-  const path = slug ? `/areas/${slug}` : '/all';
-  const title = region ? `Saunas in ${where} with space right now | Sauna Finder` : 'Every London sauna, live | Sauna Finder';
+  const path = slug ? `/areas/${slug}` : '/';
+  const title = region ? `Saunas in ${where} with space right now | Sauna Finder` : 'Live London sauna availability | Sauna Finder';
   const description = list.length
     ? `Live availability at ${plural(list.length, 'sauna')} in ${where}, checked every 15 minutes: ${list.map(fullName).join(', ')}.`
     : `Live sauna availability in ${where}, checked every 15 minutes.`;
-  const jsonld = [breadcrumbs(site, [['Sauna Finder', '/'], [region ? region.name : 'All of London', path]])];
+  const jsonld = region ? [breadcrumbs(site, [['Sauna Finder', '/'], [region.name, path]])] : [];
 
-  const tabs = `<a href="/" class="home-link" aria-label="All regions">←</a>${Object.entries(REGIONS).map(([s2, r]) =>
-    `<a href="/areas/${s2}"${s2 === slug ? ' aria-current="page"' : ''}>${esc(r.short)}</a>`).join('')}<a href="/all"${slug ? '' : ' aria-current="page"'}>All</a>`;
+  const tabs = `<a href="/"${slug ? '' : ' aria-current="page"'}>All</a>${Object.entries(REGIONS).map(([s2, r]) =>
+    `<a href="/areas/${s2}"${s2 === slug ? ' aria-current="page"' : ''}>${esc(r.short)}</a>`).join('')}`;
   const others = Object.entries(REGIONS).filter(([s2]) => s2 !== slug);
   const seo = `
     <h2>${region ? `Saunas in ${esc(where)}` : 'Every sauna we check'}</h2>
@@ -400,7 +399,7 @@ async function allSaunasPage(request, env) {
   const body = `
     <p class="crumbs"><a href="/">Sauna Finder</a></p>
     <h1>London saunas, checked live</h1>
-    <p>Sauna Finder is a live check of ${plural(venues.length, 'London sauna')}: every 15 minutes it reads each one's booking page and shows which sessions still have space. Pick one to see its week, or <a href="/all">compare them all on one timetable</a>.</p>
+    <p>Sauna Finder is a live check of ${plural(venues.length, 'London sauna')}: every 15 minutes it reads each one's booking page and shows which sessions still have space. Pick one to see its week, or <a href="/">compare them all on one timetable</a>.</p>
     ${groups.map(([slug, a, list]) => `<h2><a href="/areas/${slug}">${esc(a.name)}</a></h2>${venueCards(list, sessions)}`).join('')}`;
   const jsonld = [
     breadcrumbs(site, [['Sauna Finder', '/'], ['Saunas', '/saunas']]),
@@ -416,184 +415,12 @@ function notFound(request, env, venues) {
   return html(res.replace('<meta name="description"', '<meta name="robots" content="noindex">\n  <meta name="description"'), request, env, 404);
 }
 
-// ---- home page --------------------------------------------------------------
-
-const HOME_CSS = `
-.hero { position: relative; isolation: isolate; color: #fbf1e7; min-height: min(74vh, 640px); display: flex; flex-direction: column; }
-.hero-img { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: -1;
-  background: linear-gradient(180deg, rgb(18 10 6 / 55%) 0%, rgb(18 10 6 / 25%) 38%, rgb(18 10 6 / 78%) 100%); }
-.hero .masthead { width: 100%; box-sizing: border-box; }
-.hero .wordmark { color: #fbf1e7; }
-.hero .wordmark .s3 { fill: #fbf1e7; } .hero .wordmark .s2 { fill: #d9c3ae; } .hero .wordmark .steam { stroke: #d9c3ae; }
-.live-pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px;
-  background: rgb(18 10 6 / 45%); backdrop-filter: blur(6px); font-size: 13px; color: #fbf1e7; white-space: nowrap; }
-.hero .wordmark { white-space: nowrap; }
-@media (max-width: 420px) { .live-pill .wd { display: none; } }
-.live-pill i { width: 8px; height: 8px; border-radius: 50%; background: #ff8a3d; animation: pulse 2s ease-out infinite; box-shadow: 0 0 0 0 rgb(255 138 61 / 60%); }
-.hero-in { margin-top: auto; max-width: 1180px; width: 100%; box-sizing: border-box; margin-inline: auto; padding: 48px 28px 120px; }
-.hero h1 { margin: 0; font-size: clamp(38px, min(6vw, 9vh), 80px); line-height: .98; letter-spacing: -0.035em; font-weight: 800; max-width: 15ch; text-wrap: balance; }
-.hero p { margin: 18px 0 0; font-size: clamp(16px, 1.6vw, 19px); max-width: 46ch; color: #f1dfcf; }
-.home { max-width: 1180px; margin: -88px auto 0; padding: 0 28px 40px; position: relative; }
-.regions-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.region a { display: flex; flex-direction: column; gap: 6px; height: 100%; box-sizing: border-box; padding: 18px 20px 16px; border-radius: 16px;
-  background: var(--paper); color: var(--stone); text-decoration: none; box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 10px 30px -18px rgb(30 15 5 / 45%);
-  transition: transform .15s, box-shadow .15s; }
-.region a:hover { transform: translateY(-2px); box-shadow: 0 1px 2px rgb(0 0 0 / 8%), 0 16px 36px -18px rgb(30 15 5 / 55%); }
-.region h2 { margin: 0; font-size: 26px; letter-spacing: -0.02em; font-weight: 800; display: flex; justify-content: space-between; align-items: baseline; }
-.region h2 span { font-size: 18px; color: var(--stone-3); font-weight: 500; }
-.region .blurb { color: var(--stone-3); font-size: 13.5px; margin: 0; }
-.region .live { margin: 8px 0 0; font-size: 15px; }
-.region .live b { font-weight: 700; }
-.region .next { margin: 0; font-size: 14px; color: var(--stone-2); }
-.region .bar { margin-top: auto; padding-top: 10px; display: flex; gap: 3px; }
-.region .bar i { flex: 1; height: 6px; border-radius: 3px; background: var(--h); }
-.region .bar i.full { background: var(--full-bg); }
-.region.empty a { background: color-mix(in srgb, var(--paper) 70%, transparent); }
-.home-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 8px; align-items: center; }
-.home-actions .ghost, .home-actions button { border: 0; font: inherit; cursor: pointer; display: inline-block; padding: 10px 18px; border-radius: 999px; background: var(--sunk); color: var(--stone); text-decoration: none; font-weight: 600; }
-.home-actions button { background: var(--plunge); color: var(--plunge-ink); }
-.home-actions .muted { font-size: 13.5px; }
-.soon h2 { font-size: 20px; letter-spacing: -0.01em; margin: 30px 0 10px; }
-.soon ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; }
-.soon li a { display: grid; grid-template-columns: auto 1fr; gap: 2px 14px; padding: 12px 14px; border-radius: 12px; background: var(--paper); color: var(--stone); text-decoration: none; }
-.soon .t { grid-row: span 2; font-size: 22px; font-weight: 800; letter-spacing: -0.02em; align-self: center; }
-.soon .v { font-weight: 600; }
-.soon .l { font-size: 13.5px; color: var(--stone-2); }
-.home .sitelinks { margin-top: 34px; }
-.credit { font-size: 12px; }
-@media (max-width: 860px) { .regions-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) {
-  .hero { min-height: 560px; } .hero-in { padding: 0 16px 100px; } .home { padding-inline: 16px; margin-top: -70px; }
-  .regions-grid { grid-template-columns: 1fr 1fr; gap: 8px; } .region a { padding: 14px; } .region h2 { font-size: 20px; } .region h2 span { font-size: 15px; }
-  .region .blurb { display: none; }
-}
-@media (prefers-reduced-motion: reduce) { .live-pill i { animation: none; } .region a { transition: none; } }
-`;
-
-async function homePage(request, env) {
-  const site = siteUrl(env);
-  const venues = await loadVenues(env);
-  setFooter(venues);
-  const sessions = await loadUpcoming(env);
-  const todayIso = londonDate(new Date());
-  const todays = sessions.filter((s) => s.date === todayIso);
-  const latest = venues.map((v) => v.last_scraped_at).filter(Boolean).sort().at(-1);
-  const byId = Object.fromEntries(venues.map((v) => [v.id, v]));
-
-  const tiles = Object.entries(REGIONS).map(([slug, r]) => {
-    const list = venues.filter((v) => v.area === slug);
-    if (!list.length) {
-      return `<li class="region empty"><a href="/areas/${slug}"><h2>${esc(r.short)}</h2><p class="blurb">${esc(r.blurb)}</p><p class="live">Coming soon</p></a></li>`;
-    }
-    const ids = new Set(list.map((v) => v.id));
-    const mine = todays.filter((s) => ids.has(s.venue_id));
-    const withSpace = list.filter((v) => mine.some((s) => s.venue_id === v.id && s.left > 0));
-    const next = mine.find((s) => s.left > 0);
-    // One ember tick per sauna: how booked its remaining sessions today are.
-    const bar = list.map((v) => {
-      const ss = mine.filter((s) => s.venue_id === v.id);
-      if (!ss.length) return '<i style="--h:var(--sunk)"></i>';
-      if (ss.every((s) => s.left === 0)) return '<i class="full"></i>';
-      const fill = ss.reduce((a, s) => a + Math.min(s.booked, s.capacity), 0) / ss.reduce((a, s) => a + s.capacity, 0);
-      return `<i style="--h:var(--h${Math.min(4, Math.floor(fill * 5))})"></i>`;
-    }).join('');
-    return `<li class="region"><a href="/areas/${slug}">
-      <h2>${esc(r.short)} <span>${list.length}</span></h2>
-      <p class="blurb">${esc(r.blurb)}</p>
-      <p class="live"><b>${withSpace.length} of ${list.length}</b> ${list.length === 1 ? 'sauna has' : 'saunas have'} space today</p>
-      <p class="next">${next ? `Next: ${fmtTime(new Date(next.start_utc))} at ${esc(shortName(byId[next.venue_id]))}` : 'Nothing left today'}</p>
-      <div class="bar" aria-hidden="true">${bar}</div></a></li>`;
-  }).join('');
-
-  // The soonest free spots across London, one per sauna.
-  const seen = new Set();
-  const soon = todays.filter((s) => s.left > 0 && new Date(s.start_utc) > new Date() && !seen.has(s.venue_id) && seen.add(s.venue_id)).slice(0, 6);
-
-  const pins = venues.filter((v) => v.lat != null && v.area).map((v) => [v.lat, v.lng, v.area]);
-  const title = 'Live London sauna availability | Sauna Finder';
-  const description = `A live check of ${plural(venues.length, 'London sauna')} every 15 minutes. Pick a part of London and see which sessions have space right now.`;
-  const jsonld = [{ '@context': 'https://schema.org', '@type': 'WebSite', name: 'Sauna Finder', url: `${site}/`, description }];
-  const page = `<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>${esc(title)}</title>
-  <meta name="description" content="${esc(description)}">
-  <meta name="theme-color" content="#1e130c">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><ellipse cx='16' cy='25' rx='13' ry='5' fill='%2322292d'/><ellipse cx='14' cy='17' rx='9' ry='4.5' fill='%234d585e'/><ellipse cx='17' cy='10' rx='6' ry='3.5' fill='%23db6a2c'/></svg>">
-  <link rel="preload" as="image" href="/img/hero-1800.jpg" imagesrcset="/img/hero-1200.jpg 1200w, /img/hero-1800.jpg 1800w" imagesizes="100vw">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/style.css">
-  <style>${PAGE_CSS}${HOME_CSS}</style>${headTags({ site, path: '/', title, description, jsonld })}
-</head>
-<body>
-  <header class="hero">
-    <img class="hero-img" src="/img/hero-1800.jpg" srcset="/img/hero-1200.jpg 1200w, /img/hero-1800.jpg 1800w" sizes="100vw" alt="A wooden sauna with a wood-burning stove glowing" fetchpriority="high">
-    ${MASTHEAD.replace('</header>', `<span class="live-pill"><i aria-hidden="true"></i>Live<span class="wd"> · checked</span> <span id="ago" data-ts="${esc(latest ?? '')}">${latest ? `at ${fmtTime(new Date(latest))}` : 'recently'}</span></span></header>`)}
-    <div class="hero-in">
-      <h1>Which London saunas have space right now?</h1>
-      <p>A live check of ${plural(venues.length, 'sauna')} across London, every 15 minutes. Pick your part of town.</p>
-    </div>
-  </header>
-  <main class="home">
-    <ul class="regions-grid">${tiles}</ul>
-    <div class="home-actions">
-      <button type="button" id="near">Near me</button>
-      <a class="ghost" href="/all">All of London on one timetable</a>
-      <span class="muted" id="near-msg" aria-live="polite"></span>
-    </div>
-    ${soon.length ? `<section class="soon"><h2>Next free spots</h2><ul>${soon.map((s) => {
-      const v = byId[s.venue_id];
-      return `<li><a href="/saunas/${v.slug}"><span class="t">${fmtTime(new Date(s.start_utc))}</span><span class="v">${esc(shortName(v))}, ${esc(v.site)}</span><span class="l">${plural(s.left, 'place')} left</span></a></li>`;
-    }).join('')}</ul></section>` : ''}
-    <nav class="sitelinks" aria-label="Saunas">
-      <p><b>Every sauna:</b> ${venues.map((v) => `<a href="/saunas/${v.slug}">${esc(fullName(v))}</a>`).join(' · ')}</p>
-    </nav>
-  </main>
-  <footer class="foot">${footerLinks}
-    <p class="credit">Photo: <a href="https://unsplash.com/photos/a-wood-burning-stove-inside-of-a-wooden-cabin-sDqyw1c5xaM" rel="noopener">Unsplash</a>.</p>
-  </footer>
-  <script>
-    const ago = document.getElementById('ago');
-    function tick() {
-      const ts = Date.parse(ago.dataset.ts); if (!ts) return;
-      const m = Math.round((Date.now() - ts) / 60000);
-      ago.textContent = m < 2 ? 'just now' : m < 60 ? m + ' min ago' : m < 120 ? 'an hour ago' : Math.round(m / 60) + ' hours ago';
-    }
-    tick(); setInterval(tick, 30000);
-    const q = new URLSearchParams(location.search);
-    const send = (o) => { try { navigator.sendBeacon('/api/e', JSON.stringify({ p: location.pathname, r: document.referrer, u: q.get('utm_source') ?? q.get('ref'), ...o })); } catch {} };
-    send({ t: 'pageview' });
-    // Near me: jump to the region of the closest sauna. Location stays in the browser.
-    const pins = ${JSON.stringify(pins)};
-    const msg = document.getElementById('near-msg');
-    document.getElementById('near').onclick = () => {
-      if (!navigator.geolocation) { msg.textContent = 'Your browser can\\'t share a location.'; return; }
-      msg.textContent = 'Finding you…';
-      navigator.geolocation.getCurrentPosition((p) => {
-        const { latitude: la, longitude: lo } = p.coords;
-        const d = ([a, b]) => (a - la) ** 2 + ((b - lo) * Math.cos(la * Math.PI / 180)) ** 2;
-        const best = pins.reduce((x, y) => (d(y) < d(x) ? y : x));
-        send({ t: 'filter', d: 'near=' + best[2] });
-        location.href = '/areas/' + best[2] + '?sort=near';
-      }, () => { msg.textContent = 'Couldn\\'t get your location. Pick a region instead.'; }, { timeout: 10000, maximumAge: 600000 });
-    };
-  </script>
-</body>
-</html>`;
-  return html(page, request, env);
-}
-
 async function sitemap(request, env) {
   const site = siteUrl(env);
   const venues = await loadVenues(env);
   const lastmod = venues.map((v) => v.last_scraped_at).filter(Boolean).sort().at(-1)?.slice(0, 10) ?? londonDate(new Date());
   const areas = Object.keys(AREAS).filter((slug) => venues.some((v) => v.area === slug));
-  const paths = ['/', '/all', '/saunas', ...areas.map((s) => `/areas/${s}`), ...venues.map((v) => `/saunas/${v.slug}`)];
+  const paths = ['/', '/saunas', ...areas.map((s) => `/areas/${s}`), ...venues.map((v) => `/saunas/${v.slug}`)];
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${paths.map((p) => `  <url><loc>${site}${p}</loc><lastmod>${lastmod}</lastmod><changefreq>hourly</changefreq></url>`).join('\n')}
@@ -614,7 +441,7 @@ function robots(request, env) {
 export async function handle(request, env) {
   const { pathname } = new URL(request.url);
   try {
-    if (pathname === '/') return await homePage(request, env);
+    if (pathname === '/') return await appPage(null, request, env);
     if (pathname === '/sitemap.xml') return await sitemap(request, env);
     if (pathname === '/robots.txt') return robots(request, env);
     if (pathname === '/saunas' || pathname === '/saunas/') return await allSaunasPage(request, env);
@@ -622,8 +449,7 @@ export async function handle(request, env) {
     if (m) return await venuePage(m[1], request, env);
     m = pathname.match(/^\/areas\/([a-z0-9-]+)\/?$/);
     if (m) return await appPage(m[1], request, env);
-    if (pathname === '/all' || pathname === '/all/') return await appPage(null, request, env);
-    if (pathname === '/app' || pathname === '/app.html') return Response.redirect(new URL('/all', request.url), 301);
+    if (['/all', '/all/', '/app', '/app.html'].includes(pathname)) return Response.redirect(new URL('/' + new URL(request.url).search, request.url), 301);
     return env.ASSETS.fetch(request);
   } catch (err) {
     console.error(err);

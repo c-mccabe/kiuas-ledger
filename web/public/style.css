@@ -204,6 +204,11 @@ a { color: inherit; }
 .slot .k { font-size: 13.5px; font-weight: 700; }
 .slot.narrow .lbl { align-items: center; padding: 0; }
 .slot.narrow .t { display: none; }
+.slot .p {
+  position: absolute; right: 5px; bottom: 5px; font-size: 10.5px; font-weight: 500; line-height: 1;
+  color: var(--stone-2); font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 2px var(--paper), 0 0 4px var(--paper);
+}
 .slot.full { background: var(--full-bg); color: var(--stone-2); }
 .slot.full .k { font-size: 12px; font-weight: 600; }
 .slot.full .fill { display: none; }
@@ -308,7 +313,6 @@ a { color: inherit; }
 .regions a { flex: none; padding: 6px 13px; border-radius: 999px; color: var(--stone-2); text-decoration: none; font-weight: 500; white-space: nowrap; }
 .regions a:hover { background: var(--sunk); }
 .regions a[aria-current="page"] { background: var(--stone); color: var(--mist); font-weight: 600; }
-.regions .home-link { color: var(--stone-3); padding-inline: 10px; }
 .seo.page { max-width: 1440px; padding: 8px 28px 10px; }
 .seo h2 { font-size: 20px; margin: 18px 0 6px; }
 .seo .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; padding: 0; list-style: none; }
