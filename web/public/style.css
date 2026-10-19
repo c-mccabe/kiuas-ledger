@@ -76,7 +76,7 @@ a { color: inherit; }
 @media (prefers-reduced-motion: reduce) { .fresh i { animation: none; } }
 
 /* The headline is generated from the data and changes with the filters. */
-.lede { padding-top: 34px; padding-bottom: 6px; }
+.lede { padding-top: 18px; padding-bottom: 6px; }
 .lede h1 {
   min-height: 2.04em;
   margin: 0; max-width: 22ch; font-size: clamp(30px, 4.6vw, 54px); line-height: 1.02; font-weight: 800;
@@ -291,7 +291,8 @@ a { color: inherit; }
   .vlabel { padding-left: 12px; }
   .vlabel .n { font-size: 13.5px; }
   .timetable { margin-inline: -16px; border-radius: 0; }
-  #map { height: 190px; border-radius: 12px; }
+  #map { height: 240px; border-radius: 12px; }
+  .mapkey { position: static; max-width: none; background: none; padding: 6px 2px 0; }
   .detail { grid-template-columns: 1fr; padding-inline: 12px; }
   .key { padding-inline: 12px; }
 }
@@ -300,3 +301,20 @@ a { color: inherit; }
 .sitelinks { padding-bottom: 10px; margin-bottom: 10px; border-bottom: 1px solid var(--rule); }
 .sitelinks a, .foot nav a { color: var(--stone-2); text-underline-offset: 3px; }
 .sitelinks b, .foot nav b { color: var(--stone-2); font-weight: 600; }
+
+/* Region switcher above the headline (filled in server-side). */
+.regions { max-width: 1440px; margin: 0 auto; padding: 18px 28px 0; display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.regions::-webkit-scrollbar { display: none; }
+.regions a { flex: none; padding: 6px 13px; border-radius: 999px; color: var(--stone-2); text-decoration: none; font-weight: 500; white-space: nowrap; }
+.regions a:hover { background: var(--sunk); }
+.regions a[aria-current="page"] { background: var(--stone); color: var(--mist); font-weight: 600; }
+.regions .home-link { color: var(--stone-3); padding-inline: 10px; }
+.seo.page { max-width: 1440px; padding: 8px 28px 10px; }
+.seo h2 { font-size: 20px; margin: 18px 0 6px; }
+.seo .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; padding: 0; list-style: none; }
+.seo .cards li { background: var(--paper); border-radius: 12px; padding: 14px 16px; }
+.seo .cards a.name { font-weight: 700; color: var(--stone); text-decoration: none; }
+.seo .cards p { margin: 4px 0 0; color: var(--stone-2); font-size: 14px; }
+.seo a { color: var(--plunge); }
+.seo .muted { color: var(--stone-3); font-size: 13.5px; }
+@media (max-width: 640px) { .regions, .seo.page { padding-inline: 16px; } }

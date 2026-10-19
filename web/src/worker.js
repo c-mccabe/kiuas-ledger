@@ -9,6 +9,8 @@
 //   POST /api/e                           one analytics event from the page (no cookies)
 //   GET  /api/stats?days=30               usage summary (bearer STATS_TOKEN)
 
+import { regionOf } from './regions.js';
+
 const TZ = 'Europe/London';
 const londonDate = (d) => new Intl.DateTimeFormat('en-CA', { timeZone: TZ }).format(d);
 
@@ -114,7 +116,7 @@ async function venues(env) {
   const byId = Object.fromEntries(stats.map((s) => [s.venue_id, s]));
   return json({
     now: now.toISOString(),
-    venues: vs.map((v) => ({ ...v, last_ok: !!v.last_ok, upcoming: byId[v.id] ?? null })),
+    venues: vs.map((v) => ({ ...v, region: regionOf(v.address), last_ok: !!v.last_ok, upcoming: byId[v.id] ?? null })),
   }, 200, 60);
 }
 

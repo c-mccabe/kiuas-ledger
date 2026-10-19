@@ -7,6 +7,8 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '
 const plural = (n, one, many = `${one}s`) => `${n} ${n === 1 ? one : many}`;
 
 // Every outbound booking link carries UTM tags so venues can see the traffic we send.
+const fitOpts = () => innerWidth <= 640 ? { padding: [24, 24], maxZoom: 14 } : { paddingTopLeft: [28, 28], paddingBottomRight: [28, 56], maxZoom: 14 };
+
 function bookingUrl(url, content) {
   try {
     const u = new URL(url);
@@ -42,6 +44,15 @@ const TOD = {
   am: { label: 'morning', from: 0, to: 12 },
   pm: { label: 'afternoon', from: 12, to: 17 },
   eve: { label: 'evening', from: 17, to: 24 },
+};
+
+// /areas/<slug> pages set data-region on <body>; /all leaves it unset.
+const REGION = document.body.dataset.region || null;
+const WHERE = document.body.dataset.where || 'in London';
+const inRegion = (venues) => (REGION ? venues.filter((v) => v.region === REGION) : venues);
+const ofVenues = (sessions) => {
+  const ids = new Set(state.venues.map((v) => v.id));
+  return sessions.filter((s) => ids.has(s.venue_id));
 };
 
 const state = {
@@ -127,8 +138,8 @@ function renderHeadline() {
   // Today reads as a live count ("still"); other days as a forecast.
   const verb = isToday() ? 'still have' : 'have';
   h1.textContent = n === 0
-    ? `No sauna ${isToday() ? 'still has' : 'has'} space${who} ${whenPhrase()}.`
-    : `${n} of ${state.venues.length} saunas ${verb} space${who} ${whenPhrase()}.`;
+    ? `No sauna ${WHERE} ${isToday() ? 'still has' : 'has'} space${who} ${whenPhrase()}.`
+    : `${n} of ${state.venues.length} saunas ${WHERE} ${verb} space${who} ${whenPhrase()}.`;
 
   const candidates = state.sessions.filter((s) => inTod(s) && bookable(s));
   if (!candidates.length) {
@@ -345,6 +356,7 @@ function setHot(id) {
 
 // --- map ----------------------------------------------------------------------------
 let map;
+let fitted = null; // the pins the map was fitted to
 const markers = new Map();
 function initMap() {
   map = L.map('map', { scrollWheelZoom: false }).setView([51.505, -0.09], 11);
@@ -353,7 +365,13 @@ function initMap() {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(map);
   map.attributionControl.setPrefix(false);
-  new ResizeObserver(() => map.invalidateSize()).observe(document.getElementById('map'));
+  // Leaflet measures once; re-measure when the layout settles (fonts, grid),
+  // and re-fit the pins until the user has moved the map themselves.
+  new ResizeObserver(() => {
+    map.invalidateSize();
+    if (fitted && !map.userMoved) map.fitBounds(fitted, fitOpts());
+  }).observe(document.getElementById('map'));
+  map.on('dragstart', () => { map.userMoved = true; });
   // Scroll-zoom only once the map has been clicked, so the page scrolls past it.
   map.on('focus', () => map.scrollWheelZoom.enable());
   map.on('blur', () => map.scrollWheelZoom.disable());
@@ -387,9 +405,9 @@ function drawMarkers() {
     markers.set(v.id, m);
     pts.push([v.lat, v.lng]);
   }
-  if (pts.length && !drawMarkers.fitted) {
-    map.fitBounds(pts, { padding: [28, 28] });
-    drawMarkers.fitted = true;
+  if (pts.length && !fitted) {
+    fitted = pts;
+    map.fitBounds(pts, fitOpts());
   }
 }
 
@@ -481,7 +499,7 @@ function render({ resetScroll = false } = {}) {
 
 async function refresh() {
   try {
-    state.sessions = await loadDay(state.date);
+    state.sessions = ofVenues(await loadDay(state.date));
   } catch (err) {
     state.dayCache.delete(state.date);
     board.innerHTML = `<p class="empty">Couldn't load sessions (${esc(err.message)}). Reload the page to try again.</p>`;
@@ -496,11 +514,9 @@ function renderFreshness() {
   if (!latest) return;
   const mins = Math.round((Date.now() - new Date(latest)) / 60000);
   const ago = mins < 2 ? 'just now' : mins < 60 ? `${mins} min ago` : mins < 120 ? 'an hour ago' : `${Math.round(mins / 60)} hours ago`;
-  // "Live" only while the last check is recent; overnight there are no checks.
-  const live = mins <= 40;
   const el = document.getElementById('fresh');
-  el.classList.toggle('live', live);
-  el.innerHTML = live ? `<i aria-hidden="true"></i>Live · checked ${ago}` : `Last checked ${ago}`;
+  el.classList.add('live');
+  el.innerHTML = `<i aria-hidden="true"></i>Live · checked ${ago}`;
 }
 
 // Keep an open tab current: pick up each new check without a reload.
@@ -510,9 +526,9 @@ async function poll() {
   try {
     const { venues } = await getJson('/api/venues');
     if (latest(venues) !== latest(state.venues)) {
-      state.venues = venues;
+      state.venues = inRegion(venues);
       state.dayCache.clear();
-      state.sessions = await loadDay(state.date);
+      state.sessions = ofVenues(await loadDay(state.date));
       render();
     }
   } catch {}
@@ -533,7 +549,7 @@ async function main() {
   renderDays();
   setNeed(1);
   try {
-    ({ venues: state.venues } = await getJson('/api/venues'));
+    state.venues = inRegion((await getJson('/api/venues')).venues);
   } catch (err) {
     document.getElementById('headline').textContent = 'Sauna data is unavailable right now.';
     board.innerHTML = `<p class="empty">Couldn't reach the server (${esc(err.message)}). Reload the page to try again.</p>`;
