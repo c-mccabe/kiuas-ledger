@@ -2145,3 +2145,1023 @@ scraped_at_utc,venue,site,platform,session_id,date,weekday,start_local,duration_
 2026-10-19T11:56:03.165Z,The Cabin Sauna,Clapham Common,legitfit,6ab54061c2d82249f90c143f,2026-10-25,Sun,18:00,55,Social Sauna,12,0,12,,9004
 2026-10-19T11:56:03.165Z,The Cabin Sauna,Clapham Common,legitfit,6ab54072c2d82249f90c2dab,2026-10-25,Sun,19:00,55,Social Sauna,12,0,12,,9064
 2026-10-19T11:56:03.165Z,The Cabin Sauna,Clapham Common,legitfit,6ab540891a739fc90f6e1e87,2026-10-25,Sun,20:00,55,Social Sauna,12,0,12,,9124
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17203,2026-10-19,Mon,12:30,60,Energise - Stretch & Recover,42,8,34,0,-49
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17210,2026-10-19,Mon,13:45,70,Free Flow 70,25,2,23,0,26
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17209,2026-10-19,Mon,14:15,70,Free Flow 70,25,4,21,0,56
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17208,2026-10-19,Mon,15:45,70,Free Flow 70,25,4,21,0,146
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17206,2026-10-19,Mon,16:15,70,Free Flow 70,25,3,22,0,176
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17202,2026-10-19,Mon,17:45,60,Energise - Stretch & Recover,42,23,19,0,266
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17205,2026-10-19,Mon,19:00,60,Relax - Restorative sound bath,42,20,22,0,341
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17207,2026-10-19,Mon,20:10,70,Free Flow 70,40,2,38,0,411
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17215,2026-10-20,Tue,07:30,70,Free Flow 70,50,4,46,0,1091
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17212,2026-10-20,Tue,09:50,70,Silent Free Flow 70,50,2,48,0,1231
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17222,2026-10-20,Tue,11:00,70,Free Flow 70,50,3,47,0,1301
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17214,2026-10-20,Tue,12:30,60,Energise - Stretch & Recover,42,3,39,0,1391
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17221,2026-10-20,Tue,13:45,70,Free Flow 70,25,0,25,0,1466
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17220,2026-10-20,Tue,14:15,70,Free Flow 70,25,0,25,0,1496
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17219,2026-10-20,Tue,15:45,70,Free Flow 70,25,0,25,0,1586
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17216,2026-10-20,Tue,16:15,70,Free Flow 70,25,0,25,0,1616
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17213,2026-10-20,Tue,17:45,60,Energise - Happiness Hack,42,7,35,0,1706
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17217,2026-10-20,Tue,19:00,60,Relax - Pause & Unwind,42,19,23,0,1781
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17218,2026-10-20,Tue,20:10,70,Free Flow 70,40,1,39,0,1851
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17229,2026-10-21,Wed,07:30,60,Energise - Morning Warrior,42,3,39,0,2531
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17224,2026-10-21,Wed,09:50,70,Silent Free Flow 70,50,2,48,0,2671
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17233,2026-10-21,Wed,11:00,70,Free Flow 70,50,1,49,0,2741
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17228,2026-10-21,Wed,12:30,60,Energise - Stretch & Recover,42,3,39,0,2831
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17232,2026-10-21,Wed,13:45,70,Free Flow 70,25,0,25,0,2906
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17231,2026-10-21,Wed,14:15,70,Free Flow 70,25,0,25,0,2936
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17230,2026-10-21,Wed,15:45,70,Free Flow 70,25,3,22,0,3026
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17227,2026-10-21,Wed,16:15,70,Free Flow 70,25,0,25,0,3056
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17226,2026-10-21,Wed,17:45,60,Energise - Stretch & Recover,42,2,40,0,3146
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17225,2026-10-21,Wed,19:00,60,Ground - In For Yin,42,11,31,0,3221
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17223,2026-10-21,Wed,20:10,70,Free Flow 70,50,2,48,0,3291
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17236,2026-10-22,Thu,07:30,60,Energise - Stretch & Recover,42,3,39,0,3971
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,18105,2026-10-22,Thu,09:50,70,Free Flow 70,50,0,50,0,4111
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17244,2026-10-22,Thu,11:00,70,Free Flow 70,50,0,50,0,4181
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17237,2026-10-22,Thu,12:30,60,Energise - Stretch & Recover,42,4,38,0,4271
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17243,2026-10-22,Thu,13:45,70,Free Flow 70,25,0,25,0,4346
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17242,2026-10-22,Thu,14:15,70,Free Flow 70,25,0,25,0,4376
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17241,2026-10-22,Thu,15:45,70,Free Flow 70,25,2,23,0,4466
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17239,2026-10-22,Thu,16:15,70,Free Flow 70,25,0,25,0,4496
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17238,2026-10-22,Thu,17:45,60,Relax - Pause & Unwind,42,4,38,0,4586
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17240,2026-10-22,Thu,19:00,120,Lively - Free Flow 120,40,10,30,0,4661
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17251,2026-10-23,Fri,07:30,60,Energise - Stretch & Recover,42,2,40,0,5411
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,18106,2026-10-23,Fri,09:50,70,Free Flow 70,50,2,48,0,5551
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17255,2026-10-23,Fri,11:00,70,Free Flow 70,50,0,50,0,5621
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17247,2026-10-23,Fri,12:30,60,Energise - Happiness Hack,42,4,38,0,5711
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17254,2026-10-23,Fri,13:45,70,Free Flow 70,25,1,24,0,5786
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17253,2026-10-23,Fri,14:15,70,Free Flow 70,25,0,25,0,5816
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17252,2026-10-23,Fri,15:45,70,Free Flow 70,25,0,25,0,5906
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17249,2026-10-23,Fri,16:05,70,Free Flow 70,25,1,24,0,5926
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17250,2026-10-23,Fri,17:30,60,Energise - Stretch & Recover,42,8,34,0,6011
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17248,2026-10-23,Fri,19:00,120,Arc After Dark x Botivo,50,19,31,0,6101
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17717,2026-10-23,Fri,19:30,120,Arc After Dark x Botivo,40,11,29,0,6131
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17259,2026-10-24,Sat,08:40,70,Silent Free Flow 70,50,1,49,0,6921
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17257,2026-10-24,Sat,10:00,60,Energise - Happiness Hack.,42,4,38,0,7001
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17260,2026-10-24,Sat,11:30,60,Ground - Breathe & Ground.,42,6,36,0,7091
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17258,2026-10-24,Sat,13:00,60,Energise - Stretch & Recover.,42,8,34,0,7181
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17261,2026-10-24,Sat,14:30,70,Free Flow 70,25,0,25,0,7271
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17264,2026-10-24,Sat,15:00,70,Free Flow 70,25,0,25,0,7301
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17263,2026-10-24,Sat,16:30,70,Free Flow 70,25,1,24,0,7391
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17262,2026-10-24,Sat,17:00,70,Free Flow 70,25,0,25,0,7421
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17256,2026-10-24,Sat,18:45,120,Lively - Free Flow 120,40,0,40,0,7526
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17266,2026-10-25,Sun,08:40,70,Free Flow 70 x London Nootropics,42,1,41,0,8421
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17268,2026-10-25,Sun,10:00,60,Energise - Stretch & Recover.,42,7,35,0,8501
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17267,2026-10-25,Sun,11:30,60,Relax - Restorative Sound Bath.,42,21,21,0,8591
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17274,2026-10-25,Sun,12:45,70,Free Flow 70,25,1,24,0,8666
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17273,2026-10-25,Sun,13:15,70,Free Flow 70,25,0,25,0,8696
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17271,2026-10-25,Sun,14:45,70,Free Flow 70,25,0,25,0,8786
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17272,2026-10-25,Sun,15:15,70,Free Flow 70,25,3,22,0,8816
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17270,2026-10-25,Sun,16:45,70,Free Flow 70,25,3,22,0,8906
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17269,2026-10-25,Sun,17:15,70,Free Flow 70,25,0,25,0,8936
+2026-10-19T12:19:11.886Z,Arc,Canary Wharf,marianatek,17265,2026-10-25,Sun,18:45,70,Silent Free Flow 70,50,2,48,0,9026
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,DmC9ngn4Ypzl57TeLsrI:2026-10-19:12,2026-10-19,Mon,12:00,90,Sauna For Addiction Recovery | Willow Camberwell,11,9,2,,-79
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-19:18,2026-10-19,Mon,18:00,90,Members Weekday Priority Slots | Camberwell ,2,2,0,,281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-19:20,2026-10-19,Mon,20:00,90,Members Weekday Priority Slots | Camberwell ,2,2,0,,401
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hoeczP0SYDOnWy3qPgNG:2026-10-21:16,2026-10-21,Wed,16:00,90,Women's Over 50 Sauna | Camberwell,42,7,35,,3041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-21:18,2026-10-21,Wed,18:00,90,Members Weekday Priority Slots | Camberwell ,2,1,1,,3161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-21:20,2026-10-21,Wed,20:00,90,Members Weekday Priority Slots | Camberwell ,2,1,1,,3281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-22:7,2026-10-22,Thu,07:00,60,Sauna and Cold Plunge Weekday Camberwell,40,11,29,,3941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-22:8,2026-10-22,Thu,08:00,60,Sauna and Cold Plunge Weekday Camberwell,40,9,31,,4001
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,jzIOLMu1XTncBqy9T9jt:2026-10-22:10,2026-10-22,Thu,10:00,60,Women's Sauna | Camberwell,42,8,34,,4121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,jzIOLMu1XTncBqy9T9jt:2026-10-22:11,2026-10-22,Thu,11:00,60,Women's Sauna | Camberwell,42,5,37,,4181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,275evrwKvC7lgbtPV6Td:2026-10-22:12,2026-10-22,Thu,12:00,90,Mothers Recharge- Mother Only | Camberwell,26,5,21,,4241
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,FCeOOzlEkhPjDjCiANcF:2026-10-22:12,2026-10-22,Thu,12:00,90,Mothers Recharge - Mother & Baby | Camberwell,10,2,8,,4241
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-22:14,2026-10-22,Thu,14:00,90,Sauna and Cold Plunge Weekday Camberwell,40,2,38,,4361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-22:16,2026-10-22,Thu,16:00,90,Sauna and Cold Plunge Weekday Camberwell,40,9,31,,4481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-22:18,2026-10-22,Thu,18:00,90,Sauna and Cold Plunge Weekday Camberwell,38,11,27,,4601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-22:18,2026-10-22,Thu,18:00,90,Members Weekday Priority Slots | Camberwell ,2,1,1,,4601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-22:20,2026-10-22,Thu,20:00,90,Sauna and Cold Plunge Weekday Camberwell,38,30,8,,4721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-22:20,2026-10-22,Thu,20:00,90,Members Weekday Priority Slots | Camberwell ,2,2,0,,4721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:7,2026-10-23,Fri,07:00,60,Sauna and Cold Plunge Weekday Camberwell,21,20,1,,5381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:7.5,2026-10-23,Fri,07:30,60,Sauna and Cold Plunge Weekday Camberwell,21,5,16,,5411
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:8,2026-10-23,Fri,08:00,60,Sauna and Cold Plunge Weekday Camberwell,21,9,12,,5441
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:8.5,2026-10-23,Fri,08:30,60,Sauna and Cold Plunge Weekday Camberwell,21,4,17,,5471
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:9,2026-10-23,Fri,09:00,60,Sauna and Cold Plunge Weekday Camberwell,21,4,17,,5501
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:9.5,2026-10-23,Fri,09:30,60,Sauna and Cold Plunge Weekday Camberwell,21,5,16,,5531
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:10,2026-10-23,Fri,10:00,60,Sauna and Cold Plunge Weekday Camberwell,17,1,16,,5561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:10.5,2026-10-23,Fri,10:30,60,Sauna and Cold Plunge Weekday Camberwell,17,9,8,,5591
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:11,2026-10-23,Fri,11:00,60,Sauna and Cold Plunge Weekday Camberwell,26,7,19,,5621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:12,2026-10-23,Fri,12:00,90,Sauna and Cold Plunge Weekday Camberwell,40,10,30,,5681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:14,2026-10-23,Fri,14:00,90,Sauna and Cold Plunge Weekday Camberwell,40,6,34,,5801
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:16,2026-10-23,Fri,16:00,90,Sauna and Cold Plunge Weekday Camberwell,40,15,25,,5921
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:18,2026-10-23,Fri,18:00,90,Sauna and Cold Plunge Weekday Camberwell,38,11,27,,6041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-23:18,2026-10-23,Fri,18:00,90,Members Weekday Priority Slots | Camberwell ,2,1,1,,6041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,hE0uQQgfYwQ6nB3y44lx:2026-10-23:20,2026-10-23,Fri,20:00,90,Sauna and Cold Plunge Weekday Camberwell,38,7,31,,6161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,AQ1T7l2egHAI9FTWbL9b:2026-10-23:20,2026-10-23,Fri,20:00,90,Members Weekday Priority Slots | Camberwell ,2,0,2,,6161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-24:7,2026-10-24,Sat,07:00,30,Sauna and Cold Plunge Weekday Camberwell,38,0,38,,6821
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:7,2026-10-24,Sat,07:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,6821
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:7.5,2026-10-24,Sat,07:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,6851
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-24:8,2026-10-24,Sat,08:00,30,Sauna and Cold Plunge Weekday Camberwell,38,3,35,,6881
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:8,2026-10-24,Sat,08:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,6881
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:8.5,2026-10-24,Sat,08:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,6911
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:9,2026-10-24,Sat,09:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,6941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:9.5,2026-10-24,Sat,09:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,6971
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:10.5,2026-10-24,Sat,10:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7031
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:11,2026-10-24,Sat,11:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:11.5,2026-10-24,Sat,11:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7091
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-24:12,2026-10-24,Sat,12:00,30,Sauna and Cold Plunge Weekday Camberwell,38,21,17,,7121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:12,2026-10-24,Sat,12:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:12.5,2026-10-24,Sat,12:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7151
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:13,2026-10-24,Sat,13:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:13.5,2026-10-24,Sat,13:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7211
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:14.5,2026-10-24,Sat,14:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7271
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:15,2026-10-24,Sat,15:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:15.5,2026-10-24,Sat,15:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7331
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-24:16,2026-10-24,Sat,16:00,30,Sauna and Cold Plunge Weekday Camberwell,38,46,-8,,7361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:16,2026-10-24,Sat,16:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:16.5,2026-10-24,Sat,16:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7391
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:17,2026-10-24,Sat,17:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7421
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-24:18,2026-10-24,Sat,18:00,30,Sauna and Cold Plunge Weekday Camberwell,38,4,34,,7481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:18,2026-10-24,Sat,18:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,2,0,,7481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:18.5,2026-10-24,Sat,18:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,2,0,,7511
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:19,2026-10-24,Sat,19:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,2,0,,7541
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:19.5,2026-10-24,Sat,19:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7571
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-24:20,2026-10-24,Sat,20:00,30,Sauna and Cold Plunge Weekday Camberwell,38,0,38,,7601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:20,2026-10-24,Sat,20:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:20.5,2026-10-24,Sat,20:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7631
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-24:21,2026-10-24,Sat,21:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,7661
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-25:7,2026-10-25,Sun,07:00,30,Sauna and Cold Plunge Weekday Camberwell,38,0,38,,8321
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:7,2026-10-25,Sun,07:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8321
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:7.5,2026-10-25,Sun,07:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8351
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-25:8,2026-10-25,Sun,08:00,30,Sauna and Cold Plunge Weekday Camberwell,38,1,37,,8381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:8,2026-10-25,Sun,08:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:8.5,2026-10-25,Sun,08:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8411
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:9,2026-10-25,Sun,09:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8441
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:9.5,2026-10-25,Sun,09:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8471
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:10.5,2026-10-25,Sun,10:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8531
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:11,2026-10-25,Sun,11:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:11.5,2026-10-25,Sun,11:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8591
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-25:12,2026-10-25,Sun,12:00,30,Sauna and Cold Plunge Weekday Camberwell,38,31,7,,8621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:12,2026-10-25,Sun,12:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,8621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:12.5,2026-10-25,Sun,12:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,2,0,,8651
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:13,2026-10-25,Sun,13:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,2,0,,8681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:13.5,2026-10-25,Sun,13:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,2,0,,8711
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,YidJL4yH3DVP0PTSYdUk:2026-10-25:14,2026-10-25,Sun,14:00,90,Family Sauna Session | Camberwell,8,11,-3,,8741
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:14.5,2026-10-25,Sun,14:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,0,0,0,,8771
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:15,2026-10-25,Sun,15:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,0,0,0,,8801
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:15.5,2026-10-25,Sun,15:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,8831
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-25:16,2026-10-25,Sun,16:00,30,Sauna and Cold Plunge Weekday Camberwell,38,38,0,,8861
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:16,2026-10-25,Sun,16:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,2,0,,8861
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:16.5,2026-10-25,Sun,16:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,8891
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:17,2026-10-25,Sun,17:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,8921
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,FsJPkwGWgiCKD2EMbcKK:2026-10-25:18,2026-10-25,Sun,18:00,90,FLINTA Sauna | Camberwell,38,10,28,,8981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:18,2026-10-25,Sun,18:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,0,0,0,,8981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:18.5,2026-10-25,Sun,18:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,0,0,0,,9011
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:19,2026-10-25,Sun,19:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,0,0,0,,9041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:19.5,2026-10-25,Sun,19:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,9071
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,J0BPWmpkZGVTEUylpf6i:2026-10-25:20,2026-10-25,Sun,20:00,30,Sauna and Cold Plunge Weekday Camberwell,38,10,28,,9101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:20,2026-10-25,Sun,20:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,9101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:20.5,2026-10-25,Sun,20:30,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,1,1,,9131
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Camberwell,periode,w7jJoVWImtbTWTx5Dxye:2026-10-25:21,2026-10-25,Sun,21:00,30,Members Weekend/Holiday Priority Slots | Camberwell ,2,0,2,,9161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-19:18,2026-10-19,Mon,18:00,30,Members Priority Slots | Hackney Wick,3,2,1,,281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-19:18.5,2026-10-19,Mon,18:30,30,Members Priority Slots | Hackney Wick,3,3,0,,311
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-19:19,2026-10-19,Mon,19:00,30,Members Priority Slots | Hackney Wick,3,3,0,,341
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-19:19.5,2026-10-19,Mon,19:30,30,Members Priority Slots | Hackney Wick,3,1,2,,371
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,YPRS5qMdL90aMsOeXa0M:2026-10-19:20,2026-10-19,Mon,20:00,90,Men's Sauna | Hackney Wick,20,10,10,,401
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-19:20,2026-10-19,Mon,20:00,30,Members Priority Slots | Hackney Wick,3,4,-1,,401
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-19:20.5,2026-10-19,Mon,20:30,30,Members Priority Slots | Hackney Wick,3,4,-1,,431
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-19:21,2026-10-19,Mon,21:00,30,Members Priority Slots | Hackney Wick,3,2,1,,461
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-20:18,2026-10-20,Tue,18:00,30,Members Priority Slots | Hackney Wick,3,3,0,,1721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-20:18.5,2026-10-20,Tue,18:30,30,Members Priority Slots | Hackney Wick,3,3,0,,1751
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-20:19,2026-10-20,Tue,19:00,30,Members Priority Slots | Hackney Wick,3,3,0,,1781
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-20:19.5,2026-10-20,Tue,19:30,30,Members Priority Slots | Hackney Wick,3,2,1,,1811
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-20:20,2026-10-20,Tue,20:00,30,Members Priority Slots | Hackney Wick,3,2,1,,1841
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-20:20.5,2026-10-20,Tue,20:30,30,Members Priority Slots | Hackney Wick,3,0,3,,1871
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-20:21,2026-10-20,Tue,21:00,30,Members Priority Slots | Hackney Wick,3,0,3,,1901
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-21:8,2026-10-21,Wed,08:00,60,Women's Sauna | Hackney Wick,16,0,16,,2561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-21:9,2026-10-21,Wed,09:00,60,Women's Sauna | Hackney Wick,16,0,16,,2621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-21:10,2026-10-21,Wed,10:00,60,Women's Sauna | Hackney Wick,16,0,16,,2681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-21:14,2026-10-21,Wed,14:00,90,Women's Sauna | Hackney Wick,16,1,15,,2921
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-21:16,2026-10-21,Wed,16:00,90,Women's Sauna | Hackney Wick,16,0,16,,3041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-21:18,2026-10-21,Wed,18:00,90,Women's Sauna | Hackney Wick,10,3,7,,3161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-21:18,2026-10-21,Wed,18:00,30,Members Priority Slots | Hackney Wick,3,0,3,,3161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-21:18.5,2026-10-21,Wed,18:30,30,Members Priority Slots | Hackney Wick,3,1,2,,3191
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-21:19,2026-10-21,Wed,19:00,30,Members Priority Slots | Hackney Wick,3,1,2,,3221
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-21:19.5,2026-10-21,Wed,19:30,30,Members Priority Slots | Hackney Wick,3,1,2,,3251
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-21:20,2026-10-21,Wed,20:00,90,Women's Sauna | Hackney Wick,16,0,16,,3281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-21:20,2026-10-21,Wed,20:00,30,Members Priority Slots | Hackney Wick,3,2,1,,3281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-21:20.5,2026-10-21,Wed,20:30,30,Members Priority Slots | Hackney Wick,3,2,1,,3311
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-21:21,2026-10-21,Wed,21:00,30,Members Priority Slots | Hackney Wick,3,1,2,,3341
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-22:8,2026-10-22,Thu,08:00,60,Women's Sauna | Hackney Wick,16,0,16,,4001
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-22:9,2026-10-22,Thu,09:00,60,Women's Sauna | Hackney Wick,16,0,16,,4061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-22:10,2026-10-22,Thu,10:00,60,Women's Sauna | Hackney Wick,16,0,16,,4121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-22:11,2026-10-22,Thu,11:00,60,Women's Sauna | Hackney Wick,16,1,15,,4181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-22:12,2026-10-22,Thu,12:00,90,Women's Sauna | Hackney Wick,16,2,14,,4241
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,GbH0kPJC97eiOmu03yXb:2026-10-22:16,2026-10-22,Thu,16:00,90,Women's Sauna | Hackney Wick,16,3,13,,4481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-22:18,2026-10-22,Thu,18:00,30,Members Priority Slots | Hackney Wick,3,1,2,,4601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-22:18.5,2026-10-22,Thu,18:30,30,Members Priority Slots | Hackney Wick,3,1,2,,4631
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-22:19,2026-10-22,Thu,19:00,30,Members Priority Slots | Hackney Wick,3,1,2,,4661
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-22:19.5,2026-10-22,Thu,19:30,30,Members Priority Slots | Hackney Wick,3,1,2,,4691
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,TEXNJAzYvKmcTmmN5U86:2026-10-22:20,2026-10-22,Thu,20:00,90,Sauna Sound Bath | Hackney Wick,20,0,20,,4721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-22:20,2026-10-22,Thu,20:00,30,Members Priority Slots | Hackney Wick,3,1,2,,4721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-22:20.5,2026-10-22,Thu,20:30,30,Members Priority Slots | Hackney Wick,3,1,2,,4751
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-22:21,2026-10-22,Thu,21:00,30,Members Priority Slots | Hackney Wick,3,0,3,,4781
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-23:18,2026-10-23,Fri,18:00,30,Members Priority Slots | Hackney Wick,3,0,3,,6041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-23:18.5,2026-10-23,Fri,18:30,30,Members Priority Slots | Hackney Wick,3,0,3,,6071
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-23:19,2026-10-23,Fri,19:00,30,Members Priority Slots | Hackney Wick,3,0,3,,6101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-23:19.5,2026-10-23,Fri,19:30,30,Members Priority Slots | Hackney Wick,3,2,1,,6131
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-23:20,2026-10-23,Fri,20:00,30,Members Priority Slots | Hackney Wick,3,2,1,,6161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-23:20.5,2026-10-23,Fri,20:30,30,Members Priority Slots | Hackney Wick,3,1,2,,6191
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-23:21,2026-10-23,Fri,21:00,30,Members Priority Slots | Hackney Wick,3,0,3,,6221
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:8,2026-10-24,Sat,08:00,30,Members Priority Slots | Hackney Wick,3,0,3,,6881
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:8.5,2026-10-24,Sat,08:30,30,Members Priority Slots | Hackney Wick,3,0,3,,6911
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:9,2026-10-24,Sat,09:00,30,Members Priority Slots | Hackney Wick,3,0,3,,6941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:9.5,2026-10-24,Sat,09:30,30,Members Priority Slots | Hackney Wick,3,0,3,,6971
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:10.5,2026-10-24,Sat,10:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7031
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:11,2026-10-24,Sat,11:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:11.5,2026-10-24,Sat,11:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7091
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:12,2026-10-24,Sat,12:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:12.5,2026-10-24,Sat,12:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7151
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:13,2026-10-24,Sat,13:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:13.5,2026-10-24,Sat,13:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7211
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,7zzcENn68yNCKURUaFxL:2026-10-24:14.5,2026-10-24,Sat,14:30,90,Mindfulness and Movement with Ferus Animi // Terra Nova | Hackney Wick,20,3,17,,7271
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:14.5,2026-10-24,Sat,14:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7271
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:15,2026-10-24,Sat,15:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:15.5,2026-10-24,Sat,15:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7331
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:16,2026-10-24,Sat,16:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:16.5,2026-10-24,Sat,16:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7391
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:17,2026-10-24,Sat,17:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7421
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:18,2026-10-24,Sat,18:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:18.5,2026-10-24,Sat,18:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7511
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:19,2026-10-24,Sat,19:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7541
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:19.5,2026-10-24,Sat,19:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7571
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:20,2026-10-24,Sat,20:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:20.5,2026-10-24,Sat,20:30,30,Members Priority Slots | Hackney Wick,3,0,3,,7631
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-24:21,2026-10-24,Sat,21:00,30,Members Priority Slots | Hackney Wick,3,0,3,,7661
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:8,2026-10-25,Sun,08:00,30,Members Priority Slots | Hackney Wick,3,0,3,,8381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:8.5,2026-10-25,Sun,08:30,30,Members Priority Slots | Hackney Wick,3,0,3,,8411
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:9,2026-10-25,Sun,09:00,30,Members Priority Slots | Hackney Wick,3,0,3,,8441
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:9.5,2026-10-25,Sun,09:30,30,Members Priority Slots | Hackney Wick,3,0,3,,8471
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:10.5,2026-10-25,Sun,10:30,30,Members Priority Slots | Hackney Wick,3,0,3,,8531
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:11,2026-10-25,Sun,11:00,30,Members Priority Slots | Hackney Wick,3,1,2,,8561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:11.5,2026-10-25,Sun,11:30,30,Members Priority Slots | Hackney Wick,3,1,2,,8591
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:12,2026-10-25,Sun,12:00,30,Members Priority Slots | Hackney Wick,3,1,2,,8621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:12.5,2026-10-25,Sun,12:30,30,Members Priority Slots | Hackney Wick,3,1,2,,8651
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:13,2026-10-25,Sun,13:00,30,Members Priority Slots | Hackney Wick,3,1,2,,8681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:13.5,2026-10-25,Sun,13:30,30,Members Priority Slots | Hackney Wick,3,1,2,,8711
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:14.5,2026-10-25,Sun,14:30,30,Members Priority Slots | Hackney Wick,3,0,3,,8771
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:15,2026-10-25,Sun,15:00,30,Members Priority Slots | Hackney Wick,3,1,2,,8801
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:15.5,2026-10-25,Sun,15:30,30,Members Priority Slots | Hackney Wick,3,1,2,,8831
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:16,2026-10-25,Sun,16:00,30,Members Priority Slots | Hackney Wick,3,0,3,,8861
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:16.5,2026-10-25,Sun,16:30,30,Members Priority Slots | Hackney Wick,3,0,3,,8891
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:17,2026-10-25,Sun,17:00,30,Members Priority Slots | Hackney Wick,3,0,3,,8921
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,cj96v0lQJKaHiuVHUev3:2026-10-25:18,2026-10-25,Sun,18:00,90,FLINTA Sauna | Hackney Wick,16,0,16,,8981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:18,2026-10-25,Sun,18:00,30,Members Priority Slots | Hackney Wick,3,0,3,,8981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:18.5,2026-10-25,Sun,18:30,30,Members Priority Slots | Hackney Wick,3,0,3,,9011
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:19,2026-10-25,Sun,19:00,30,Members Priority Slots | Hackney Wick,3,0,3,,9041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:19.5,2026-10-25,Sun,19:30,30,Members Priority Slots | Hackney Wick,3,0,3,,9071
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:20,2026-10-25,Sun,20:00,30,Members Priority Slots | Hackney Wick,3,0,3,,9101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:20.5,2026-10-25,Sun,20:30,30,Members Priority Slots | Hackney Wick,3,0,3,,9131
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Hackney Wick,periode,D2J9GbbTG4ocadqzcAdK:2026-10-25:21,2026-10-25,Sun,21:00,30,Members Priority Slots | Hackney Wick,3,0,3,,9161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-23:9,2026-10-23,Fri,09:00,75,Sauna Peckham,12,0,12,,5501
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-23:10.5,2026-10-23,Fri,10:30,75,Sauna Peckham,12,1,11,,5591
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-23:12,2026-10-23,Fri,12:00,75,Sauna Peckham,12,0,12,,5681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-23:13.5,2026-10-23,Fri,13:30,75,Sauna Peckham,12,2,10,,5771
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-23:15,2026-10-23,Fri,15:00,75,Sauna Peckham,12,0,12,,5861
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-23:18,2026-10-23,Fri,18:00,75,Sauna Peckham,0,0,0,,6041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-24:9,2026-10-24,Sat,09:00,75,Sauna Peckham,12,0,12,,6941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-24:10.5,2026-10-24,Sat,10:30,75,Sauna Peckham,12,5,7,,7031
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-24:12,2026-10-24,Sat,12:00,75,Sauna Peckham,12,0,12,,7121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-24:13.5,2026-10-24,Sat,13:30,75,Sauna Peckham,12,0,12,,7211
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-24:15,2026-10-24,Sat,15:00,75,Sauna Peckham,12,5,7,,7301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-24:18,2026-10-24,Sat,18:00,75,Sauna Peckham,0,0,0,,7481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-25:9,2026-10-25,Sun,09:00,75,Sauna Peckham,12,3,9,,8441
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-25:10.5,2026-10-25,Sun,10:30,75,Sauna Peckham,12,3,9,,8531
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-25:12,2026-10-25,Sun,12:00,75,Sauna Peckham,12,2,10,,8621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-25:13.5,2026-10-25,Sun,13:30,75,Sauna Peckham,12,0,12,,8711
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Peckham,periode,QXxOLPJkNVoiDhJZ0dGd:2026-10-25:15,2026-10-25,Sun,15:00,75,Sauna Peckham,12,0,12,,8801
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-19:12,2026-10-19,Mon,12:00,60,Sauna and Cold Plunge Weekday Stratford,22,24,-2,,-79
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-19:13,2026-10-19,Mon,13:00,90,Sauna and Cold Plunge Weekday Stratford,16,19,-3,,-19
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-19:15,2026-10-19,Mon,15:00,90,Sauna and Cold Plunge Weekday Stratford,24,28,-4,,101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-19:17,2026-10-19,Mon,17:00,90,Sauna and Cold Plunge Weekday Stratford,24,10,14,,221
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-19:19,2026-10-19,Mon,19:00,90,Sauna and Cold Plunge Weekday Stratford,24,7,17,,341
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-19:20.5,2026-10-19,Mon,20:30,60,Sauna and Cold Plunge Weekday Stratford,20,5,15,,431
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-20:18,2026-10-20,Tue,18:00,90,Sauna and Cold Plunge Weekday Stratford,24,6,18,,1721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-20:20,2026-10-20,Tue,20:00,90,Sauna and Cold Plunge Weekday Stratford,24,7,17,,1841
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-21:7,2026-10-21,Wed,07:00,60,Sauna and Cold Plunge Weekday Stratford,22,5,17,,2501
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-21:8,2026-10-21,Wed,08:00,60,Sauna and Cold Plunge Weekday Stratford,22,2,20,,2561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,QAqhrzSVMSeKmQTPyRhD:2026-10-21:9,2026-10-21,Wed,09:00,60,Women's Sauna | Stratford,22,4,18,,2621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,QAqhrzSVMSeKmQTPyRhD:2026-10-21:10,2026-10-21,Wed,10:00,60,Women's Sauna | Stratford,22,2,20,,2681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,QAqhrzSVMSeKmQTPyRhD:2026-10-21:11,2026-10-21,Wed,11:00,60,Women's Sauna | Stratford,11,2,9,,2741
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,QAqhrzSVMSeKmQTPyRhD:2026-10-21:12,2026-10-21,Wed,12:00,90,Women's Sauna | Stratford,11,4,7,,2801
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-21:14,2026-10-21,Wed,14:00,60,Sauna and Cold Plunge Weekday Stratford,22,10,12,,2921
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-21:15,2026-10-21,Wed,15:00,90,Sauna and Cold Plunge Weekday Stratford,24,5,19,,2981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-21:17,2026-10-21,Wed,17:00,90,Sauna and Cold Plunge Weekday Stratford,24,4,20,,3101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-21:19,2026-10-21,Wed,19:00,90,Sauna and Cold Plunge Weekday Stratford,24,10,14,,3221
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,tdcrHbKCsEHWmKIULw58:2026-10-21:20.5,2026-10-21,Wed,20:30,60,FLINTA Sauna | Stratford,20,2,18,,3311
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:7,2026-10-22,Thu,07:00,60,Sauna and Cold Plunge Weekday Stratford,22,1,21,,3941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:8,2026-10-22,Thu,08:00,60,Sauna and Cold Plunge Weekday Stratford,22,1,21,,4001
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:9,2026-10-22,Thu,09:00,60,Sauna and Cold Plunge Weekday Stratford,22,3,19,,4061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:10,2026-10-22,Thu,10:00,60,Sauna and Cold Plunge Weekday Stratford,22,0,22,,4121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:11,2026-10-22,Thu,11:00,60,Sauna and Cold Plunge Weekday Stratford,22,0,22,,4181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:12,2026-10-22,Thu,12:00,60,Sauna and Cold Plunge Weekday Stratford,22,1,21,,4241
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:13,2026-10-22,Thu,13:00,90,Sauna and Cold Plunge Weekday Stratford,24,0,24,,4301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:15,2026-10-22,Thu,15:00,90,Sauna and Cold Plunge Weekday Stratford,24,2,22,,4421
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:17,2026-10-22,Thu,17:00,90,Sauna and Cold Plunge Weekday Stratford,24,7,17,,4541
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:19,2026-10-22,Thu,19:00,90,Sauna and Cold Plunge Weekday Stratford,24,3,21,,4661
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-22:20.5,2026-10-22,Thu,20:30,60,Sauna and Cold Plunge Weekday Stratford,20,0,20,,4751
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:7,2026-10-23,Fri,07:00,60,Sauna and Cold Plunge Weekday Stratford,22,1,21,,5381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:8,2026-10-23,Fri,08:00,60,Sauna and Cold Plunge Weekday Stratford,22,0,22,,5441
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:9,2026-10-23,Fri,09:00,60,Sauna and Cold Plunge Weekday Stratford,22,2,20,,5501
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:10,2026-10-23,Fri,10:00,60,Sauna and Cold Plunge Weekday Stratford,22,0,22,,5561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,ED0Ft441uL4dGbNe6kgQ:2026-10-23:11,2026-10-23,Fri,11:00,90,Sauna for Addiction Recovery | Stratford,12,12,0,,5621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:13,2026-10-23,Fri,13:00,90,Sauna and Cold Plunge Weekday Stratford,24,4,20,,5741
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:15,2026-10-23,Fri,15:00,90,Sauna and Cold Plunge Weekday Stratford,24,2,22,,5861
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:17,2026-10-23,Fri,17:00,90,Sauna and Cold Plunge Weekday Stratford,24,2,22,,5981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:19,2026-10-23,Fri,19:00,90,Sauna and Cold Plunge Weekday Stratford,24,7,17,,6101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,mir3XkLVxs4EYRsV194r:2026-10-23:20.5,2026-10-23,Fri,20:30,60,Sauna and Cold Plunge Weekday Stratford,20,0,20,,6191
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:8,2026-10-24,Sat,08:00,30,Sauna and Cold Plunge Weekday Stratford,24,0,24,,6881
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:9,2026-10-24,Sat,09:00,30,Sauna and Cold Plunge Weekday Stratford,24,2,22,,6941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:11,2026-10-24,Sat,11:00,30,Sauna and Cold Plunge Weekday Stratford,24,3,21,,7061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:13,2026-10-24,Sat,13:00,30,Sauna and Cold Plunge Weekday Stratford,24,2,22,,7181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:15,2026-10-24,Sat,15:00,30,Sauna and Cold Plunge Weekday Stratford,24,3,21,,7301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:17,2026-10-24,Sat,17:00,30,Sauna and Cold Plunge Weekday Stratford,24,0,24,,7421
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:19,2026-10-24,Sat,19:00,30,Sauna and Cold Plunge Weekday Stratford,24,7,17,,7541
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-24:20.5,2026-10-24,Sat,20:30,30,Sauna and Cold Plunge Weekday Stratford,24,0,24,,7631
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:8,2026-10-25,Sun,08:00,30,Sauna and Cold Plunge Weekday Stratford,24,1,23,,8381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:9,2026-10-25,Sun,09:00,30,Sauna and Cold Plunge Weekday Stratford,24,0,24,,8441
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:11,2026-10-25,Sun,11:00,30,Sauna and Cold Plunge Weekday Stratford,24,2,22,,8561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:13,2026-10-25,Sun,13:00,30,Sauna and Cold Plunge Weekday Stratford,24,2,22,,8681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:15,2026-10-25,Sun,15:00,30,Sauna and Cold Plunge Weekday Stratford,24,2,22,,8801
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:17,2026-10-25,Sun,17:00,30,Sauna and Cold Plunge Weekday Stratford,24,16,8,,8921
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:19,2026-10-25,Sun,19:00,30,Sauna and Cold Plunge Weekday Stratford,24,0,24,,9041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Stratford,periode,HWi2avl2KIhXqDKQZTqe:2026-10-25:20.5,2026-10-25,Sun,20:30,30,Sauna and Cold Plunge Weekday Stratford,24,0,24,,9131
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,IRIoT7wcArJCjW0CB8nw:2026-10-19:12,2026-10-19,Mon,12:00,90,Women's Sauna | Walthamstow,33,12,21,,-79
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-19:14,2026-10-19,Mon,14:00,90,Sauna and Cold Plunge Weekday Walthamstow,51,54,-3,,41
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-19:16,2026-10-19,Mon,16:00,90,Sauna and Cold Plunge Weekday Walthamstow,51,38,13,,161
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-19:18,2026-10-19,Mon,18:00,90,Sauna and Cold Plunge Weekday Walthamstow,49,36,13,,281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,FfLpAjma40ZWVNpwc0ha:2026-10-19:18,2026-10-19,Mon,18:00,90,Members Weekday Priority Slots | Walthamstow ,3,3,0,,281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-19:20,2026-10-19,Mon,20:00,90,Sauna and Cold Plunge Weekday Walthamstow,49,32,17,,401
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,FfLpAjma40ZWVNpwc0ha:2026-10-19:20,2026-10-19,Mon,20:00,90,Members Weekday Priority Slots | Walthamstow ,3,1,2,,401
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:7,2026-10-20,Tue,07:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,6,43,,1061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:8,2026-10-20,Tue,08:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,2,47,,1121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:9,2026-10-20,Tue,09:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,7,42,,1181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:10,2026-10-20,Tue,10:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,7,42,,1241
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:11,2026-10-20,Tue,11:00,60,Sauna and Cold Plunge Weekday Walthamstow,30,2,28,,1301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,3inkstMMGdO2IG2nQyAp:2026-10-20:11,2026-10-20,Tue,11:00,90,Sauna For Addiction Recovery | Octavia Walthamstow,20,3,17,,1301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:12,2026-10-20,Tue,12:00,90,Sauna and Cold Plunge Weekday Walthamstow,40,12,28,,1361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:14,2026-10-20,Tue,14:00,90,Sauna and Cold Plunge Weekday Walthamstow,51,5,46,,1481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:16,2026-10-20,Tue,16:00,90,Sauna and Cold Plunge Weekday Walthamstow,51,13,38,,1601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:18,2026-10-20,Tue,18:00,90,Sauna and Cold Plunge Weekday Walthamstow,49,17,32,,1721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,FfLpAjma40ZWVNpwc0ha:2026-10-20:18,2026-10-20,Tue,18:00,90,Members Weekday Priority Slots | Walthamstow ,3,0,3,,1721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-20:20,2026-10-20,Tue,20:00,90,Sauna and Cold Plunge Weekday Walthamstow,49,15,34,,1841
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,FfLpAjma40ZWVNpwc0ha:2026-10-20:20,2026-10-20,Tue,20:00,90,Members Weekday Priority Slots | Walthamstow ,3,0,3,,1841
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zurVFvhAnZi3QbEzWARw:2026-10-21:20,2026-10-21,Wed,20:00,90,FLINTA Sauna | Walthamstow,51,26,25,,3281
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:7,2026-10-22,Thu,07:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,3,46,,3941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:8,2026-10-22,Thu,08:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,1,48,,4001
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:9,2026-10-22,Thu,09:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,1,48,,4061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:10,2026-10-22,Thu,10:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,4,45,,4121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:11,2026-10-22,Thu,11:00,60,Sauna and Cold Plunge Weekday Walthamstow,49,7,42,,4181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:12,2026-10-22,Thu,12:00,90,Sauna and Cold Plunge Weekday Walthamstow,51,2,49,,4241
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:14,2026-10-22,Thu,14:00,90,Sauna and Cold Plunge Weekday Walthamstow,51,6,45,,4361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:16,2026-10-22,Thu,16:00,90,Sauna and Cold Plunge Weekday Walthamstow,51,1,50,,4481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:18,2026-10-22,Thu,18:00,90,Sauna and Cold Plunge Weekday Walthamstow,49,19,30,,4601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,FfLpAjma40ZWVNpwc0ha:2026-10-22:18,2026-10-22,Thu,18:00,90,Members Weekday Priority Slots | Walthamstow ,3,1,2,,4601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,zobwgLpyI2NU73tHF6wU:2026-10-22:20,2026-10-22,Thu,20:00,90,Sauna and Cold Plunge Weekday Walthamstow,18,10,8,,4721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,Um6RTD8ly8HeTcMA9jxQ:2026-10-22:20,2026-10-22,Thu,20:00,90,Sing and Sauna | Walthamstow,30,16,14,,4721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,FfLpAjma40ZWVNpwc0ha:2026-10-22:20,2026-10-22,Thu,20:00,90,Members Weekday Priority Slots | Walthamstow ,3,2,1,,4721
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,G2WNUfPwC3aoJP8crVXT:2026-10-23:18,2026-10-23,Fri,18:00,90,Sauna Live Session | Walthamstow,56,16,40,,6041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-24:7,2026-10-24,Sat,07:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,0,49,,6821
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:7,2026-10-24,Sat,07:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,6821
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:7.5,2026-10-24,Sat,07:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,6851
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-24:8,2026-10-24,Sat,08:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,0,49,,6881
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:8,2026-10-24,Sat,08:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,6881
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:8.5,2026-10-24,Sat,08:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,6911
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:9,2026-10-24,Sat,09:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,6941
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:9.5,2026-10-24,Sat,09:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,6971
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:10.5,2026-10-24,Sat,10:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7031
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:11,2026-10-24,Sat,11:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7061
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:11.5,2026-10-24,Sat,11:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7091
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-24:12,2026-10-24,Sat,12:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,9,40,,7121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:12,2026-10-24,Sat,12:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7121
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:12.5,2026-10-24,Sat,12:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7151
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:13,2026-10-24,Sat,13:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7181
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:13.5,2026-10-24,Sat,13:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7211
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:14.5,2026-10-24,Sat,14:30,30,Members Weekend Priority Slots | Walthamstow ,3,1,2,,7271
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:15,2026-10-24,Sat,15:00,30,Members Weekend Priority Slots | Walthamstow ,3,1,2,,7301
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:15.5,2026-10-24,Sat,15:30,30,Members Weekend Priority Slots | Walthamstow ,3,1,2,,7331
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-24:16,2026-10-24,Sat,16:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,26,23,,7361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:16,2026-10-24,Sat,16:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7361
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:16.5,2026-10-24,Sat,16:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7391
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:17,2026-10-24,Sat,17:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7421
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-24:18,2026-10-24,Sat,18:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,0,49,,7481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:18,2026-10-24,Sat,18:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7481
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:18.5,2026-10-24,Sat,18:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7511
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:19,2026-10-24,Sat,19:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7541
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:19.5,2026-10-24,Sat,19:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7571
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-24:20,2026-10-24,Sat,20:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,2,47,,7601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:20,2026-10-24,Sat,20:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7601
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:20.5,2026-10-24,Sat,20:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7631
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-24:21,2026-10-24,Sat,21:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,7661
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-25:7,2026-10-25,Sun,07:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,0,49,,8321
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:7,2026-10-25,Sun,07:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8321
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:7.5,2026-10-25,Sun,07:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8351
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-25:8,2026-10-25,Sun,08:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,0,49,,8381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:8,2026-10-25,Sun,08:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8381
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:8.5,2026-10-25,Sun,08:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8411
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:9,2026-10-25,Sun,09:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8441
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:9.5,2026-10-25,Sun,09:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8471
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,DYyBNiLwEcpvgQC5tlWB:2026-10-25:10.5,2026-10-25,Sun,10:30,90,Sauna Sound Bath | Walthamstow,30,1,29,,8531
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:10.5,2026-10-25,Sun,10:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8531
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:11,2026-10-25,Sun,11:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8561
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:11.5,2026-10-25,Sun,11:30,30,Members Weekend Priority Slots | Walthamstow ,3,1,2,,8591
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-25:12,2026-10-25,Sun,12:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,47,2,,8621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:12,2026-10-25,Sun,12:00,30,Members Weekend Priority Slots | Walthamstow ,3,1,2,,8621
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:12.5,2026-10-25,Sun,12:30,30,Members Weekend Priority Slots | Walthamstow ,3,1,2,,8651
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:13,2026-10-25,Sun,13:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8681
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:13.5,2026-10-25,Sun,13:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8711
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:14.5,2026-10-25,Sun,14:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8771
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:15,2026-10-25,Sun,15:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8801
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:15.5,2026-10-25,Sun,15:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8831
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-25:16,2026-10-25,Sun,16:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,12,37,,8861
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:16,2026-10-25,Sun,16:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8861
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:16.5,2026-10-25,Sun,16:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8891
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:17,2026-10-25,Sun,17:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8921
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-25:18,2026-10-25,Sun,18:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,7,42,,8981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:18,2026-10-25,Sun,18:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,8981
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:18.5,2026-10-25,Sun,18:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,9011
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:19,2026-10-25,Sun,19:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,9041
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:19.5,2026-10-25,Sun,19:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,9071
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,r8AbVvxPnhVcG3qjL8tk:2026-10-25:20,2026-10-25,Sun,20:00,30,Sauna and Cold Plunge Weekday Walthamstow,49,6,43,,9101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:20,2026-10-25,Sun,20:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,9101
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:20.5,2026-10-25,Sun,20:30,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,9131
+2026-10-19T12:19:11.886Z,Community Sauna Baths,Walthamstow,periode,xWdLzn3YJu4cv89gNb7q:2026-10-25:21,2026-10-25,Sun,21:00,30,Members Weekend Priority Slots | Walthamstow ,3,0,3,,9161
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431636,2026-10-19,Mon,12:00,50,Off-Peak Session,20,5,15,8,-79
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431656,2026-10-19,Mon,13:00,50,Off-Peak Session,20,5,15,8,-19
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431676,2026-10-19,Mon,15:00,50,Off-Peak Session,20,4,16,8,101
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431696,2026-10-19,Mon,16:00,50,Off-Peak Session,20,0,20,8,161
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6512640,2026-10-19,Mon,17:00,50,Off-Peak Session,20,2,18,8,221
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432099,2026-10-19,Mon,18:00,75,Breathwork Sauna Session (optional),20,4,16,8,281
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432139,2026-10-19,Mon,19:30,75,Peak Session,20,2,18,8,371
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431716,2026-10-20,Tue,07:00,50,Off-Peak Session,20,2,18,8,1061
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431736,2026-10-20,Tue,08:00,50,Off-Peak Session,20,2,18,8,1121
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431756,2026-10-20,Tue,09:00,50,Off-Peak Session,20,0,20,8,1181
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431776,2026-10-20,Tue,10:00,50,Off-Peak Session,20,5,15,8,1241
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431796,2026-10-20,Tue,11:00,50,Off-Peak Session,20,0,20,8,1301
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431816,2026-10-20,Tue,12:00,50,Off-Peak Session,20,0,20,8,1361
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431836,2026-10-20,Tue,13:00,50,Off-Peak Session,20,0,20,8,1421
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431856,2026-10-20,Tue,15:00,50,Off-Peak Session,20,1,19,8,1541
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431876,2026-10-20,Tue,16:00,50,Off-Peak Session,20,0,20,8,1601
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6512661,2026-10-20,Tue,17:00,50,Off-Peak Session,20,5,15,8,1661
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432180,2026-10-20,Tue,18:00,75,Peak Session,20,13,7,8,1721
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432220,2026-10-20,Tue,19:30,75,Peak Session,20,3,17,8,1811
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431896,2026-10-21,Wed,07:00,50,Off-Peak Session,20,1,19,8,2501
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431916,2026-10-21,Wed,08:00,50,Off-Peak Session,20,2,18,8,2561
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431936,2026-10-21,Wed,09:00,50,Off-Peak Session,20,0,20,8,2621
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431956,2026-10-21,Wed,10:00,50,Off-Peak Session,20,2,18,8,2681
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431976,2026-10-21,Wed,11:00,50,Off-Peak Session,20,0,20,8,2741
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6431996,2026-10-21,Wed,12:00,50,Off-Peak Session,20,0,20,8,2801
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432016,2026-10-21,Wed,13:00,50,Off-Peak Session,20,0,20,8,2861
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432036,2026-10-21,Wed,15:00,50,Off-Peak Session,20,0,20,8,2981
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432056,2026-10-21,Wed,16:00,50,Off-Peak Session,20,0,20,8,3041
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6512682,2026-10-21,Wed,17:00,50,Off-Peak Session,20,0,20,8,3101
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432261,2026-10-21,Wed,18:00,75,Peak Session,20,9,11,8,3161
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6861463,2026-10-21,Wed,19:30,75,Women-Only Session,20,0,20,8,3251
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432084,2026-10-22,Thu,07:00,50,Off-Peak Session,20,0,20,8,3941
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432124,2026-10-22,Thu,08:00,50,Off-Peak Session,20,2,18,8,4001
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432163,2026-10-22,Thu,09:00,50,Off-Peak Session,20,2,18,8,4061
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432203,2026-10-22,Thu,10:00,50,Off-Peak Session,20,0,20,8,4121
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432242,2026-10-22,Thu,11:00,50,Off-Peak Session,20,0,20,8,4181
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432281,2026-10-22,Thu,12:00,50,Off-Peak Session,20,0,20,8,4241
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432321,2026-10-22,Thu,13:00,50,Off-Peak Session,20,3,17,8,4301
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432362,2026-10-22,Thu,15:00,50,Off-Peak Session,20,0,20,8,4421
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432401,2026-10-22,Thu,16:00,50,Off-Peak Session,20,0,20,8,4481
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6512702,2026-10-22,Thu,17:00,50,Off-Peak Session,20,2,18,8,4541
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,7152629,2026-10-22,Thu,19:00,120,London Sauna Week Celebration,20,6,14,8,4661
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432441,2026-10-23,Fri,07:00,50,Off-Peak Session,20,0,20,8,5381
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432479,2026-10-23,Fri,08:00,50,Off-Peak Session,20,1,19,8,5441
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432519,2026-10-23,Fri,09:00,50,Off-Peak Session,20,0,20,8,5501
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432558,2026-10-23,Fri,10:00,50,Off-Peak Session,20,0,20,8,5561
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432597,2026-10-23,Fri,11:00,50,Off-Peak Session,20,0,20,8,5621
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432636,2026-10-23,Fri,12:00,50,Off-Peak Session,20,0,20,8,5681
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432677,2026-10-23,Fri,13:00,50,Off-Peak Session,20,0,20,8,5741
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432717,2026-10-23,Fri,15:00,50,Off-Peak Session,20,0,20,8,5861
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432757,2026-10-23,Fri,16:00,50,Off-Peak Session,20,0,20,8,5921
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6512722,2026-10-23,Fri,17:00,50,Off-Peak Session,20,1,19,8,5981
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432422,2026-10-23,Fri,18:00,75,Peak Session,20,2,18,8,6041
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432463,2026-10-23,Fri,19:30,75,Peak Session,20,0,20,8,6131
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432545,2026-10-24,Sat,08:00,75,Peak Session,20,0,20,8,6881
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432586,2026-10-24,Sat,09:30,75,Peak Session,20,4,16,8,6971
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432627,2026-10-24,Sat,11:00,75,Peak Session,20,2,18,8,7061
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432666,2026-10-24,Sat,12:30,75,Peak Session,20,0,20,8,7151
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432706,2026-10-24,Sat,14:00,75,Peak Session,20,2,18,8,7241
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432746,2026-10-24,Sat,15:30,75,Peak Session,20,2,18,8,7331
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6451241,2026-10-24,Sat,17:00,75,Peak Session,20,0,20,8,7421
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6971220,2026-10-24,Sat,18:45,165,DSS x Jubel,40,0,40,8,7526
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432816,2026-10-25,Sun,08:00,75,Peak Session,20,0,20,8,8381
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432836,2026-10-25,Sun,09:30,75,Peak Session,20,1,19,8,8471
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432856,2026-10-25,Sun,11:00,75,Peak Session,20,0,20,8,8561
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432877,2026-10-25,Sun,12:30,75,Peak Session,20,0,20,8,8651
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432897,2026-10-25,Sun,14:00,75,Peak Session,20,0,20,8,8741
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432917,2026-10-25,Sun,15:30,75,Peak Session,20,0,20,8,8831
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432937,2026-10-25,Sun,17:00,75,Peak Session,20,2,18,8,8921
+2026-10-19T12:19:11.886Z,Druid Street Saunas,Bermondsey,bookee,6432957,2026-10-25,Sun,18:30,75,Peak Session,20,0,20,8,9011
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,IbVFSpAdi0OE0uqJVDBl,2026-10-21,Wed,13:00,50,50,24,2,22,0,2861
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,rp2koGLkSdDGEoTUX9aD,2026-10-21,Wed,14:15,50,50,24,0,24,0,2936
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,1UK4lFfxJGOcK7oSpTy6,2026-10-21,Wed,15:30,75,75,24,1,23,0,3011
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,cENKUXAbaDpNRVte38GC,2026-10-21,Wed,17:15,50,50,24,0,24,0,3116
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,f3OwUEiHgQPjGNiz8yXu,2026-10-21,Wed,18:30,50,50,24,1,23,0,3191
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,v1MRHH83bGuAwSUxtRBC,2026-10-21,Wed,19:45,50,50 - Hotdrop Run Club,24,3,21,0,3266
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,6Crb2Krt3sMdsY8B39Vk,2026-10-22,Thu,12:00,50,50,24,2,22,0,4241
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,yoE9ZQAYZrQSrgUGzqmu,2026-10-22,Thu,13:15,50,50,24,0,24,0,4316
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,2xZpQ3mC32DB0rb4rQXC,2026-10-22,Thu,14:30,50,50,24,0,24,0,4391
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,GEZdcH5FDFAXgYNQV0ZD,2026-10-22,Thu,15:45,75,75,24,1,23,0,4466
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,NwAHinAF24b9ySfCWuhV,2026-10-22,Thu,17:30,50,50,24,2,22,0,4571
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,tscxKw8tAIAlrR4L7RkE,2026-10-22,Thu,18:45,75,"Sauna, Ice & Breathwork guided by The Breathwork Breddah",16,0,16,0,4646
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,pDHFGd7MYWaL6e75WvYa,2026-10-23,Fri,12:15,50,50,24,0,24,0,5696
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,lZAoZ1E3Oq3QnpgpTdpM,2026-10-23,Fri,13:30,50,50,24,0,24,0,5771
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,FjXdWT4TqlLlCt2fSAq1,2026-10-23,Fri,14:45,50,50,24,0,24,0,5846
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,5rllKjkJfLQjy1CFkZiK,2026-10-23,Fri,16:00,50,50,24,0,24,0,5921
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,NwnzZPTo8yXbcjScaELj,2026-10-23,Fri,17:15,50,50,24,0,24,0,5996
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,lhYQoGGbUqjs7VeFzqKD,2026-10-23,Fri,18:30,50,50,24,0,24,0,6071
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,3kMLXTl9twf741x6HjsP,2026-10-23,Fri,19:45,75,75,24,0,24,0,6146
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,05ocHAUYm5UjvYSiwmKt,2026-10-24,Sat,09:00,50,50,24,0,24,0,6941
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,VaN25iGJ1crbZqGXNVEG,2026-10-24,Sat,10:15,50,50,24,0,24,0,7016
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,O7OGLbTAg9gmliSIECzM,2026-10-24,Sat,11:30,75,75,24,0,24,0,7091
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,kb2pDeLnd69z8acQieWX,2026-10-24,Sat,13:15,50,50,24,7,17,0,7196
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,GwrewPk1SL7S7O43C9zZ,2026-10-24,Sat,14:30,75,75,24,0,24,0,7271
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,eINXblZ1HNOLEPoURvrV,2026-10-24,Sat,16:15,105,105,24,0,24,0,7376
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,Ndj80kLVxLt5FP4c2uP8,2026-10-25,Sun,09:00,50,50,24,0,24,0,8441
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,ZivKXG1BF6irecO3O7Mq,2026-10-25,Sun,10:15,50,50,24,0,24,0,8516
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,xtWtcSzMgDAu1tVrPNLp,2026-10-25,Sun,11:30,75,75,24,0,24,0,8591
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,0TI8VLUTmwRBL7rMGCZj,2026-10-25,Sun,13:15,50,50,24,0,24,0,8696
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,zTUeZTnKjMXvAQ11qTnL,2026-10-25,Sun,14:30,75,75,24,0,24,0,8771
+2026-10-19T12:19:11.886Z,Hotdrop,Battersea,arketa,a0N7rwjrSceCATzCROHi,2026-10-25,Sun,16:15,105,105,24,0,24,0,8876
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449ded8f2340274082815,2026-10-19,Mon,14:00,75,Sauna - Off-Peak Session,18,0,18,,41
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a1ae505019e459e92c8,2026-10-19,Mon,15:15,75,Sauna - Off-Peak Session,18,0,18,,116
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f3f46e25c418cece3ed4,2026-10-19,Mon,17:15,75,Silent Sauna,18,4,14,,236
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f40e6e25c418cece4e91,2026-10-19,Mon,18:30,75,Sauna - Peak Session,18,1,17,,311
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f86f1971beefbbbd1910,2026-10-19,Mon,19:45,75,Sleep Reset,18,2,16,,386
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4491fd8f2340274079870,2026-10-20,Tue,07:00,75,Sauna - Off-Peak Session,18,0,18,,1061
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4494de505019e459e17f6,2026-10-20,Tue,08:15,75,Sauna - Off-Peak Session,18,0,18,,1136
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44972e505019e459e30b1,2026-10-20,Tue,09:30,75,Sauna - Off-Peak Session,18,0,18,,1211
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4499fe505019e459e46c9,2026-10-20,Tue,11:30,75,Sauna - Off-Peak Session,18,0,18,,1331
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449bde505019e459e56e0,2026-10-20,Tue,12:45,75,Sauna - Off-Peak Session,18,0,18,,1406
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449edd8f2340274083265,2026-10-20,Tue,14:00,75,Sauna - Women Only Session,18,0,18,,1481
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a1ae505019e459e92c9,2026-10-20,Tue,15:15,75,Sauna - Off-Peak Session,18,0,18,,1556
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f3f46e25c418cece3ed5,2026-10-20,Tue,17:15,75,Silent Sauna,18,1,17,,1676
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f40e6e25c418cece4e92,2026-10-20,Tue,18:30,75,Sauna - Peak Session,18,3,15,,1751
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f86f1971beefbbbd1911,2026-10-20,Tue,19:45,75,Sleep Reset,18,0,18,,1826
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4499fe505019e459e46ca,2026-10-21,Wed,11:30,75,Sauna - Off-Peak Session,18,1,17,,2771
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449bde505019e459e56e1,2026-10-21,Wed,12:45,75,Sauna - Off-Peak Session,18,2,16,,2846
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449ded8f2340274082816,2026-10-21,Wed,14:00,75,Sauna - Off-Peak Session,18,0,18,,2921
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6acf9acd978c1a19b993911a,2026-10-21,Wed,15:15,75,Sauna - Off-Peak Session,18,0,18,,2996
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f3f46e25c418cece3ed6,2026-10-21,Wed,17:15,75,Silent Sauna,18,0,18,,3116
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f40e6e25c418cece4e93,2026-10-21,Wed,18:30,75,Sauna - Peak Session,18,2,16,,3191
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4491fd8f2340274079871,2026-10-22,Thu,07:00,75,Sauna - Off-Peak Session,18,1,17,,3941
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4494de505019e459e17f7,2026-10-22,Thu,08:15,75,Sauna - Off-Peak Session,18,0,18,,4016
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44972e505019e459e30b2,2026-10-22,Thu,09:30,75,Sauna - Off-Peak Session,18,1,17,,4091
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4499fe505019e459e46cb,2026-10-22,Thu,11:30,75,Sauna - Off-Peak Session,18,0,18,,4211
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449bde505019e459e56e2,2026-10-22,Thu,12:45,75,Sauna - Off-Peak Session,18,0,18,,4286
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449ded8f2340274082817,2026-10-22,Thu,14:00,75,Sauna - Off-Peak Session,18,0,18,,4361
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a1ae505019e459e92cb,2026-10-22,Thu,15:15,75,Sauna - Off-Peak Session,18,2,16,,4436
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f3f46e25c418cece3ed7,2026-10-22,Thu,17:15,75,Silent Sauna,18,1,17,,4556
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ac2dea4706c26ff24666d00,2026-10-22,Thu,18:30,75,Sauna - Peak Session,18,0,18,,4631
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f86f1971beefbbbd1912,2026-10-22,Thu,19:45,75,Sleep Reset,18,2,16,,4706
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4491fd8f2340274079872,2026-10-23,Fri,07:00,75,Sauna - Off-Peak Session,18,1,17,,5381
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4494de505019e459e17f8,2026-10-23,Fri,08:15,75,Sauna - Off-Peak Session,18,0,18,,5456
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44972e505019e459e30b3,2026-10-23,Fri,09:30,75,Sauna - Off-Peak Session,18,0,18,,5531
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4499fe505019e459e46cc,2026-10-23,Fri,11:30,75,Sauna - Off-Peak Session,18,2,16,,5651
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449bde505019e459e56e3,2026-10-23,Fri,12:45,75,Sauna - Off-Peak Session,18,0,18,,5726
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449ded8f2340274082818,2026-10-23,Fri,14:00,75,Sauna - Off-Peak Session,18,0,18,,5801
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a1ae505019e459e92cc,2026-10-23,Fri,15:15,75,Sauna - Off-Peak Session,18,2,16,,5876
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f3f46e25c418cece3ed8,2026-10-23,Fri,17:15,75,Silent Sauna,18,0,18,,5996
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f40e6e25c418cece4e95,2026-10-23,Fri,18:30,75,Sauna - Peak Session,18,0,18,,6071
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f86f1971beefbbbd1913,2026-10-23,Fri,19:45,75,Sleep Reset,18,0,18,,6146
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4493bd8f234027407ae69,2026-10-24,Sat,07:00,75,Sauna - Peak Session,18,0,18,,6821
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4495ee505019e459e241e,2026-10-24,Sat,08:15,75,Sauna - Peak Session,18,2,16,,6896
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44982e505019e459e3984,2026-10-24,Sat,09:30,75,Sauna - Peak Session,18,0,18,,6971
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449aee505019e459e4f6d,2026-10-24,Sat,11:30,75,Sauna - Peak Session,18,0,18,,7091
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449cae505019e459e612e,2026-10-24,Sat,12:45,75,Sauna - Peak Session,18,0,18,,7166
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a01d8f234027408409f,2026-10-24,Sat,14:00,75,Sauna - Peak Session,18,0,18,,7241
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a59d8f2340274087ea1,2026-10-24,Sat,15:15,75,Sauna - Peak Session,18,0,18,,7316
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f4211971beefbbba89a9,2026-10-24,Sat,17:15,75,Sauna - Peak Session,18,1,17,,7436
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f40e6e25c418cece4e96,2026-10-24,Sat,18:30,75,Sauna - Peak Session,18,0,18,,7511
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f86f1971beefbbbd1914,2026-10-24,Sat,19:45,75,Sleep Reset,18,0,18,,7586
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4493bd8f234027407ae6a,2026-10-25,Sun,07:00,75,Sauna - Peak Session,18,0,18,,8321
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab4495ee505019e459e241f,2026-10-25,Sun,08:15,75,Sauna - Peak Session,18,2,16,,8396
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44982e505019e459e3985,2026-10-25,Sun,09:30,75,Sauna - Peak Session,18,0,18,,8471
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449aee505019e459e4f6e,2026-10-25,Sun,11:30,75,Sauna - Peak Session,18,0,18,,8591
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab449cae505019e459e612f,2026-10-25,Sun,12:45,75,Sauna - Peak Session,18,0,18,,8666
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a01d8f23402740840a0,2026-10-25,Sun,14:00,75,Sauna - Peak Session,18,0,18,,8741
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab44a59d8f2340274087ea2,2026-10-25,Sun,15:15,75,Sauna - Peak Session,18,0,18,,8816
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f4211971beefbbba89aa,2026-10-25,Sun,17:15,75,Sauna - Peak Session,18,0,18,,8936
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f40e6e25c418cece4e97,2026-10-25,Sun,18:30,75,Sauna - Peak Session,18,0,18,,9011
+2026-10-19T12:19:11.886Z,Pulse Club,Fulham,legitfit,6ab7f86f1971beefbbbd1915,2026-10-25,Sun,19:45,75,Sleep Reset,18,0,18,,9086
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80dc11971beefbbc9d934,2026-10-19,Mon,14:00,75,Sauna - Women Only Session,16,4,12,,41
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d991971beefbbc9c60c,2026-10-19,Mon,15:15,75,Sauna - Off-Peak Session,16,0,16,,116
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d671971beefbbc9ab16,2026-10-19,Mon,17:15,75,Silent Sauna,16,1,15,,236
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d2e1971beefbbc988f4,2026-10-19,Mon,18:30,75,Sauna - Peak Session,16,5,11,,311
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ceb6e25c418cedc7533,2026-10-19,Mon,19:45,75,Sleep Reset,16,1,15,,386
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e6c1971beefbbca36b6,2026-10-20,Tue,11:30,75,Sauna - Off-Peak Session,16,0,16,,1331
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e1a1971beefbbca06ec,2026-10-20,Tue,12:45,75,Sauna - Off-Peak Session,16,0,16,,1406
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80dce1971beefbbc9e1ce,2026-10-20,Tue,14:00,75,Sauna - Off-Peak Session,16,0,16,,1481
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d991971beefbbc9c60d,2026-10-20,Tue,15:15,75,Sauna - Off-Peak Session,16,0,16,,1556
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d671971beefbbc9ab17,2026-10-20,Tue,17:15,75,Silent Sauna,16,0,16,,1676
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ad3623d53bf567e5919abb8,2026-10-20,Tue,18:30,75,Sauna - Private Booking,1,1,0,,1751
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ceb6e25c418cedc7534,2026-10-20,Tue,19:45,75,Sleep Reset,16,1,15,,1826
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ef41971beefbbca90a9,2026-10-21,Wed,07:00,75,Sauna - Off-Peak Session,16,0,16,,2501
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80f281971beefbbcab0d7,2026-10-21,Wed,08:15,75,Sauna - Off-Peak Session,16,0,16,,2576
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e8b1971beefbbca4ab6,2026-10-21,Wed,09:30,75,Sauna - Off-Peak Session,16,2,14,,2651
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e1a1971beefbbca06ed,2026-10-21,Wed,12:45,75,Sauna - Off-Peak Session,16,0,16,,2846
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80dc11971beefbbc9d935,2026-10-21,Wed,14:00,75,Sauna - Women Only Session,16,1,15,,2921
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d991971beefbbc9c60e,2026-10-21,Wed,15:15,75,Sauna - Off-Peak Session,16,2,14,,2996
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d671971beefbbc9ab18,2026-10-21,Wed,17:15,75,Silent Sauna,16,0,16,,3116
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ac2dfa17b7dfc6edddd58ee,2026-10-21,Wed,18:30,75,Sauna - Peak Session,16,1,15,,3191
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ceb6e25c418cedc7535,2026-10-21,Wed,19:45,75,Sleep Reset,16,1,15,,3266
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ef41971beefbbca90aa,2026-10-22,Thu,07:00,75,Sauna - Off-Peak Session,16,1,15,,3941
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80f281971beefbbcab0d8,2026-10-22,Thu,08:15,75,Sauna - Off-Peak Session,16,0,16,,4016
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e8b1971beefbbca4ab7,2026-10-22,Thu,09:30,75,Sauna - Off-Peak Session,16,0,16,,4091
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e6c1971beefbbca36b7,2026-10-22,Thu,11:30,75,Sauna - Off-Peak Session,16,0,16,,4211
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e1a1971beefbbca06ee,2026-10-22,Thu,12:45,75,Sauna - Off-Peak Session,16,0,16,,4286
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80dce1971beefbbc9e1cf,2026-10-22,Thu,14:00,75,Sauna - Off-Peak Session,16,0,16,,4361
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d991971beefbbc9c60f,2026-10-22,Thu,15:15,75,Sauna - Off-Peak Session,16,0,16,,4436
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d671971beefbbc9ab19,2026-10-22,Thu,17:15,75,Silent Sauna,16,0,16,,4556
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ac2dfe7706c26ff2466bea6,2026-10-22,Thu,18:30,75,"Meet The Trees - An Evening of Baltic Sauna Rituals, Herbs and Deep Relaxation",16,7,9,,4631
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ceb6e25c418cedc7536,2026-10-22,Thu,19:45,75,Sleep Reset,16,2,14,,4706
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ef41971beefbbca90ab,2026-10-23,Fri,07:00,75,Sauna - Off-Peak Session,16,3,13,,5381
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80f281971beefbbcab0d9,2026-10-23,Fri,08:15,75,Sauna - Off-Peak Session,16,0,16,,5456
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e8b1971beefbbca4ab8,2026-10-23,Fri,09:30,75,Sauna - Off-Peak Session,16,0,16,,5531
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e6c1971beefbbca36b8,2026-10-23,Fri,11:30,75,Sauna - Off-Peak Session,16,0,16,,5651
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e1a1971beefbbca06ef,2026-10-23,Fri,12:45,75,Sauna - Off-Peak Session,16,0,16,,5726
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80dce1971beefbbc9e1d0,2026-10-23,Fri,14:00,75,Sauna - Off-Peak Session,16,1,15,,5801
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d991971beefbbc9c610,2026-10-23,Fri,15:15,75,Sauna - Off-Peak Session,16,0,16,,5876
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d671971beefbbc9ab1a,2026-10-23,Fri,17:15,75,Silent Sauna,16,0,16,,5996
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d2e1971beefbbc988f8,2026-10-23,Fri,18:30,75,Sauna - Peak Session,16,0,16,,6071
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ceb6e25c418cedc7537,2026-10-23,Fri,19:45,75,Sleep Reset,16,1,15,,6146
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80f046e25c418cedd98ef,2026-10-24,Sat,07:00,75,Sauna - Peak Session,16,0,16,,6821
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ff36e25c418cede11ab,2026-10-24,Sat,08:15,75,Sauna - Peak Session,16,0,16,,6896
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab811e76e25c418cedf23c0,2026-10-24,Sat,09:30,75,Sauna - Peak Session,16,1,15,,6971
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e5a6e25c418cedd31d6,2026-10-24,Sat,12:45,75,Sauna - Peak Session,16,0,16,,7166
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ded6e25c418cedcf8b0,2026-10-24,Sat,14:00,75,Sauna - Peak Session,16,0,16,,7241
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80dab1971beefbbc9cfa3,2026-10-24,Sat,15:15,75,Sauna - Peak Session,16,0,16,,7316
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d806e25c418cedcc4e2,2026-10-24,Sat,17:15,75,Sauna - Peak Session,16,0,16,,7436
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d2e1971beefbbc988f9,2026-10-24,Sat,18:30,75,Sauna - Peak Session,16,0,16,,7511
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ceb6e25c418cedc7538,2026-10-24,Sat,19:45,75,Sleep Reset,16,1,15,,7586
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80f046e25c418cedd98f0,2026-10-25,Sun,07:00,75,Sauna - Peak Session,16,0,16,,8321
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ff36e25c418cede11ac,2026-10-25,Sun,08:15,75,Sauna - Peak Session,16,0,16,,8396
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab811771971beefbbcbea04,2026-10-25,Sun,09:30,75,Sauna - Private Booking - London Scottish Content Shoot with Lucy,1,1,0,,8471
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ec46e25c418cedd7424,2026-10-25,Sun,11:30,75,Sauna - Peak Session,16,0,16,,8591
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80e5a6e25c418cedd31d7,2026-10-25,Sun,12:45,75,Sauna - Peak Session,16,0,16,,8666
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ded6e25c418cedcf8b1,2026-10-25,Sun,14:00,75,Sauna - Peak Session,16,0,16,,8741
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80dab1971beefbbc9cfa4,2026-10-25,Sun,15:15,75,Sauna - Peak Session,16,1,15,,8816
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d806e25c418cedcc4e3,2026-10-25,Sun,17:15,75,Sauna - Peak Session,16,0,16,,8936
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80d2e1971beefbbc988fa,2026-10-25,Sun,18:30,75,Sauna - Peak Session,16,0,16,,9011
+2026-10-19T12:19:11.886Z,Pulse Club,Putney,legitfit,6ab80ceb6e25c418cedc7539,2026-10-25,Sun,19:45,75,Sleep Reset,16,3,13,,9086
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T12:30:00.000Z,2026-10-19,Mon,13:30,30,Sauna&Plunge Reset,6,0,6,,11
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T13:00:00.000Z,2026-10-19,Mon,14:00,30,Sauna&Plunge Reset,6,0,6,,41
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T13:30:00.000Z,2026-10-19,Mon,14:30,30,Sauna&Plunge Reset,6,0,6,,71
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T14:00:00.000Z,2026-10-19,Mon,15:00,30,Sauna&Plunge Reset,6,0,6,,101
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T14:30:00.000Z,2026-10-19,Mon,15:30,30,Sauna&Plunge Reset,6,0,6,,131
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T15:00:00.000Z,2026-10-19,Mon,16:00,30,Sauna&Plunge Reset,6,0,6,,161
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T15:30:00.000Z,2026-10-19,Mon,16:30,30,Sauna&Plunge Reset,6,0,6,,191
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T16:00:00.000Z,2026-10-19,Mon,17:00,30,Sauna&Plunge Reset,6,0,6,,221
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T16:30:00.000Z,2026-10-19,Mon,17:30,30,Sauna&Plunge Reset,6,1,5,,251
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T17:00:00.000Z,2026-10-19,Mon,18:00,30,Sauna&Plunge Reset,6,2,4,,281
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T17:30:00.000Z,2026-10-19,Mon,18:30,30,Sauna&Plunge Reset,6,0,6,,311
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T18:00:00.000Z,2026-10-19,Mon,19:00,30,Sauna&Plunge Reset,6,0,6,,341
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-19T18:30:00.000Z,2026-10-19,Mon,19:30,30,Sauna&Plunge Reset,6,0,6,,371
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T05:30:00.000Z,2026-10-20,Tue,06:30,30,Sauna&Plunge Reset,6,0,6,,1031
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T06:00:00.000Z,2026-10-20,Tue,07:00,30,Sauna&Plunge Reset,6,0,6,,1061
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T06:30:00.000Z,2026-10-20,Tue,07:30,30,Sauna&Plunge Reset,6,3,3,,1091
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T07:00:00.000Z,2026-10-20,Tue,08:00,30,Sauna&Plunge Reset,6,1,5,,1121
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T07:30:00.000Z,2026-10-20,Tue,08:30,30,Sauna&Plunge Reset,6,0,6,,1151
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T08:00:00.000Z,2026-10-20,Tue,09:00,30,Sauna&Plunge Reset,6,0,6,,1181
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T08:30:00.000Z,2026-10-20,Tue,09:30,30,Sauna&Plunge Reset,6,0,6,,1211
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T09:00:00.000Z,2026-10-20,Tue,10:00,30,Sauna&Plunge Reset,6,0,6,,1241
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T09:30:00.000Z,2026-10-20,Tue,10:30,30,Sauna&Plunge Reset,6,0,6,,1271
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T10:00:00.000Z,2026-10-20,Tue,11:00,30,Sauna&Plunge Reset,6,0,6,,1301
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T10:30:00.000Z,2026-10-20,Tue,11:30,30,Sauna&Plunge Reset,6,0,6,,1331
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T11:00:00.000Z,2026-10-20,Tue,12:00,30,Sauna&Plunge Reset,6,0,6,,1361
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T11:30:00.000Z,2026-10-20,Tue,12:30,30,Sauna&Plunge Reset,6,0,6,,1391
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T12:00:00.000Z,2026-10-20,Tue,13:00,30,Sauna&Plunge Reset,6,0,6,,1421
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T12:30:00.000Z,2026-10-20,Tue,13:30,30,Sauna&Plunge Reset,6,0,6,,1451
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T13:00:00.000Z,2026-10-20,Tue,14:00,30,Sauna&Plunge Reset,6,0,6,,1481
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T13:30:00.000Z,2026-10-20,Tue,14:30,30,Sauna&Plunge Reset,6,0,6,,1511
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T14:00:00.000Z,2026-10-20,Tue,15:00,30,Sauna&Plunge Reset,6,0,6,,1541
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T14:30:00.000Z,2026-10-20,Tue,15:30,30,Sauna&Plunge Reset,6,0,6,,1571
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T15:00:00.000Z,2026-10-20,Tue,16:00,30,Sauna&Plunge Reset,6,0,6,,1601
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T15:30:00.000Z,2026-10-20,Tue,16:30,30,Sauna&Plunge Reset,6,0,6,,1631
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T16:00:00.000Z,2026-10-20,Tue,17:00,30,Sauna&Plunge Reset,6,0,6,,1661
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T16:30:00.000Z,2026-10-20,Tue,17:30,30,Sauna&Plunge Reset,6,0,6,,1691
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T17:00:00.000Z,2026-10-20,Tue,18:00,30,Sauna&Plunge Reset,6,1,5,,1721
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T17:30:00.000Z,2026-10-20,Tue,18:30,30,Sauna&Plunge Reset,6,0,6,,1751
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T18:00:00.000Z,2026-10-20,Tue,19:00,30,Sauna&Plunge Reset,6,0,6,,1781
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-20T18:30:00.000Z,2026-10-20,Tue,19:30,30,Sauna&Plunge Reset,6,0,6,,1811
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T05:30:00.000Z,2026-10-21,Wed,06:30,30,Sauna&Plunge Reset,6,0,6,,2471
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T06:00:00.000Z,2026-10-21,Wed,07:00,30,Sauna&Plunge Reset,6,0,6,,2501
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T06:30:00.000Z,2026-10-21,Wed,07:30,30,Sauna&Plunge Reset,6,0,6,,2531
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T07:00:00.000Z,2026-10-21,Wed,08:00,30,Sauna&Plunge Reset,6,0,6,,2561
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T07:30:00.000Z,2026-10-21,Wed,08:30,30,Sauna&Plunge Reset,6,0,6,,2591
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T08:00:00.000Z,2026-10-21,Wed,09:00,30,Sauna&Plunge Reset,6,0,6,,2621
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T08:30:00.000Z,2026-10-21,Wed,09:30,30,Sauna&Plunge Reset,6,0,6,,2651
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T09:00:00.000Z,2026-10-21,Wed,10:00,30,Sauna&Plunge Reset,6,0,6,,2681
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T09:30:00.000Z,2026-10-21,Wed,10:30,30,Sauna&Plunge Reset,6,0,6,,2711
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T10:00:00.000Z,2026-10-21,Wed,11:00,30,Sauna&Plunge Reset,6,0,6,,2741
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T10:30:00.000Z,2026-10-21,Wed,11:30,30,Sauna&Plunge Reset,6,0,6,,2771
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T11:00:00.000Z,2026-10-21,Wed,12:00,30,Sauna&Plunge Reset,6,0,6,,2801
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T11:30:00.000Z,2026-10-21,Wed,12:30,30,Sauna&Plunge Reset,6,0,6,,2831
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T12:00:00.000Z,2026-10-21,Wed,13:00,30,Sauna&Plunge Reset,6,0,6,,2861
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T12:30:00.000Z,2026-10-21,Wed,13:30,30,Sauna&Plunge Reset,6,0,6,,2891
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T13:00:00.000Z,2026-10-21,Wed,14:00,30,Sauna&Plunge Reset,6,0,6,,2921
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T13:30:00.000Z,2026-10-21,Wed,14:30,30,Sauna&Plunge Reset,6,0,6,,2951
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T14:00:00.000Z,2026-10-21,Wed,15:00,30,Sauna&Plunge Reset,6,0,6,,2981
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T14:30:00.000Z,2026-10-21,Wed,15:30,30,Sauna&Plunge Reset,6,0,6,,3011
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T15:00:00.000Z,2026-10-21,Wed,16:00,30,Sauna&Plunge Reset,6,0,6,,3041
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T15:30:00.000Z,2026-10-21,Wed,16:30,30,Sauna&Plunge Reset,6,0,6,,3071
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T16:00:00.000Z,2026-10-21,Wed,17:00,30,Sauna&Plunge Reset,6,0,6,,3101
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T16:30:00.000Z,2026-10-21,Wed,17:30,30,Sauna&Plunge Reset,6,1,5,,3131
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T17:00:00.000Z,2026-10-21,Wed,18:00,30,Sauna&Plunge Reset,6,0,6,,3161
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T17:30:00.000Z,2026-10-21,Wed,18:30,30,Sauna&Plunge Reset,6,1,5,,3191
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T18:00:00.000Z,2026-10-21,Wed,19:00,30,Sauna&Plunge Reset,6,0,6,,3221
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-21T18:30:00.000Z,2026-10-21,Wed,19:30,30,Sauna&Plunge Reset,6,0,6,,3251
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T05:30:00.000Z,2026-10-22,Thu,06:30,30,Sauna&Plunge Reset,6,0,6,,3911
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T06:00:00.000Z,2026-10-22,Thu,07:00,30,Sauna&Plunge Reset,6,0,6,,3941
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T06:30:00.000Z,2026-10-22,Thu,07:30,30,Sauna&Plunge Reset,6,0,6,,3971
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T07:00:00.000Z,2026-10-22,Thu,08:00,30,Sauna&Plunge Reset,6,0,6,,4001
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T07:30:00.000Z,2026-10-22,Thu,08:30,30,Sauna&Plunge Reset,6,0,6,,4031
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T08:00:00.000Z,2026-10-22,Thu,09:00,30,Sauna&Plunge Reset,6,6,0,,4061
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T08:30:00.000Z,2026-10-22,Thu,09:30,30,Sauna&Plunge Reset,6,0,6,,4091
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T09:00:00.000Z,2026-10-22,Thu,10:00,30,Sauna&Plunge Reset,6,0,6,,4121
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T09:30:00.000Z,2026-10-22,Thu,10:30,30,Sauna&Plunge Reset,6,0,6,,4151
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T10:00:00.000Z,2026-10-22,Thu,11:00,30,Sauna&Plunge Reset,6,0,6,,4181
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T10:30:00.000Z,2026-10-22,Thu,11:30,30,Sauna&Plunge Reset,6,0,6,,4211
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T11:00:00.000Z,2026-10-22,Thu,12:00,30,Sauna&Plunge Reset,6,0,6,,4241
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T11:30:00.000Z,2026-10-22,Thu,12:30,30,Sauna&Plunge Reset,6,0,6,,4271
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T12:00:00.000Z,2026-10-22,Thu,13:00,30,Sauna&Plunge Reset,6,0,6,,4301
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T12:30:00.000Z,2026-10-22,Thu,13:30,30,Sauna&Plunge Reset,6,0,6,,4331
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T13:00:00.000Z,2026-10-22,Thu,14:00,30,Sauna&Plunge Reset,6,0,6,,4361
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T13:30:00.000Z,2026-10-22,Thu,14:30,30,Sauna&Plunge Reset,6,0,6,,4391
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T14:00:00.000Z,2026-10-22,Thu,15:00,30,Sauna&Plunge Reset,6,0,6,,4421
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T14:30:00.000Z,2026-10-22,Thu,15:30,30,Sauna&Plunge Reset,6,0,6,,4451
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T15:00:00.000Z,2026-10-22,Thu,16:00,30,Sauna&Plunge Reset,6,0,6,,4481
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T15:30:00.000Z,2026-10-22,Thu,16:30,30,Sauna&Plunge Reset,6,0,6,,4511
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T16:00:00.000Z,2026-10-22,Thu,17:00,30,Sauna&Plunge Reset,6,0,6,,4541
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T16:30:00.000Z,2026-10-22,Thu,17:30,30,Sauna&Plunge Reset,6,0,6,,4571
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T17:00:00.000Z,2026-10-22,Thu,18:00,30,Sauna&Plunge Reset,6,6,0,,4601
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T17:30:00.000Z,2026-10-22,Thu,18:30,30,Sauna&Plunge Reset,6,6,0,,4631
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T18:00:00.000Z,2026-10-22,Thu,19:00,30,Sauna&Plunge Reset,6,6,0,,4661
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-22T18:30:00.000Z,2026-10-22,Thu,19:30,30,Sauna&Plunge Reset,6,6,0,,4691
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T05:30:00.000Z,2026-10-23,Fri,06:30,30,Sauna&Plunge Reset,6,0,6,,5351
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T06:00:00.000Z,2026-10-23,Fri,07:00,30,Sauna&Plunge Reset,6,1,5,,5381
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T06:30:00.000Z,2026-10-23,Fri,07:30,30,Sauna&Plunge Reset,6,0,6,,5411
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T07:00:00.000Z,2026-10-23,Fri,08:00,30,Sauna&Plunge Reset,6,0,6,,5441
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T07:30:00.000Z,2026-10-23,Fri,08:30,30,Sauna&Plunge Reset,6,0,6,,5471
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T08:00:00.000Z,2026-10-23,Fri,09:00,30,Sauna&Plunge Reset,6,0,6,,5501
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T08:30:00.000Z,2026-10-23,Fri,09:30,30,Sauna&Plunge Reset,6,0,6,,5531
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T09:00:00.000Z,2026-10-23,Fri,10:00,30,Sauna&Plunge Reset,6,0,6,,5561
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T09:30:00.000Z,2026-10-23,Fri,10:30,30,Sauna&Plunge Reset,6,0,6,,5591
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T10:00:00.000Z,2026-10-23,Fri,11:00,30,Sauna&Plunge Reset,6,4,2,,5621
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T10:30:00.000Z,2026-10-23,Fri,11:30,30,Sauna&Plunge Reset,6,0,6,,5651
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T11:00:00.000Z,2026-10-23,Fri,12:00,30,Sauna&Plunge Reset,6,2,4,,5681
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T11:30:00.000Z,2026-10-23,Fri,12:30,30,Sauna&Plunge Reset,6,0,6,,5711
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T12:00:00.000Z,2026-10-23,Fri,13:00,30,Sauna&Plunge Reset,6,0,6,,5741
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T12:30:00.000Z,2026-10-23,Fri,13:30,30,Sauna&Plunge Reset,6,0,6,,5771
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T13:00:00.000Z,2026-10-23,Fri,14:00,30,Sauna&Plunge Reset,6,0,6,,5801
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T13:30:00.000Z,2026-10-23,Fri,14:30,30,Sauna&Plunge Reset,6,0,6,,5831
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T14:00:00.000Z,2026-10-23,Fri,15:00,30,Sauna&Plunge Reset,6,0,6,,5861
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T14:30:00.000Z,2026-10-23,Fri,15:30,30,Sauna&Plunge Reset,6,0,6,,5891
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T15:00:00.000Z,2026-10-23,Fri,16:00,30,Sauna&Plunge Reset,6,0,6,,5921
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T15:30:00.000Z,2026-10-23,Fri,16:30,30,Sauna&Plunge Reset,6,0,6,,5951
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T16:00:00.000Z,2026-10-23,Fri,17:00,30,Sauna&Plunge Reset,6,0,6,,5981
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T16:30:00.000Z,2026-10-23,Fri,17:30,30,Sauna&Plunge Reset,6,0,6,,6011
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T17:00:00.000Z,2026-10-23,Fri,18:00,30,Sauna&Plunge Reset,6,0,6,,6041
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T17:30:00.000Z,2026-10-23,Fri,18:30,30,Sauna&Plunge Reset,6,1,5,,6071
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T18:00:00.000Z,2026-10-23,Fri,19:00,30,Sauna&Plunge Reset,6,0,6,,6101
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-23T18:30:00.000Z,2026-10-23,Fri,19:30,30,Sauna&Plunge Reset,6,0,6,,6131
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T07:00:00.000Z,2026-10-24,Sat,08:00,30,Sauna&Plunge Reset,6,0,6,,6881
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T07:30:00.000Z,2026-10-24,Sat,08:30,30,Sauna&Plunge Reset,6,0,6,,6911
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T08:00:00.000Z,2026-10-24,Sat,09:00,30,Sauna&Plunge Reset,6,0,6,,6941
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T08:30:00.000Z,2026-10-24,Sat,09:30,30,Sauna&Plunge Reset,6,1,5,,6971
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T09:00:00.000Z,2026-10-24,Sat,10:00,30,Sauna&Plunge Reset,6,0,6,,7001
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T09:30:00.000Z,2026-10-24,Sat,10:30,30,Sauna&Plunge Reset,6,0,6,,7031
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T10:00:00.000Z,2026-10-24,Sat,11:00,30,Sauna&Plunge Reset,6,0,6,,7061
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T10:30:00.000Z,2026-10-24,Sat,11:30,30,Sauna&Plunge Reset,6,0,6,,7091
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T11:00:00.000Z,2026-10-24,Sat,12:00,30,Sauna&Plunge Reset,6,0,6,,7121
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T11:30:00.000Z,2026-10-24,Sat,12:30,30,Sauna&Plunge Reset,6,0,6,,7151
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T12:00:00.000Z,2026-10-24,Sat,13:00,30,Sauna&Plunge Reset,6,0,6,,7181
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T12:30:00.000Z,2026-10-24,Sat,13:30,30,Sauna&Plunge Reset,6,0,6,,7211
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T13:00:00.000Z,2026-10-24,Sat,14:00,30,Sauna&Plunge Reset,6,2,4,,7241
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T13:30:00.000Z,2026-10-24,Sat,14:30,30,Sauna&Plunge Reset,6,0,6,,7271
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T14:00:00.000Z,2026-10-24,Sat,15:00,30,Sauna&Plunge Reset,6,0,6,,7301
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T14:30:00.000Z,2026-10-24,Sat,15:30,30,Sauna&Plunge Reset,6,0,6,,7331
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T15:00:00.000Z,2026-10-24,Sat,16:00,30,Sauna&Plunge Reset,6,0,6,,7361
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T15:30:00.000Z,2026-10-24,Sat,16:30,30,Sauna&Plunge Reset,6,0,6,,7391
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T16:00:00.000Z,2026-10-24,Sat,17:00,30,Sauna&Plunge Reset,6,0,6,,7421
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T16:30:00.000Z,2026-10-24,Sat,17:30,30,Sauna&Plunge Reset,6,0,6,,7451
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T17:00:00.000Z,2026-10-24,Sat,18:00,30,Sauna&Plunge Reset,6,0,6,,7481
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-24T17:30:00.000Z,2026-10-24,Sat,18:30,30,Sauna&Plunge Reset,6,0,6,,7511
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T08:00:00.000Z,2026-10-25,Sun,08:00,30,Sauna&Plunge Reset,6,0,6,,8381
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T08:30:00.000Z,2026-10-25,Sun,08:30,30,Sauna&Plunge Reset,6,0,6,,8411
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T09:00:00.000Z,2026-10-25,Sun,09:00,30,Sauna&Plunge Reset,6,0,6,,8441
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T09:30:00.000Z,2026-10-25,Sun,09:30,30,Sauna&Plunge Reset,6,0,6,,8471
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T10:00:00.000Z,2026-10-25,Sun,10:00,30,Sauna&Plunge Reset,6,0,6,,8501
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T10:30:00.000Z,2026-10-25,Sun,10:30,30,Sauna&Plunge Reset,6,0,6,,8531
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T11:00:00.000Z,2026-10-25,Sun,11:00,30,Sauna&Plunge Reset,6,2,4,,8561
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T11:30:00.000Z,2026-10-25,Sun,11:30,30,Sauna&Plunge Reset,6,0,6,,8591
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T13:00:00.000Z,2026-10-25,Sun,13:00,30,Sauna&Plunge Reset,6,0,6,,8681
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T13:30:00.000Z,2026-10-25,Sun,13:30,30,Sauna&Plunge Reset,6,0,6,,8711
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T14:00:00.000Z,2026-10-25,Sun,14:00,30,Sauna&Plunge Reset,6,0,6,,8741
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T14:30:00.000Z,2026-10-25,Sun,14:30,30,Sauna&Plunge Reset,6,0,6,,8771
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T15:00:00.000Z,2026-10-25,Sun,15:00,30,Sauna&Plunge Reset,6,0,6,,8801
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T15:30:00.000Z,2026-10-25,Sun,15:30,30,Sauna&Plunge Reset,6,0,6,,8831
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T16:00:00.000Z,2026-10-25,Sun,16:00,30,Sauna&Plunge Reset,6,0,6,,8861
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T16:30:00.000Z,2026-10-25,Sun,16:30,30,Sauna&Plunge Reset,6,0,6,,8891
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T17:00:00.000Z,2026-10-25,Sun,17:00,30,Sauna&Plunge Reset,6,0,6,,8921
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T17:30:00.000Z,2026-10-25,Sun,17:30,30,Sauna&Plunge Reset,6,0,6,,8951
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T18:00:00.000Z,2026-10-25,Sun,18:00,30,Sauna&Plunge Reset,6,0,6,,8981
+2026-10-19T12:19:11.886Z,Sauna & Plunge,Shoreditch,momence,110021:2026-10-25T18:30:00.000Z,2026-10-25,Sun,18:30,30,Sauna&Plunge Reset,6,0,6,,9011
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633840,2026-10-19,Mon,12:00,50,Essential Sauna | 50min,20,7,13,2,-79
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633851,2026-10-19,Mon,12:20,50,Essential Sauna | 50min,20,3,17,2,-59
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633862,2026-10-19,Mon,12:50,50,Essential Sauna | 50min,20,9,11,2,-29
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633637,2026-10-19,Mon,14:00,50,Open Essential Sauna | 50min,30,10,20,2,41
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633648,2026-10-19,Mon,15:00,50,Open Essential Sauna | 50min,30,4,26,2,101
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633873,2026-10-19,Mon,16:00,50,Essential Sauna | 50min,20,6,14,2,161
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633884,2026-10-19,Mon,16:20,50,Essential Sauna | 50min,20,3,17,2,181
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633895,2026-10-19,Mon,16:50,50,Essential Sauna | 50min,20,2,18,2,211
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633906,2026-10-19,Mon,17:10,50,Essential Sauna | 50min,20,20,0,2,231
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634141,2026-10-19,Mon,18:10,100,Social Sauna | 1hr40min,20,7,13,2,291
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634163,2026-10-19,Mon,18:30,100,Social Sauna | 1hr40min,20,7,13,2,311
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634185,2026-10-19,Mon,19:50,100,Social Sauna | 1hr40min,20,10,10,2,391
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634207,2026-10-19,Mon,20:10,100,Social Sauna | 1hr40min,20,4,16,2,411
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633918,2026-10-20,Tue,16:00,50,Essential Sauna | 50min,20,10,10,2,1601
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633930,2026-10-20,Tue,16:20,50,Essential Sauna | 50min,20,0,20,2,1621
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633942,2026-10-20,Tue,16:50,50,Essential Sauna | 50min,20,0,20,2,1651
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633954,2026-10-20,Tue,17:10,50,Essential Sauna | 50min,20,6,14,2,1671
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,7047767,2026-10-20,Tue,18:10,100,Social Sauna | 1hr40min,20,7,13,2,1731
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,7047795,2026-10-20,Tue,18:30,100,Social Sauna | 1hr40min,20,15,5,2,1751
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,7047823,2026-10-20,Tue,19:50,100,Social Sauna | 1hr40min,20,2,18,2,1831
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,7047851,2026-10-20,Tue,20:10,100,Social Sauna | 1hr40min,20,0,20,2,1851
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633966,2026-10-21,Wed,12:00,50,Essential Sauna | 50min,20,4,16,2,2801
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633978,2026-10-21,Wed,12:20,50,Essential Sauna | 50min,20,1,19,2,2821
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633990,2026-10-21,Wed,12:50,50,Essential Sauna | 50min,20,0,20,2,2851
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633671,2026-10-21,Wed,14:00,50,Open Essential Sauna | 50min,30,0,30,2,2921
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633683,2026-10-21,Wed,15:00,50,Open Essential Sauna | 50min,30,0,30,2,2981
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634002,2026-10-21,Wed,16:00,50,Essential Sauna | 50min,20,0,20,2,3041
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634014,2026-10-21,Wed,16:20,50,Essential Sauna | 50min,20,0,20,2,3061
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634026,2026-10-21,Wed,16:50,50,Essential Sauna | 50min,20,0,20,2,3091
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634038,2026-10-21,Wed,17:10,50,Essential Sauna | 50min,20,1,19,2,3111
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634230,2026-10-21,Wed,18:10,100,Social Sauna | 1hr40min,20,1,19,2,3171
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634252,2026-10-21,Wed,18:30,100,Social Sauna | 1hr40min,20,7,13,2,3191
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634273,2026-10-21,Wed,19:50,100,Social Sauna | 1hr40min,20,6,14,2,3271
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634295,2026-10-21,Wed,20:10,100,Social Sauna | 1hr40min,20,2,18,2,3291
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634050,2026-10-22,Thu,12:00,50,Essential Sauna | 50min,20,2,18,2,4241
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634062,2026-10-22,Thu,12:20,50,Essential Sauna | 50min,20,2,18,2,4261
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634074,2026-10-22,Thu,12:50,50,Essential Sauna | 50min,20,0,20,2,4291
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633695,2026-10-22,Thu,14:00,50,Open Essential Sauna | 50min,30,1,29,2,4361
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633707,2026-10-22,Thu,15:00,50,Open Essential Sauna | 50min,30,15,15,2,4421
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634086,2026-10-22,Thu,16:00,50,Essential Sauna | 50min,20,0,20,2,4481
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634098,2026-10-22,Thu,16:20,50,Essential Sauna | 50min,20,0,20,2,4501
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634110,2026-10-22,Thu,16:50,50,Essential Sauna | 50min,20,0,20,2,4531
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634122,2026-10-22,Thu,17:10,50,Essential Sauna | 50min,20,2,18,2,4551
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633328,2026-10-22,Thu,18:10,70,Aufguss | Guided Session | 1hr10min,30,9,21,2,4611
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633340,2026-10-22,Thu,19:40,70,Aufguss | Guided Session | 1hr10min,30,19,11,2,4701
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633719,2026-10-22,Thu,21:00,50,Open Essential Sauna | 50min,30,4,26,2,4781
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633550,2026-10-23,Fri,07:00,50,Silent Essential Sauna | 50min,20,2,18,2,5381
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633561,2026-10-23,Fri,07:20,50,Silent Essential Sauna | 50min,20,3,17,2,5401
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633572,2026-10-23,Fri,07:50,50,Silent Essential Sauna | 50min,20,10,10,2,5431
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633583,2026-10-23,Fri,08:10,50,Silent Essential Sauna | 50min,20,0,20,2,5451
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633594,2026-10-23,Fri,08:40,50,Silent Essential Sauna | 50min,20,2,18,2,5481
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633605,2026-10-23,Fri,09:00,50,Silent Essential Sauna | 50min,20,2,18,2,5501
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633731,2026-10-23,Fri,10:00,50,Open Essential Sauna | 50min,30,4,26,2,5561
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633742,2026-10-23,Fri,11:00,50,Open Essential Sauna | 50min,30,6,24,2,5621
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634140,2026-10-23,Fri,12:00,50,Essential Sauna | 50min,20,0,20,2,5681
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634162,2026-10-23,Fri,12:20,50,Essential Sauna | 50min,20,0,20,2,5701
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634184,2026-10-23,Fri,12:50,50,Essential Sauna | 50min,20,1,19,2,5731
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633753,2026-10-23,Fri,14:00,50,Open Essential Sauna | 50min,30,4,26,2,5801
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633764,2026-10-23,Fri,15:00,50,Open Essential Sauna | 50min,30,1,29,2,5861
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634206,2026-10-23,Fri,15:50,50,Essential Sauna | 50min,20,0,20,2,5911
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634229,2026-10-23,Fri,16:10,50,Essential Sauna | 50min,20,0,20,2,5931
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634253,2026-10-23,Fri,16:40,50,Essential Sauna | 50min,20,1,19,2,5961
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634279,2026-10-23,Fri,17:00,50,Essential Sauna | 50min,20,2,18,2,5981
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633352,2026-10-23,Fri,18:00,70,Ambient Sauna • Dubrunner & Katiusha,20,6,14,2,6041
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633363,2026-10-23,Fri,18:20,70,Ambient Sauna • Dubrunner & Katiusha,20,5,15,2,6061
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633374,2026-10-23,Fri,19:10,70,Ambient Sauna • Dubrunner & Katiusha,18,4,14,2,6111
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633385,2026-10-23,Fri,19:30,70,Ambient Sauna • Dubrunner & Katiusha,20,5,15,2,6131
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633396,2026-10-23,Fri,20:20,70,Ambient Sauna • Dubrunner & Katiusha,20,0,20,2,6181
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633407,2026-10-23,Fri,20:40,70,Ambient Sauna • Dubrunner & Katiusha,20,1,19,2,6201
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634303,2026-10-24,Sat,08:00,50,Essential Sauna | 50min,20,1,19,2,6881
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634325,2026-10-24,Sat,08:20,50,Essential Sauna | 50min,20,1,19,2,6901
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634349,2026-10-24,Sat,08:50,50,Essential Sauna | 50min,20,2,18,2,6931
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634372,2026-10-24,Sat,09:10,50,Essential Sauna | 50min,20,2,18,2,6951
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634396,2026-10-24,Sat,09:40,50,Essential Sauna | 50min,20,3,17,2,6981
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634420,2026-10-24,Sat,10:00,50,Essential Sauna | 50min,20,4,16,2,7001
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634444,2026-10-24,Sat,10:30,50,Essential Sauna | 50min,20,2,18,2,7031
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634469,2026-10-24,Sat,10:50,50,Essential Sauna | 50min,20,20,0,2,7051
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634318,2026-10-24,Sat,11:50,100,Social Sauna | 1hr40min,20,9,11,2,7111
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634339,2026-10-24,Sat,12:10,100,Social Sauna | 1hr40min,20,0,20,2,7131
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634360,2026-10-24,Sat,13:30,100,Social Sauna | 1hr40min,20,6,14,2,7211
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634381,2026-10-24,Sat,13:50,100,Social Sauna | 1hr40min,20,3,17,2,7231
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634401,2026-10-24,Sat,15:10,100,Social Sauna | 1hr40min,20,0,20,2,7311
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634421,2026-10-24,Sat,15:30,100,Social Sauna | 1hr40min,20,5,15,2,7331
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634492,2026-10-24,Sat,16:50,50,Essential Sauna | 50min,20,1,19,2,7411
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633418,2026-10-24,Sat,18:00,70,Ambient Sauna • Black History Edition • Sisu w/ HOLY C & lol,20,6,14,2,7481
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633429,2026-10-24,Sat,18:20,70,Ambient Sauna • Black History Edition • Sisu w/ HOLY C & lol,20,0,20,2,7501
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633440,2026-10-24,Sat,19:10,70,Ambient Sauna • Black History Edition • Sisu w/ HOLY C & lol,18,2,16,2,7551
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633451,2026-10-24,Sat,19:30,70,Ambient Sauna • Black History Edition • Sisu w/ HOLY C & lol,20,0,20,2,7571
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633462,2026-10-24,Sat,20:20,70,Ambient Sauna • Black History Edition • Sisu w/ HOLY C & lol,20,0,20,2,7621
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633473,2026-10-24,Sat,20:40,70,Ambient Sauna • Black History Edition • Sisu w/ HOLY C & lol,20,0,20,2,7641
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634512,2026-10-25,Sun,08:00,50,Essential Sauna | 50min,20,2,18,2,8381
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634523,2026-10-25,Sun,08:20,50,Essential Sauna | 50min,20,4,16,2,8401
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634534,2026-10-25,Sun,08:50,50,Essential Sauna | 50min,20,0,20,2,8431
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634545,2026-10-25,Sun,09:10,50,Essential Sauna | 50min,20,4,16,2,8451
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634556,2026-10-25,Sun,09:40,50,Essential Sauna | 50min,20,2,18,2,8481
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634567,2026-10-25,Sun,10:00,50,Essential Sauna | 50min,20,8,12,2,8501
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634578,2026-10-25,Sun,10:30,50,Essential Sauna | 50min,20,8,12,2,8531
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634589,2026-10-25,Sun,10:50,50,Essential Sauna | 50min,20,20,0,2,8551
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634441,2026-10-25,Sun,11:50,100,Social Sauna | 1hr40min,20,13,7,2,8611
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634461,2026-10-25,Sun,12:10,100,Social Sauna | 1hr40min,20,0,20,2,8631
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634481,2026-10-25,Sun,13:30,100,Social Sauna | 1hr40min,20,0,20,2,8711
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634501,2026-10-25,Sun,13:50,100,Social Sauna | 1hr40min,20,2,18,2,8731
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633484,2026-10-25,Sun,16:00,70,Ambient Sauna • Luvandula,20,9,11,2,8861
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633495,2026-10-25,Sun,16:20,70,Ambient Sauna • Luvandula,20,0,20,2,8881
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633506,2026-10-25,Sun,17:10,70,Ambient Sauna • Luvandula,18,0,18,2,8931
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633517,2026-10-25,Sun,17:30,70,Ambient Sauna • Luvandula,20,6,14,2,8951
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6634600,2026-10-25,Sun,18:00,120,Sound Healing & Sauna | Creative Wellbeing | 2hrs,18,5,13,2,8981
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633528,2026-10-25,Sun,18:20,70,Ambient Sauna • Luvandula,20,0,20,2,9001
+2026-10-19T12:19:11.886Z,Sauna Social Club,Peckham,bookee,6633539,2026-10-25,Sun,18:40,70,Ambient Sauna • Luvandula,20,2,18,2,9021
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f7c1a739fc90f6ccdb6,2026-10-19,Mon,14:00,55,Social Sauna,12,0,12,,41
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f7e1a739fc90f6ccf89,2026-10-19,Mon,15:00,55,Social Sauna,12,0,12,,101
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f7f1a739fc90f6cd1f5,2026-10-19,Mon,16:00,55,Social Sauna,12,0,12,,161
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f811a739fc90f6cd467,2026-10-19,Mon,17:00,55,Social Sauna,12,0,12,,221
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f83c2d82249f90af9a1,2026-10-19,Mon,18:00,55,Social Sauna,12,4,8,,281
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f84c2d82249f90afadb,2026-10-19,Mon,19:00,55,Social Sauna,12,9,3,,341
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f86c2d82249f90afcd6,2026-10-19,Mon,20:00,55,Social Sauna,12,6,6,,401
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ea4c2d82249f909a327,2026-10-20,Tue,08:30,30,Express Sauna & plunge,12,4,8,,1151
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f3ac2d82249f90a8250,2026-10-20,Tue,09:00,55,Social Sauna,12,0,12,,1181
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fb0c2d82249f90b3308,2026-10-20,Tue,10:00,55,Social Sauna,12,1,11,,1241
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fc9c2d82249f90b5875,2026-10-20,Tue,11:00,55,Social Sauna,12,0,12,,1301
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fe1c2d82249f90b75e6,2026-10-20,Tue,12:00,55,Social Sauna,12,0,12,,1361
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ff5c2d82249f90b8db9,2026-10-20,Tue,13:00,55,Social Sauna,12,0,12,,1421
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54009c2d82249f90ba2a9,2026-10-20,Tue,14:00,55,Social Sauna,12,0,12,,1481
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5401dc2d82249f90bbbc4,2026-10-20,Tue,15:00,55,Social Sauna,12,2,10,,1541
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54034c2d82249f90bdab4,2026-10-20,Tue,16:00,55,Social Sauna,12,2,10,,1601
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5404fc2d82249f90bfd6b,2026-10-20,Tue,17:00,55,Social Sauna,12,0,12,,1661
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54061c2d82249f90c143a,2026-10-20,Tue,18:00,55,Social Sauna,12,0,12,,1721
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54072c2d82249f90c2da6,2026-10-20,Tue,19:00,55,Social Sauna,12,2,10,,1781
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab540891a739fc90f6e1e82,2026-10-20,Tue,20:00,55,Social Sauna,12,0,12,,1841
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ea5c2d82249f909a328,2026-10-21,Wed,08:30,30,Express Sauna & plunge,12,0,12,,2591
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f3ac2d82249f90a8251,2026-10-21,Wed,09:00,55,Social Sauna,12,0,12,,2621
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fb0c2d82249f90b3309,2026-10-21,Wed,10:00,55,Social Sauna,12,0,12,,2681
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fc9c2d82249f90b5876,2026-10-21,Wed,11:00,55,Social Sauna,12,0,12,,2741
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fe1c2d82249f90b75e7,2026-10-21,Wed,12:00,55,Social Sauna,12,0,12,,2801
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ff5c2d82249f90b8dba,2026-10-21,Wed,13:00,55,Social Sauna,12,0,12,,2861
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54009c2d82249f90ba2aa,2026-10-21,Wed,14:00,55,Social Sauna,12,0,12,,2921
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5401dc2d82249f90bbbc5,2026-10-21,Wed,15:00,55,Social Sauna,12,0,12,,2981
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54034c2d82249f90bdab5,2026-10-21,Wed,16:00,55,Social Sauna,12,1,11,,3041
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5404fc2d82249f90bfd6c,2026-10-21,Wed,17:00,55,Social Sauna,12,0,12,,3101
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54061c2d82249f90c143b,2026-10-21,Wed,18:00,55,Social Sauna,12,2,10,,3161
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54072c2d82249f90c2da7,2026-10-21,Wed,19:00,55,Social Sauna,12,6,6,,3221
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab540891a739fc90f6e1e83,2026-10-21,Wed,20:00,55,Social Sauna,12,1,11,,3281
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ea5c2d82249f909a329,2026-10-22,Thu,08:30,30,Express Sauna & plunge,12,0,12,,4031
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f3ac2d82249f90a8252,2026-10-22,Thu,09:00,55,Social Sauna,12,0,12,,4061
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fb0c2d82249f90b330a,2026-10-22,Thu,10:00,55,Social Sauna,12,1,11,,4121
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fc9c2d82249f90b5877,2026-10-22,Thu,11:00,55,Social Sauna,12,1,11,,4181
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fe1c2d82249f90b75e8,2026-10-22,Thu,12:00,55,Social Sauna,12,0,12,,4241
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ff5c2d82249f90b8dbb,2026-10-22,Thu,13:00,55,Social Sauna,12,0,12,,4301
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54009c2d82249f90ba2ab,2026-10-22,Thu,14:00,55,Social Sauna,12,0,12,,4361
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5401dc2d82249f90bbbc6,2026-10-22,Thu,15:00,55,Social Sauna,12,0,12,,4421
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54034c2d82249f90bdab6,2026-10-22,Thu,16:00,55,Social Sauna,12,0,12,,4481
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5404fc2d82249f90bfd6d,2026-10-22,Thu,17:00,55,Social Sauna,12,0,12,,4541
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54061c2d82249f90c143c,2026-10-22,Thu,18:00,55,Social Sauna,12,0,12,,4601
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54072c2d82249f90c2da8,2026-10-22,Thu,19:00,55,Social Sauna,12,9,3,,4661
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab540891a739fc90f6e1e84,2026-10-22,Thu,20:00,55,Social Sauna,12,1,11,,4721
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ea5c2d82249f909a32a,2026-10-23,Fri,08:30,30,Express Sauna & plunge,12,2,10,,5471
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f3ac2d82249f90a8253,2026-10-23,Fri,09:00,55,Social Sauna,12,0,12,,5501
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fb0c2d82249f90b330b,2026-10-23,Fri,10:00,55,Social Sauna,12,0,12,,5561
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fc9c2d82249f90b5878,2026-10-23,Fri,11:00,55,Social Sauna,12,0,12,,5621
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fe1c2d82249f90b75e9,2026-10-23,Fri,12:00,55,Social Sauna,12,0,12,,5681
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ff5c2d82249f90b8dbc,2026-10-23,Fri,13:00,55,Social Sauna,12,0,12,,5741
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54009c2d82249f90ba2ac,2026-10-23,Fri,14:00,55,Social Sauna,12,0,12,,5801
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5401dc2d82249f90bbbc7,2026-10-23,Fri,15:00,55,Social Sauna,12,0,12,,5861
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54034c2d82249f90bdab7,2026-10-23,Fri,16:00,55,Social Sauna,12,3,9,,5921
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5404fc2d82249f90bfd6e,2026-10-23,Fri,17:00,55,Social Sauna,12,1,11,,5981
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54061c2d82249f90c143d,2026-10-23,Fri,18:00,55,Social Sauna,12,0,12,,6041
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54072c2d82249f90c2da9,2026-10-23,Fri,19:00,55,Social Sauna,12,2,10,,6101
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab540891a739fc90f6e1e85,2026-10-23,Fri,20:00,55,Social Sauna,12,0,12,,6161
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ea5c2d82249f909a32b,2026-10-24,Sat,08:30,30,Express Sauna & plunge,12,6,6,,6911
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f3ac2d82249f90a8254,2026-10-24,Sat,09:00,55,Social Sauna,12,0,12,,6941
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fb0c2d82249f90b330c,2026-10-24,Sat,10:00,55,Social Sauna,12,3,9,,7001
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fc9c2d82249f90b5879,2026-10-24,Sat,11:00,55,Social Sauna,12,0,12,,7061
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fe1c2d82249f90b75ea,2026-10-24,Sat,12:00,55,Social Sauna,12,0,12,,7121
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ff5c2d82249f90b8dbd,2026-10-24,Sat,13:00,55,Social Sauna,12,0,12,,7181
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54009c2d82249f90ba2ad,2026-10-24,Sat,14:00,55,Social Sauna,12,0,12,,7241
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5401dc2d82249f90bbbc8,2026-10-24,Sat,15:00,55,Social Sauna,12,0,12,,7301
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54034c2d82249f90bdab8,2026-10-24,Sat,16:00,55,Social Sauna,12,2,10,,7361
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5404fc2d82249f90bfd6f,2026-10-24,Sat,17:00,55,Social Sauna,12,2,10,,7421
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54061c2d82249f90c143e,2026-10-24,Sat,18:00,55,Social Sauna,12,0,12,,7481
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54072c2d82249f90c2daa,2026-10-24,Sat,19:00,55,Social Sauna,12,2,10,,7541
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab540891a739fc90f6e1e86,2026-10-24,Sat,20:00,55,Social Sauna,12,0,12,,7601
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ea5c2d82249f909a32c,2026-10-25,Sun,08:30,30,Express Sauna & plunge,12,8,4,,8411
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53f3ac2d82249f90a8255,2026-10-25,Sun,09:00,55,Social Sauna,12,0,12,,8441
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fb0c2d82249f90b330d,2026-10-25,Sun,10:00,55,Social Sauna,12,0,12,,8501
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fc9c2d82249f90b587a,2026-10-25,Sun,11:00,55,Social Sauna,12,0,12,,8561
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53fe1c2d82249f90b75eb,2026-10-25,Sun,12:00,55,Social Sauna,12,0,12,,8621
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab53ff5c2d82249f90b8dbe,2026-10-25,Sun,13:00,55,Social Sauna,12,2,10,,8681
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54009c2d82249f90ba2ae,2026-10-25,Sun,14:00,55,Social Sauna,12,2,10,,8741
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab5401dc2d82249f90bbbc9,2026-10-25,Sun,15:00,55,Social Sauna,12,2,10,,8801
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54034c2d82249f90bdab9,2026-10-25,Sun,16:00,55,Social Sauna,12,9,3,,8861
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54061c2d82249f90c143f,2026-10-25,Sun,18:00,55,Social Sauna,12,0,12,,8981
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab54072c2d82249f90c2dab,2026-10-25,Sun,19:00,55,Social Sauna,12,0,12,,9041
+2026-10-19T12:19:11.886Z,The Cabin Sauna,Clapham Common,legitfit,6ab540891a739fc90f6e1e87,2026-10-25,Sun,20:00,55,Social Sauna,12,0,12,,9101
