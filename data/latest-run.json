@@ -1,0 +1,162 @@
+{
+  "scraped_at_utc": "2026-10-19T10:50:12.391Z",
+  "days_ahead": 7,
+  "venues": [
+    {
+      "venue": "Druid Street Saunas",
+      "site": "Bermondsey",
+      "platform": "bookee",
+      "ok": true,
+      "seconds": 8.5,
+      "sessions": 72,
+      "capacity": 1460,
+      "booked": 108,
+      "fill": 7.4,
+      "raw_sessions": 75
+    },
+    {
+      "venue": "Sauna Social Club",
+      "site": "Peckham",
+      "platform": "bookee",
+      "ok": true,
+      "seconds": 10.1,
+      "sessions": 111,
+      "capacity": 2362,
+      "booked": 412,
+      "fill": 17.4,
+      "raw_sessions": 114
+    },
+    {
+      "venue": "Community Sauna Baths",
+      "site": "Hackney Wick",
+      "platform": "periode",
+      "ok": true,
+      "seconds": 24.5,
+      "sessions": 101,
+      "capacity": 539,
+      "booked": 87,
+      "fill": 16.1,
+      "raw_sessions": 101
+    },
+    {
+      "venue": "Community Sauna Baths",
+      "site": "Stratford",
+      "platform": "periode",
+      "ok": true,
+      "seconds": 44.1,
+      "sessions": 58,
+      "capacity": 1274,
+      "booked": 243,
+      "fill": 19.1,
+      "raw_sessions": 61
+    },
+    {
+      "venue": "Community Sauna Baths",
+      "site": "Walthamstow",
+      "platform": "periode",
+      "ok": true,
+      "seconds": 60.7,
+      "sessions": 118,
+      "capacity": 2668,
+      "booked": 540,
+      "fill": 20.2,
+      "raw_sessions": 120
+    },
+    {
+      "venue": "Community Sauna Baths",
+      "site": "Camberwell",
+      "platform": "periode",
+      "ok": true,
+      "seconds": 96.8,
+      "sessions": 125,
+      "capacity": 2048,
+      "booked": 812,
+      "fill": 39.6,
+      "raw_sessions": 131
+    },
+    {
+      "venue": "Community Sauna Baths",
+      "site": "Peckham",
+      "platform": "periode",
+      "ok": true,
+      "seconds": 102,
+      "sessions": 17,
+      "capacity": 180,
+      "booked": 18,
+      "fill": 10,
+      "raw_sessions": 17
+    },
+    {
+      "venue": "Arc",
+      "site": "Canary Wharf",
+      "platform": "marianatek",
+      "ok": true,
+      "seconds": 4.8,
+      "sessions": 71,
+      "capacity": 2574,
+      "booked": 262,
+      "fill": 10.2,
+      "raw_sessions": 71
+    },
+    {
+      "venue": "Hotdrop",
+      "site": "Battersea",
+      "platform": "arketa",
+      "ok": true,
+      "seconds": 0.4,
+      "sessions": 31,
+      "capacity": 736,
+      "booked": 17,
+      "fill": 2.3,
+      "raw_sessions": 31
+    },
+    {
+      "venue": "Sauna & Plunge",
+      "site": "Shoreditch",
+      "platform": "momence",
+      "ok": true,
+      "seconds": 3.1,
+      "sessions": 166,
+      "capacity": 996,
+      "booked": 53,
+      "fill": 5.3,
+      "raw_sessions": 166
+    },
+    {
+      "venue": "The Cabin Sauna",
+      "site": "Clapham Common",
+      "platform": "legitfit",
+      "ok": true,
+      "seconds": 0.7,
+      "sessions": 86,
+      "capacity": 1032,
+      "booked": 95,
+      "fill": 9.2,
+      "raw_sessions": 89
+    },
+    {
+      "venue": "Pulse Club",
+      "site": "Fulham",
+      "platform": "legitfit",
+      "ok": true,
+      "seconds": 0.6,
+      "sessions": 62,
+      "capacity": 1116,
+      "booked": 31,
+      "fill": 2.8,
+      "raw_sessions": 65
+    },
+    {
+      "venue": "Pulse Club",
+      "site": "Putney",
+      "platform": "legitfit",
+      "ok": true,
+      "seconds": 0.7,
+      "sessions": 61,
+      "capacity": 946,
+      "booked": 42,
+      "fill": 4.4,
+      "raw_sessions": 64
+    }
+  ]
+}
