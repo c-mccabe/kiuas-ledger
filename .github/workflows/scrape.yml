@@ -4,12 +4,12 @@ on:
   # Every 15 minutes, 05:00–22:45 UTC: covers every session start in both BST
   # and GMT. Ingest only writes rows that changed, which keeps D1 under its
   # free 100k writes a day. Public repo, so Actions minutes are free.
-  # Data is committed to git only on the :45 run of every second hour (the
-  # ARCHIVE schedule), to keep the repo from growing ~70 commits a day.
+  # The cron Worker (cron/) dispatches the real runs and sends archive=true on
+  # the :45 run of every second hour, so data is committed to git ~9 times a
+  # day. This schedule is only a backup for ingest and never commits: when it
+  # also committed, it raced the Worker's archive run and the rebase conflicted.
   schedule:
-    - cron: '0,15,30 5-22 * * *'
-    - cron: '45 6-22/2 * * *'
-    - cron: '45 5-21/2 * * *'   # ARCHIVE
+    - cron: '0,15,30,45 5-22 * * *'
   workflow_dispatch:
     inputs:
       only:
@@ -34,7 +34,9 @@ concurrency:
 
 jobs:
   scrape:
-    runs-on: ubuntu-latest
+    # Pinned: ubuntu-latest is moving to 26.04, which Playwright 1.48
+    # predates.
+    runs-on: ubuntu-24.04
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
@@ -52,7 +54,16 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
 
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install chromium
+
+      # System libraries come from apt, and a slow mirror can take 10+ minutes
+      # and eat the job timeout. The runner image ships Google Chrome, so the
+      # libraries Chromium needs are almost always there already: give apt a
+      # few minutes and carry on without it.
+      - name: Install Chromium system deps
+        timeout-minutes: 3
+        continue-on-error: true
+        run: npx playwright install-deps chromium
 
       - name: Scrape
         env:
@@ -68,7 +79,7 @@ jobs:
         run: node src/push.mjs
 
       - name: Commit data
-        if: always() && (github.event_name == 'schedule' && github.event.schedule == '45 5-21/2 * * *' || github.event_name != 'schedule' && inputs.archive != 'false')
+        if: always() && github.event_name == 'workflow_dispatch' && inputs.archive != 'false'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -76,7 +87,14 @@ jobs:
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "data: snapshot $(date -u +%Y-%m-%dT%H:%MZ)"
           for i in 1 2 3; do
-            git pull --rebase && git push && exit 0
+            if ! git pull --rebase; then
+              # Another run committed a snapshot of the same files meanwhile.
+              # It's equally current, so keep it and skip ours.
+              git rebase --abort
+              echo "Snapshot conflicts with a newer one on main; skipping"
+              exit 0
+            fi
+            git push && exit 0
             sleep 5
           done
           exit 1

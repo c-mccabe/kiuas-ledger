@@ -87,13 +87,13 @@ One failing venue doesn't stop the others. The run exits non-zero only if more t
 
 ## Deployment
 
-`.github/workflows/scrape.yml` runs the scraper on GitHub Actions and commits new rows to `data/`. It runs every 15 minutes from 05:00 to 22:45 UTC; only the :45 run of every second hour (05:45–21:45) commits data to git. You can also start it from **Actions → Scrape sessions → Run workflow**, optionally with `only` and `days_ahead`.
+`.github/workflows/scrape.yml` runs the scraper on GitHub Actions and commits new rows to `data/`. It runs every 15 minutes from 05:00 to 22:45 UTC; only the cron Worker's :45 run of every second hour (05:45–21:45) commits data to git. You can also start it from **Actions → Scrape sessions → Run workflow**, optionally with `only` and `days_ahead`.
 
 Notes:
 
 - **Minutes.** The repo is public, so Actions minutes are free. A run takes about 2.5 minutes on Actions, including the Chromium install.
 - **Late runs.** GitHub's cron is best-effort: in the first week it ran only 10–17 of the ~72 daily slots. `minutes_to_start` records the actual lead time.
-- **Cron Worker.** `cron/` is a Cloudflare Worker (`sauna-finder-cron`, no public URL) whose Cron Trigger calls the workflow_dispatch API every 15 minutes, passing `archive=true` only in the archive slot. It needs a `GH_TOKEN` secret: a fine-grained token with Actions read/write on this repo only (`cd cron && npx wrangler secret put GH_TOKEN`). Deploy with `cd cron && npx wrangler deploy`. GitHub's own schedule stays on as a backup; the `scrape` concurrency group stops overlapping runs from clashing.
+- **Cron Worker.** `cron/` is a Cloudflare Worker (`sauna-finder-cron`, no public URL) whose Cron Trigger calls the workflow_dispatch API every 15 minutes, passing `archive=true` only in the archive slot. It needs a `GH_TOKEN` secret: a fine-grained token with Actions read/write on this repo only (`cd cron && npx wrangler secret put GH_TOKEN`). Deploy with `cd cron && npx wrangler deploy`. GitHub's own schedule stays on as a backup for ingest but never commits, so it can't race the Worker's archive run; the `scrape` concurrency group stops overlapping runs from clashing.
 - **Repo size.** About 1,000 rows (~130 KB) per run. At the archive rate (9 runs a day) that's ~35 MB a month of CSV in git, so the monthly files will need compressing, or moving to a release asset or object storage, within a few months.
 - **Fragility.** Bookee and Periode depend on page behaviour (the WAF token, the Firestore stream format), so they're the most likely to break. `latest-run.json` and the job log show which venue failed.
 
