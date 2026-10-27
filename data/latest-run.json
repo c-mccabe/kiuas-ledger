@@ -1,5 +1,5 @@
 {
-  "scraped_at_utc": "2026-10-27T09:49:05.482Z",
+  "scraped_at_utc": "2026-10-27T11:49:04.104Z",
   "days_ahead": 7,
   "venues": [
     {
@@ -7,23 +7,23 @@
       "site": "Bermondsey",
       "platform": "bookee",
       "ok": true,
-      "seconds": 7,
-      "sessions": 75,
-      "capacity": 1500,
+      "seconds": 10.9,
+      "sessions": 72,
+      "capacity": 1440,
       "booked": 118,
-      "fill": 7.9,
-      "raw_sessions": 76
+      "fill": 8.2,
+      "raw_sessions": 75
     },
     {
       "venue": "Sauna Social Club",
       "site": "Peckham",
       "platform": "bookee",
       "ok": true,
-      "seconds": 8.6,
+      "seconds": 11.5,
       "sessions": 114,
       "capacity": 2422,
-      "booked": 491,
-      "fill": 20.3,
+      "booked": 512,
+      "fill": 21.1,
       "raw_sessions": 114
     },
     {
@@ -31,23 +31,23 @@
       "site": "Hackney Wick",
       "platform": "periode",
       "ok": true,
-      "seconds": 41.4,
-      "sessions": 230,
-      "capacity": 6924,
-      "booked": 2305,
-      "fill": 33.3,
-      "raw_sessions": 232
+      "seconds": 81.3,
+      "sessions": 220,
+      "capacity": 6475,
+      "booked": 2327,
+      "fill": 35.9,
+      "raw_sessions": 225
     },
     {
       "venue": "Community Sauna Baths",
       "site": "Stratford",
       "platform": "periode",
       "ok": true,
-      "seconds": 61.3,
+      "seconds": 54.7,
       "sessions": 85,
       "capacity": 1872,
-      "booked": 248,
-      "fill": 13.2,
+      "booked": 259,
+      "fill": 13.8,
       "raw_sessions": 85
     },
     {
@@ -55,11 +55,11 @@
       "site": "Walthamstow",
       "platform": "periode",
       "ok": true,
-      "seconds": 67.3,
-      "sessions": 151,
-      "capacity": 3910,
-      "booked": 867,
-      "fill": 22.2,
+      "seconds": 86.8,
+      "sessions": 149,
+      "capacity": 3820,
+      "booked": 881,
+      "fill": 23.1,
       "raw_sessions": 152
     },
     {
@@ -67,23 +67,23 @@
       "site": "Camberwell",
       "platform": "periode",
       "ok": true,
-      "seconds": 101.4,
-      "sessions": 166,
-      "capacity": 3346,
-      "booked": 1300,
-      "fill": 38.9,
-      "raw_sessions": 166
+      "seconds": 151.3,
+      "sessions": 144,
+      "capacity": 2546,
+      "booked": 994,
+      "fill": 39,
+      "raw_sessions": 144
     },
     {
       "venue": "Community Sauna Baths",
       "site": "Peckham",
       "platform": "periode",
       "ok": true,
-      "seconds": 101.8,
+      "seconds": 141.6,
       "sessions": 15,
       "capacity": 168,
-      "booked": 31,
-      "fill": 18.5,
+      "booked": 32,
+      "fill": 19,
       "raw_sessions": 15
     },
     {
@@ -91,12 +91,12 @@
       "site": "Canary Wharf",
       "platform": "marianatek",
       "ok": true,
-      "seconds": 1.7,
-      "sessions": 74,
-      "capacity": 2710,
-      "booked": 278,
-      "fill": 10.3,
-      "raw_sessions": 74
+      "seconds": 3.3,
+      "sessions": 73,
+      "capacity": 2660,
+      "booked": 297,
+      "fill": 11.2,
+      "raw_sessions": 73
     },
     {
       "venue": "Hotdrop",
@@ -106,8 +106,8 @@
       "seconds": 0.3,
       "sessions": 34,
       "capacity": 816,
-      "booked": 57,
-      "fill": 7,
+      "booked": 59,
+      "fill": 7.2,
       "raw_sessions": 34
     },
     {
@@ -115,23 +115,23 @@
       "site": "Shoreditch",
       "platform": "momence",
       "ok": true,
-      "seconds": 1.8,
-      "sessions": 170,
-      "capacity": 1020,
-      "booked": 35,
-      "fill": 3.4,
-      "raw_sessions": 170
+      "seconds": 2.8,
+      "sessions": 166,
+      "capacity": 996,
+      "booked": 38,
+      "fill": 3.8,
+      "raw_sessions": 166
     },
     {
       "venue": "Reset Sauna",
       "site": "Islington",
       "platform": "momence-schedule",
       "ok": true,
-      "seconds": 1,
-      "sessions": 80,
-      "capacity": 1928,
-      "booked": 73,
-      "fill": 3.8,
+      "seconds": 0.7,
+      "sessions": 78,
+      "capacity": 1880,
+      "booked": 76,
+      "fill": 4,
       "raw_sessions": 81
     },
     {
@@ -139,11 +139,11 @@
       "site": "Bethnal Green",
       "platform": "momence-schedule",
       "ok": true,
-      "seconds": 0.8,
-      "sessions": 36,
-      "capacity": 528,
-      "booked": 50,
-      "fill": 9.5,
+      "seconds": 0.9,
+      "sessions": 34,
+      "capacity": 496,
+      "booked": 51,
+      "fill": 10.3,
       "raw_sessions": 37
     },
     {
@@ -151,11 +151,11 @@
       "site": "Camberwell",
       "platform": "momence-schedule",
       "ok": true,
-      "seconds": 0.7,
+      "seconds": 0.5,
       "sessions": 36,
       "capacity": 428,
-      "booked": 56,
-      "fill": 13.1,
+      "booked": 63,
+      "fill": 14.7,
       "raw_sessions": 36
     },
     {
@@ -166,8 +166,8 @@
       "seconds": 0.5,
       "sessions": 36,
       "capacity": 933,
-      "booked": 31,
-      "fill": 3.3,
+      "booked": 35,
+      "fill": 3.8,
       "raw_sessions": 36
     },
     {
@@ -175,11 +175,11 @@
       "site": "Regent's Canal, Islington",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 1.1,
+      "seconds": 1,
       "sessions": 108,
       "capacity": 857,
-      "booked": 83,
-      "fill": 9.7,
+      "booked": 94,
+      "fill": 11,
       "raw_sessions": 108
     },
     {
@@ -187,35 +187,35 @@
       "site": "Clapham Common",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 1.2,
+      "seconds": 1.1,
       "sessions": 85,
       "capacity": 1028,
-      "booked": 81,
-      "fill": 7.9,
-      "raw_sessions": 87
+      "booked": 87,
+      "fill": 8.5,
+      "raw_sessions": 89
     },
     {
       "venue": "Pulse Club",
       "site": "Fulham",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 1.2,
+      "seconds": 1.1,
       "sessions": 37,
       "capacity": 632,
-      "booked": 22,
-      "fill": 3.5,
-      "raw_sessions": 40
+      "booked": 23,
+      "fill": 3.6,
+      "raw_sessions": 41
     },
     {
       "venue": "Pulse Club",
       "site": "Putney",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 1.3,
-      "sessions": 66,
-      "capacity": 1035,
-      "booked": 67,
-      "fill": 6.5,
+      "seconds": 1.2,
+      "sessions": 65,
+      "capacity": 1019,
+      "booked": 68,
+      "fill": 6.7,
       "raw_sessions": 66
     },
     {
@@ -223,11 +223,11 @@
       "site": "Walthamstow",
       "platform": "bookasession",
       "ok": true,
-      "seconds": 1.6,
-      "sessions": 50,
-      "capacity": 802,
-      "booked": 102,
-      "fill": 12.7,
+      "seconds": 1.3,
+      "sessions": 48,
+      "capacity": 770,
+      "booked": 106,
+      "fill": 13.8,
       "raw_sessions": 51
     },
     {
@@ -238,8 +238,8 @@
       "seconds": 1.2,
       "sessions": 49,
       "capacity": 784,
-      "booked": 35,
-      "fill": 4.5,
+      "booked": 37,
+      "fill": 4.7,
       "raw_sessions": 49
     },
     {
@@ -247,11 +247,11 @@
       "site": "Stoke Newington",
       "platform": "mindbody",
       "ok": true,
-      "seconds": 2.2,
-      "sessions": 58,
-      "capacity": 290,
-      "booked": 13,
-      "fill": 4.5,
+      "seconds": 2.4,
+      "sessions": 57,
+      "capacity": 285,
+      "booked": 16,
+      "fill": 5.6,
       "raw_sessions": 58
     },
     {
@@ -260,10 +260,10 @@
       "platform": "momence-schedule",
       "ok": true,
       "seconds": 1.3,
-      "sessions": 74,
-      "capacity": 2170,
-      "booked": 152,
-      "fill": 7,
+      "sessions": 72,
+      "capacity": 2110,
+      "booked": 149,
+      "fill": 7.1,
       "raw_sessions": 75
     },
     {
@@ -271,12 +271,12 @@
       "site": "Royal Docks",
       "platform": "acuity",
       "ok": true,
-      "seconds": 8.8,
-      "sessions": 55,
-      "capacity": 660,
+      "seconds": 8.7,
+      "sessions": 53,
+      "capacity": 636,
       "booked": 5,
       "fill": 0.8,
-      "raw_sessions": 55
+      "raw_sessions": 53
     },
     {
       "venue": "Revitalise Urban Spa",
@@ -286,8 +286,8 @@
       "seconds": 1.3,
       "sessions": 138,
       "capacity": 1458,
-      "booked": 17,
-      "fill": 1.2,
+      "booked": 21,
+      "fill": 1.4,
       "raw_sessions": 138
     },
     {
@@ -296,10 +296,10 @@
       "platform": "lowlu",
       "ok": true,
       "seconds": 1.1,
-      "sessions": 93,
-      "capacity": 1116,
-      "booked": 87,
-      "fill": 7.8,
+      "sessions": 91,
+      "capacity": 1092,
+      "booked": 104,
+      "fill": 9.5,
       "raw_sessions": 94
     },
     {
@@ -310,8 +310,8 @@
       "seconds": 1.1,
       "sessions": 82,
       "capacity": 2132,
-      "booked": 246,
-      "fill": 11.5,
+      "booked": 263,
+      "fill": 12.3,
       "raw_sessions": 82
     },
     {
@@ -320,10 +320,10 @@
       "platform": "lowlu",
       "ok": true,
       "seconds": 1.1,
-      "sessions": 104,
-      "capacity": 1456,
-      "booked": 10,
-      "fill": 0.7,
+      "sessions": 102,
+      "capacity": 1428,
+      "booked": 15,
+      "fill": 1.1,
       "raw_sessions": 105
     },
     {
@@ -331,11 +331,11 @@
       "site": "Teddington",
       "platform": "wunderbook",
       "ok": true,
-      "seconds": 43.8,
+      "seconds": 61.2,
       "sessions": 44,
       "capacity": 264,
-      "booked": 72,
-      "fill": 27.3,
+      "booked": 76,
+      "fill": 28.8,
       "raw_sessions": 44
     },
     {
@@ -343,11 +343,11 @@
       "site": "Hampton Court",
       "platform": "wunderbook",
       "ok": true,
-      "seconds": 42.4,
+      "seconds": 59,
       "sessions": 44,
       "capacity": 252,
-      "booked": 35,
-      "fill": 13.9,
+      "booked": 36,
+      "fill": 14.3,
       "raw_sessions": 44
     }
   ]
