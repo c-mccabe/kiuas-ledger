@@ -1,5 +1,5 @@
 {
-  "scraped_at_utc": "2026-11-25T21:46:07.020Z",
+  "scraped_at_utc": "2026-11-26T05:46:36.181Z",
   "days_ahead": 7,
   "venues": [
     {
@@ -7,11 +7,11 @@
       "site": "Bermondsey",
       "platform": "bookee",
       "ok": true,
-      "seconds": 6.8,
-      "sessions": 64,
-      "capacity": 1270,
-      "booked": 127,
-      "fill": 10,
+      "seconds": 9,
+      "sessions": 76,
+      "capacity": 1510,
+      "booked": 133,
+      "fill": 8.8,
       "raw_sessions": 76
     },
     {
@@ -19,11 +19,11 @@
       "site": "Peckham",
       "platform": "bookee",
       "ok": true,
-      "seconds": 8.4,
-      "sessions": 103,
-      "capacity": 2182,
-      "booked": 672,
-      "fill": 30.8,
+      "seconds": 6.3,
+      "sessions": 114,
+      "capacity": 2422,
+      "booked": 677,
+      "fill": 28,
       "raw_sessions": 114
     },
     {
@@ -31,11 +31,11 @@
       "site": "Hackney Wick",
       "platform": "periode",
       "ok": true,
-      "seconds": 45.9,
-      "sessions": 240,
-      "capacity": 6562,
-      "booked": 2694,
-      "fill": 41.1,
+      "seconds": 26.6,
+      "sessions": 276,
+      "capacity": 7542,
+      "booked": 2778,
+      "fill": 36.8,
       "raw_sessions": 276
     },
     {
@@ -43,11 +43,11 @@
       "site": "Stratford",
       "platform": "periode",
       "ok": true,
-      "seconds": 62.1,
-      "sessions": 79,
-      "capacity": 1818,
-      "booked": 382,
-      "fill": 21,
+      "seconds": 48.7,
+      "sessions": 89,
+      "capacity": 2014,
+      "booked": 386,
+      "fill": 19.2,
       "raw_sessions": 89
     },
     {
@@ -55,11 +55,11 @@
       "site": "Walthamstow",
       "platform": "periode",
       "ok": true,
-      "seconds": 79.8,
-      "sessions": 159,
-      "capacity": 4120,
-      "booked": 1431,
-      "fill": 34.7,
+      "seconds": 69.5,
+      "sessions": 160,
+      "capacity": 4167,
+      "booked": 1487,
+      "fill": 35.7,
       "raw_sessions": 160
     },
     {
@@ -67,11 +67,11 @@
       "site": "Camberwell",
       "platform": "periode",
       "ok": true,
-      "seconds": 122.6,
-      "sessions": 156,
-      "capacity": 3085,
-      "booked": 1817,
-      "fill": 58.9,
+      "seconds": 104.6,
+      "sessions": 171,
+      "capacity": 3438,
+      "booked": 1844,
+      "fill": 53.6,
       "raw_sessions": 171
     },
     {
@@ -79,11 +79,11 @@
       "site": "Peckham",
       "platform": "periode",
       "ok": true,
-      "seconds": 126.6,
+      "seconds": 111.2,
       "sessions": 15,
       "capacity": 180,
-      "booked": 39,
-      "fill": 21.7,
+      "booked": 46,
+      "fill": 25.6,
       "raw_sessions": 15
     },
     {
@@ -91,12 +91,12 @@
       "site": "Canary Wharf",
       "platform": "marianatek",
       "ok": true,
-      "seconds": 2.9,
-      "sessions": 63,
-      "capacity": 2248,
-      "booked": 333,
-      "fill": 14.8,
-      "raw_sessions": 63
+      "seconds": 1.8,
+      "sessions": 74,
+      "capacity": 2666,
+      "booked": 341,
+      "fill": 12.8,
+      "raw_sessions": 74
     },
     {
       "venue": "Hotdrop",
@@ -104,10 +104,10 @@
       "platform": "arketa",
       "ok": true,
       "seconds": 0.4,
-      "sessions": 26,
-      "capacity": 620,
-      "booked": 2,
-      "fill": 0.3,
+      "sessions": 32,
+      "capacity": 764,
+      "booked": 3,
+      "fill": 0.4,
       "raw_sessions": 32
     },
     {
@@ -115,12 +115,12 @@
       "site": "Shoreditch",
       "platform": "momence",
       "ok": true,
-      "seconds": 1.3,
-      "sessions": 152,
-      "capacity": 912,
+      "seconds": 1.1,
+      "sessions": 179,
+      "capacity": 1074,
       "booked": 50,
-      "fill": 5.5,
-      "raw_sessions": 152
+      "fill": 4.7,
+      "raw_sessions": 179
     },
     {
       "venue": "Reset Sauna",
@@ -132,31 +132,31 @@
       "capacity": 0,
       "booked": 0,
       "fill": null,
-      "error": "GET https://readonly-api.momence.com/host-plugins/host/74215/host-schedule/sessions?fromDate=2026-11-25T00%3A00%3A00%2B00%3A00&toDate=2026-12-02T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=special"
+      "error": "GET https://readonly-api.momence.com/host-plugins/host/74215/host-schedule/sessions?fromDate=2026-11-26T00%3A00%3A00%2B00%3A00&toDate=2026-12-03T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=special"
     },
     {
       "venue": "Waking Dreams",
       "site": "Bethnal Green",
       "platform": "momence-schedule",
       "ok": false,
-      "seconds": 0.4,
+      "seconds": 0.1,
       "sessions": 0,
       "capacity": 0,
       "booked": 0,
       "fill": null,
-      "error": "GET https://readonly-api.momence.com/host-plugins/host/31455/host-schedule/sessions?fromDate=2026-11-25T00%3A00%3A00%2B00%3A00&toDate=2026-12-02T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=special"
+      "error": "GET https://readonly-api.momence.com/host-plugins/host/31455/host-schedule/sessions?fromDate=2026-11-26T00%3A00%3A00%2B00%3A00&toDate=2026-12-03T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=special"
     },
     {
       "venue": "Urban Heat",
       "site": "Camberwell",
       "platform": "momence-schedule",
       "ok": false,
-      "seconds": 0.2,
+      "seconds": 0.1,
       "sessions": 0,
       "capacity": 0,
       "booked": 0,
       "fill": null,
-      "error": "GET https://readonly-api.momence.com/host-plugins/host/130322/host-schedule/sessions?fromDate=2026-11-25T00%3A00%3A00%2B00%3A00&toDate=2026-12-02T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=specia"
+      "error": "GET https://readonly-api.momence.com/host-plugins/host/130322/host-schedule/sessions?fromDate=2026-11-26T00%3A00%3A00%2B00%3A00&toDate=2026-12-03T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=specia"
     },
     {
       "venue": "Innervisions Alchemy",
@@ -168,18 +168,18 @@
       "capacity": 0,
       "booked": 0,
       "fill": null,
-      "error": "GET https://readonly-api.momence.com/host-plugins/host/117308/host-schedule/sessions?fromDate=2026-11-25T00%3A00%3A00%2B00%3A00&toDate=2026-12-02T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=specia"
+      "error": "GET https://readonly-api.momence.com/host-plugins/host/117308/host-schedule/sessions?fromDate=2026-11-26T00%3A00%3A00%2B00%3A00&toDate=2026-12-03T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=specia"
     },
     {
       "venue": "Saunos",
       "site": "Regent's Canal, Islington",
       "platform": "legitfit",
       "ok": true,
-      "seconds": 0.6,
-      "sessions": 94,
-      "capacity": 725,
-      "booked": 126,
-      "fill": 17.4,
+      "seconds": 0.7,
+      "sessions": 104,
+      "capacity": 805,
+      "booked": 132,
+      "fill": 16.4,
       "raw_sessions": 104
     },
     {
@@ -188,10 +188,10 @@
       "platform": "legitfit",
       "ok": true,
       "seconds": 0.6,
-      "sessions": 77,
-      "capacity": 921,
-      "booked": 67,
-      "fill": 7.3,
+      "sessions": 89,
+      "capacity": 1065,
+      "booked": 71,
+      "fill": 6.7,
       "raw_sessions": 89
     },
     {
@@ -223,23 +223,23 @@
       "site": "Walthamstow",
       "platform": "bookasession",
       "ok": true,
-      "seconds": 1.7,
-      "sessions": 44,
-      "capacity": 702,
-      "booked": 163,
-      "fill": 23.2,
-      "raw_sessions": 50
+      "seconds": 1.3,
+      "sessions": 52,
+      "capacity": 830,
+      "booked": 155,
+      "fill": 18.7,
+      "raw_sessions": 52
     },
     {
       "venue": "Old Kent Road Sauna",
       "site": "Peckham",
       "platform": "bookasession",
       "ok": true,
-      "seconds": 1.2,
-      "sessions": 45,
-      "capacity": 724,
-      "booked": 81,
-      "fill": 11.2,
+      "seconds": 0.9,
+      "sessions": 48,
+      "capacity": 757,
+      "booked": 72,
+      "fill": 9.5,
       "raw_sessions": 48
     },
     {
@@ -247,11 +247,11 @@
       "site": "Stoke Newington",
       "platform": "mindbody",
       "ok": true,
-      "seconds": 1.7,
-      "sessions": 50,
-      "capacity": 250,
-      "booked": 23,
-      "fill": 9.2,
+      "seconds": 1.5,
+      "sessions": 59,
+      "capacity": 295,
+      "booked": 25,
+      "fill": 8.5,
       "raw_sessions": 59
     },
     {
@@ -259,36 +259,36 @@
       "site": "Shoreditch",
       "platform": "momence-schedule",
       "ok": false,
-      "seconds": 0.3,
+      "seconds": 0.2,
       "sessions": 0,
       "capacity": 0,
       "booked": 0,
       "fill": null,
-      "error": "GET https://readonly-api.momence.com/host-plugins/host/47026/host-schedule/sessions?fromDate=2026-11-25T00%3A00%3A00%2B00%3A00&toDate=2026-12-02T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=special"
+      "error": "GET https://readonly-api.momence.com/host-plugins/host/47026/host-schedule/sessions?fromDate=2026-11-26T00%3A00%3A00%2B00%3A00&toDate=2026-12-03T00%3A00%3A00%2B00%3A00&pageSize=500&page=0&sessionTypes%5B%5D=course-class&sessionTypes%5B%5D=fitness&sessionTypes%5B%5D=retreat&sessionTypes%5B%5D=special"
     },
     {
       "venue": "Sweheat",
       "site": "Royal Docks",
       "platform": "acuity",
       "ok": true,
-      "seconds": 10.7,
-      "sessions": 50,
-      "capacity": 602,
+      "seconds": 6.3,
+      "sessions": 56,
+      "capacity": 674,
       "booked": 13,
-      "fill": 2.2,
-      "raw_sessions": 50
+      "fill": 1.9,
+      "raw_sessions": 56
     },
     {
       "venue": "Revitalise Urban Spa",
       "site": "Hackney",
       "platform": "bsport",
       "ok": true,
-      "seconds": 0.8,
-      "sessions": 122,
-      "capacity": 1290,
-      "booked": 19,
-      "fill": 1.5,
-      "raw_sessions": 139
+      "seconds": 1,
+      "sessions": 138,
+      "capacity": 1458,
+      "booked": 15,
+      "fill": 1,
+      "raw_sessions": 138
     },
     {
       "venue": "Lowlu",
@@ -296,10 +296,10 @@
       "platform": "lowlu",
       "ok": true,
       "seconds": 0.9,
-      "sessions": 82,
-      "capacity": 984,
-      "booked": 93,
-      "fill": 9.5,
+      "sessions": 95,
+      "capacity": 1140,
+      "booked": 91,
+      "fill": 8,
       "raw_sessions": 95
     },
     {
@@ -307,12 +307,12 @@
       "site": "Kentish Town",
       "platform": "lowlu",
       "ok": true,
-      "seconds": 1,
-      "sessions": 83,
-      "capacity": 2158,
-      "booked": 438,
-      "fill": 20.3,
-      "raw_sessions": 96
+      "seconds": 0.9,
+      "sessions": 95,
+      "capacity": 2470,
+      "booked": 440,
+      "fill": 17.8,
+      "raw_sessions": 95
     },
     {
       "venue": "Lowlu",
@@ -320,10 +320,10 @@
       "platform": "lowlu",
       "ok": true,
       "seconds": 0.9,
-      "sessions": 92,
-      "capacity": 1288,
-      "booked": 18,
-      "fill": 1.4,
+      "sessions": 105,
+      "capacity": 1470,
+      "booked": 14,
+      "fill": 1,
       "raw_sessions": 105
     },
     {
@@ -331,24 +331,24 @@
       "site": "Teddington",
       "platform": "wunderbook",
       "ok": true,
-      "seconds": 58.3,
-      "sessions": 43,
-      "capacity": 253,
-      "booked": 124,
-      "fill": 49,
-      "raw_sessions": 43
+      "seconds": 47.1,
+      "sessions": 52,
+      "capacity": 307,
+      "booked": 137,
+      "fill": 44.6,
+      "raw_sessions": 52
     },
     {
       "venue": "Temz Floating Saunas",
       "site": "Hampton Court",
       "platform": "wunderbook",
       "ok": true,
-      "seconds": 59.1,
-      "sessions": 36,
-      "capacity": 216,
-      "booked": 51,
-      "fill": 23.6,
-      "raw_sessions": 40
+      "seconds": 48.6,
+      "sessions": 39,
+      "capacity": 222,
+      "booked": 54,
+      "fill": 24.3,
+      "raw_sessions": 39
     }
   ]
 }
